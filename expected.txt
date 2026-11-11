@@ -118,11 +118,11 @@
            #130 "No events"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #131 "09:00"
+         #29 div.time
+           #131 "09:00"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -256,11 +256,11 @@
            #130 "No events"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #131 "09:00"
+         #29 div.time
+           #131 "09:00"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -394,11 +394,11 @@
            #220 "No events"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #221 "10:00"
+         #29 div.time
+           #221 "10:00"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -532,11 +532,11 @@
            #310 "No events"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #311 "11:00"
+         #29 div.time
+           #311 "11:00"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -670,11 +670,11 @@
            #400 "No events"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #401 "12:00"
+         #29 div.time
+           #401 "12:00"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -808,11 +808,11 @@
            #490 "No events"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #491 "12:15"
+         #29 div.time
+           #491 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -951,11 +951,11 @@
              #585 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #586 "12:15"
+         #29 div.time
+           #586 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -1094,11 +1094,11 @@
              #585 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #586 "12:15"
+         #29 div.time
+           #586 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -1238,11 +1238,11 @@
              #585 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Тушлик"
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #586 "12:15"
+         #29 div.time
+           #586 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -1381,11 +1381,11 @@
              #680 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Тушлик"
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #681 "12:15"
+         #29 div.time
+           #681 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -1531,11 +1531,11 @@
              #782 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #783 "12:15"
+         #29 div.time
+           #783 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -1682,11 +1682,11 @@
              #884 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #885 "12:15"
+         #29 div.time
+           #885 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -1832,11 +1832,11 @@
              #986 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #987 "12:15"
+         #29 div.time
+           #987 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -1975,11 +1975,11 @@
              #1081 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #1082 "12:15"
+         #29 div.time
+           #1082 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
@@ -2118,11 +2118,11 @@
              #1081 "✕"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
-         #29 div.row
-           #30 button [data-k="h-"]
-             #31 "−1 h"
-           #32 div.time
-             #1082 "12:15"
+         #29 div.time
+           #1082 "12:15"
+         #30 div.row
+           #31 button [data-k="h-"]
+             #32 "−1 h"
            #33 button [data-k="h+"]
              #34 "+1 h"
            #35 button [data-k="m-"]
