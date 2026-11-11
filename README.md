@@ -19,7 +19,7 @@ With [arche-lang](https://github.com/arche-family/arche-lang) checked out next t
 ../arche-lang/wasm/nimadir-app.sh . calendar.component.wasm
 ```
 
-`manifest` is what the phone's repository packages with the component. It gives the app's name, version and title, and what it may do: keep its data (`storage`), the events.
+`manifest` is what the phone's repository packages with the component. It gives the app's name, version and title, and what it may do: keep its data (`storage`), the events; post notifications (`notify`), the reminders; and be woken off the screen (`background`), at a reminder's time.
 
 ## Test
 

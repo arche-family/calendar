@@ -6,7 +6,8 @@ package arche:phone@0.1.0;
 
 /// Notifications: what an app tells its user while it is not looked at.
 /// They are in the shade, and one that comes is shown over the top of the
-/// screen for a while; a tap on one opens its app.
+/// screen for a while; a tap on one opens its app. Only for an app whose
+/// manifest needs notify (T8); another's post posts nothing.
 interface notify {
     /// A notification of title and text; its number, to cancel it by.
     post: func(title: string, text: string) -> u32;
@@ -16,7 +17,9 @@ interface notify {
 
 /// An app woken off the screen, as an alarm or a messenger is: the phone
 /// runs its update once then, for at most 2 s, and what it draws is not
-/// shown; it may post a notification, and ask to be woken again.
+/// shown; it may post a notification, and ask to be woken again. Only for
+/// an app whose manifest needs background (T8); another's wake-at wakes
+/// nothing.
 interface background {
     /// Wake this app at about at-millis (as now-millis counts): one time an
     /// app, a later call replacing it; 0 asks for none. The phone keeps it
@@ -108,6 +111,67 @@ interface alarm {
     dismiss: func();
 }
 
+/// The phone's shared files (T7): photos, music, documents and downloads,
+/// kept by the phone in folders of their own (Pictures, Music, Documents,
+/// Download), and shared by the apps that may (their manifest's needs:
+/// files), as Android's shared storage is. A path is names parted by "/",
+/// none of them empty, "." or ".."; "" is the top, where those folders
+/// are. Any other path is refused. Another app's list is empty, its read
+/// none, and its write, make-folder and remove do nothing.
+interface files {
+    record entry {
+        name: string,
+        /// Whether it is a folder; a file's size in bytes, 0 for a folder.
+        folder: bool,
+        size: u64,
+    }
+    /// What is in the folder at path, in order of their names.
+    list: func(path: string) -> list<entry>;
+    /// The file at path; none when there is none.
+    read: func(path: string) -> option<list<u8>>;
+    /// data written to the file at path, made or emptied, in a folder that
+    /// is there; whether it was.
+    write: func(path: string, data: list<u8>) -> bool;
+    /// A new folder at path; whether it was made.
+    make-folder: func(path: string) -> bool;
+    /// The file, or the empty folder, at path taken away; whether it was.
+    remove: func(path: string) -> bool;
+}
+
+/// The phone's camera (T7): what it sees, and photos taken of it, kept in
+/// the shared Pictures folder named by when they were taken, as Android's
+/// camera names its photos (IMG_20261110_120000.png). Only for an app
+/// whose manifest needs camera; another's view is none, and its take
+/// takes nothing.
+interface camera {
+    /// What the camera sees now: the number of an image, as image-load's,
+    /// which the phone keeps up to date frame by frame while the app is
+    /// drawn; none when there is no camera.
+    view: func() -> option<u32>;
+    /// A photo of what the camera sees: in the shared Pictures folder once
+    /// last says its name.
+    take: func();
+    /// The last photo's name in the shared Pictures folder; none before
+    /// the first.
+    last: func() -> option<string>;
+}
+
+/// Sound an app plays (T7): a WAV file of the phone's shared files through
+/// its speaker, one at a time for the whole phone, as Android's media
+/// playback is: a notification's chime pauses it a moment, and a call or
+/// an alarm stops it. Only for an app whose manifest needs files, which
+/// may read them; another's play plays nothing.
+interface audio {
+    /// The WAV file at path in the shared files played from its start, in
+    /// the place of what played; whether it was asked to. What plays says
+    /// whether it does.
+    play: func(path: string) -> bool;
+    /// What plays stopped.
+    stop: func();
+    /// The path of what plays, whichever app played it; none for nothing.
+    playing: func() -> option<string>;
+}
+
 world phone-app {
     include nimadir:shell/mini-app@1.2.0;
     import notify;
@@ -117,4 +181,7 @@ world phone-app {
     import location;
     import contacts;
     import alarm;
+    import files;
+    import camera;
+    import audio;
 }
