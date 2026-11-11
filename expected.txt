@@ -1115,7 +1115,7 @@
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 8  (clicks fed to guest: []) ---
-   [type] #28 = "Lunch"
+   [type] #28 = "Тушлик"
    [page] 137 nodes
    #1 body
      #2 div.cal {click input}
@@ -1237,7 +1237,7 @@
            #584 button [data-k="x:1"]
              #585 "✕"
        #27 div.new
-         #28 input.title [placeholder="New event"] value="Lunch"
+         #28 input.title [placeholder="New event"] value="Тушлик"
          #29 div.row
            #30 button [data-k="h-"]
              #31 "−1 h"
@@ -1380,7 +1380,7 @@
            #679 button [data-k="x:1"]
              #680 "✕"
        #27 div.new
-         #28 input.title [placeholder="New event"] value="Lunch"
+         #28 input.title [placeholder="New event"] value="Тушлик"
          #29 div.row
            #30 button [data-k="h-"]
              #31 "−1 h"
@@ -1526,7 +1526,7 @@
            #777 div.at
              #778 "12:15"
            #779 div.what
-             #780 "Lunch"
+             #780 "Тушлик"
            #781 button [data-k="x:2"]
              #782 "✕"
        #27 div.new
@@ -1677,7 +1677,7 @@
            #879 div.at
              #880 "12:15"
            #881 div.what
-             #882 "Lunch"
+             #882 "Тушлик"
            #883 button [data-k="x:2"]
              #884 "✕"
        #27 div.new
@@ -1827,7 +1827,7 @@
            #981 div.at
              #982 "12:15"
            #983 div.what
-             #984 "Lunch"
+             #984 "Тушлик"
            #985 button [data-k="x:2"]
              #986 "✕"
        #27 div.new

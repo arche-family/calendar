@@ -23,7 +23,7 @@ With [arche-lang](https://github.com/arche-family/arche-lang) checked out next t
 
 ## Test
 
-`headless` holds the taps and the typing of a headless run, at a time held still (`--now-millis`, 12:00 in Tashkent on 10 November 2026), as the phone's tests have it: an event made for 12:15 with a reminder, the phone asked to wake the app then and, woken (the run is a wake throughout), its notification posted; another without one; the next month and back; the second deleted. It also holds the functions the phone's world adds, and `expected.txt` what arche-wasm's interpreter said to them, as Nimadir's shell does not run the phone's world. `app-check.sh` runs the app with arche-wasm, by the interpreter and by the JIT, and compares what it says with `expected.txt`. CI runs it on every push.
+`headless` holds the taps and the typing of a headless run, at a time held still (`--now-millis`, 12:00 in Tashkent on 10 November 2026), as the phone's tests have it: an event made for 12:15 with a reminder, the phone asked to wake the app then and, woken (the run is a wake throughout), its notification posted; another without one, its title in Cyrillic; the next month and back; the second deleted. It also holds the functions the phone's world adds, and `expected.txt` what arche-wasm's interpreter said to them, as Nimadir's shell does not run the phone's world. `app-check.sh` runs the app with arche-wasm, by the interpreter and by the JIT, and compares what it says with `expected.txt`. CI runs it on every push.
 
 ```sh
 ../arche-lang/wasm/app-check.sh .

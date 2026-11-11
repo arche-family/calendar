@@ -491,13 +491,19 @@ fn save(state: &Calendar, host: &mut std.Host, a: alloc.Allocator) {
         } else {
             text.push_str("\t0\t");
         }
-        for c in e.title.view().bytes() {
-            if c.* == '\t' or c.* == '\n' {
+        // The title, its tabs and line ends spaces; whole runs between
+        // them, so that any UTF-8 stays as it is.
+        let t = e.title.view();
+        var start: usize = 0;
+        var k: usize = 0;
+        while k < t.len() : (k += 1) {
+            if t.bytes()[k] == '\t' or t.bytes()[k] == '\n' {
+                text.push_str(t[start..k]);
                 text.push_str(" ");
-            } else {
-                text.push_ascii(c.*);
+                start = k + 1;
             }
         }
+        text.push_str(t[start..t.len()]);
         text.push_str("\n");
     }
     var why = alloc.String.init(a);
