@@ -1,0 +1,120 @@
+// The Arche phone's world (docs/sprints.md T5, T6, T7): Nimadir's, and what a
+// phone gives an app more. An app of it is built as Nimadir's are
+// (arche-lang's wasm/nimadir-app.sh), with this directory as its wit/ and
+// phone-app as its world; Nimadir's own world is in deps/.
+package arche:phone@0.1.0;
+
+/// Notifications: what an app tells its user while it is not looked at.
+/// They are in the shade, and one that comes is shown over the top of the
+/// screen for a while; a tap on one opens its app.
+interface notify {
+    /// A notification of title and text; its number, to cancel it by.
+    post: func(title: string, text: string) -> u32;
+    /// The app's notification of that number taken away.
+    cancel: func(id: u32);
+}
+
+/// An app woken off the screen, as an alarm or a messenger is: the phone
+/// runs its update once then, for at most 2 s, and what it draws is not
+/// shown; it may post a notification, and ask to be woken again.
+interface background {
+    /// Wake this app at about at-millis (as now-millis counts): one time an
+    /// app, a later call replacing it; 0 asks for none. The phone keeps it
+    /// across a restart.
+    wake-at: func(at-millis: s64);
+    /// Whether this init or update is such a wake.
+    woken: func() -> bool;
+}
+
+/// Calls (T6): a number dialed, the phone's call screen takes it from
+/// there, as Android's in-call screen does. Only for an app whose
+/// manifest needs telephony; another's dial does nothing.
+interface telephony {
+    dial: func(number: string);
+    /// A call the phone had (T7): the other end's number, whether it came
+    /// or was made, whether it was answered (a call that came and was not
+    /// is a missed one), when it began, as now-millis counts, and how
+    /// long it went on.
+    record call {
+        number: string,
+        incoming: bool,
+        answered: bool,
+        at-millis: s64,
+        seconds: u32,
+    }
+    /// The calls the phone had, the oldest first.
+    history: func() -> list<call>;
+}
+
+/// Text messages (T6): those the phone has, and one sent. Only for an app
+/// whose manifest needs messaging; another's list is empty, and its send
+/// sends nothing.
+interface messaging {
+    record message {
+        number: string,
+        text: string,
+        /// Whether it came to the phone, or went from it.
+        incoming: bool,
+    }
+    /// The messages, the oldest first.
+    list: func() -> list<message>;
+    /// text sent to number; it is in list once it has gone.
+    send: func(number: string, text: string);
+}
+
+/// Where the phone is (T6), when it knows: degrees north and east. Only
+/// for an app whose manifest needs location; another is told none.
+interface location {
+    record position {
+        latitude: f64,
+        longitude: f64,
+    }
+    position: func() -> option<position>;
+}
+
+/// The phone's contacts (T7): names for numbers, kept by the phone and
+/// shared by the apps that may (their manifest's needs: contacts); the
+/// call screen and messages' notifications say them too. Another app's
+/// list is empty, and its save and remove do nothing.
+interface contacts {
+    record contact {
+        name: string,
+        number: string,
+    }
+    /// The contacts, in order of their names.
+    list: func() -> list<contact>;
+    /// name kept for number: a new contact, or that number's renamed.
+    save: func(name: string, number: string);
+    /// number's contact taken away.
+    remove: func(number: string);
+}
+
+/// An alarm that rings (T7), as Android's clock's does: the phone's alarm
+/// screen over all else, a dark screen lit, the time large and the label
+/// under it, with Snooze and Dismiss; its sound again and again, in Do Not
+/// Disturb too, until one is tapped, or ten minutes have gone and the app's
+/// notification says it was missed. Snoozed, it rings again ten minutes on,
+/// and the app's notification says until when meanwhile; a tap on it opens
+/// the app. One alarm at a time: a later one takes the place of one ringing
+/// or snoozed. Only for an app whose manifest needs alarm; another's ring
+/// rings nothing.
+interface alarm {
+    /// The app's alarm rung, label under the time; whether it rings.
+    ring: func(label: string) -> bool;
+    /// When the app's snoozed alarm rings again, as now-millis counts;
+    /// none when it has none.
+    snoozed: func() -> option<s64>;
+    /// The app's alarm, ringing or snoozed, over.
+    dismiss: func();
+}
+
+world phone-app {
+    include nimadir:shell/mini-app@1.2.0;
+    import notify;
+    import background;
+    import telephony;
+    import messaging;
+    import location;
+    import contacts;
+    import alarm;
+}

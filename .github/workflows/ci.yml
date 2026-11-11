@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  # The app built with the Arche compiler of arche-lang's main, as a
+  # component of Nimadir's world, and run headless by arche-wasm, by the
+  # interpreter and by the JIT, with the taps of its headless file: what it
+  # says is held to what Nimadir's own shell said to them (expected.txt).
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: app
+      - uses: actions/checkout@v4
+        with:
+          repository: arche-family/arche-lang
+          path: arche-lang
+      - name: Build the Arche compiler and arche-wasm
+        run: make -C arche-lang/stage0 && make -C arche-lang/compiler && make -C arche-lang/wasm
+      - name: The app, headless, as Nimadir's shell runs it
+        run: sh arche-lang/wasm/app-check.sh app

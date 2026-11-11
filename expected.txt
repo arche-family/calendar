@@ -1,0 +1,2138 @@
+=== headless run: 15 frames ===
+
+--- frame 0  (clicks fed to guest: []) ---
+   [page] 132 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #43 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #44 button.day.out [data-k="d:20752"]
+           #45 "26"
+         #46 button.day.out [data-k="d:20753"]
+           #47 "27"
+         #48 button.day.out [data-k="d:20754"]
+           #49 "28"
+         #50 button.day.out [data-k="d:20755"]
+           #51 "29"
+         #52 button.day.out [data-k="d:20756"]
+           #53 "30"
+         #54 button.day.out [data-k="d:20757"]
+           #55 "31"
+         #56 button.day [data-k="d:20758"]
+           #57 "1"
+         #58 button.day [data-k="d:20759"]
+           #59 "2"
+         #60 button.day [data-k="d:20760"]
+           #61 "3"
+         #62 button.day [data-k="d:20761"]
+           #63 "4"
+         #64 button.day [data-k="d:20762"]
+           #65 "5"
+         #66 button.day [data-k="d:20763"]
+           #67 "6"
+         #68 button.day [data-k="d:20764"]
+           #69 "7"
+         #70 button.day [data-k="d:20765"]
+           #71 "8"
+         #72 button.day [data-k="d:20766"]
+           #73 "9"
+         #74 button.day.today.picked [data-k="d:20767"]
+           #75 "10"
+         #76 button.day [data-k="d:20768"]
+           #77 "11"
+         #78 button.day [data-k="d:20769"]
+           #79 "12"
+         #80 button.day [data-k="d:20770"]
+           #81 "13"
+         #82 button.day [data-k="d:20771"]
+           #83 "14"
+         #84 button.day [data-k="d:20772"]
+           #85 "15"
+         #86 button.day [data-k="d:20773"]
+           #87 "16"
+         #88 button.day [data-k="d:20774"]
+           #89 "17"
+         #90 button.day [data-k="d:20775"]
+           #91 "18"
+         #92 button.day [data-k="d:20776"]
+           #93 "19"
+         #94 button.day [data-k="d:20777"]
+           #95 "20"
+         #96 button.day [data-k="d:20778"]
+           #97 "21"
+         #98 button.day [data-k="d:20779"]
+           #99 "22"
+         #100 button.day [data-k="d:20780"]
+           #101 "23"
+         #102 button.day [data-k="d:20781"]
+           #103 "24"
+         #104 button.day [data-k="d:20782"]
+           #105 "25"
+         #106 button.day [data-k="d:20783"]
+           #107 "26"
+         #108 button.day [data-k="d:20784"]
+           #109 "27"
+         #110 button.day [data-k="d:20785"]
+           #111 "28"
+         #112 button.day [data-k="d:20786"]
+           #113 "29"
+         #114 button.day [data-k="d:20787"]
+           #115 "30"
+         #116 button.day.out [data-k="d:20788"]
+           #117 "1"
+         #118 button.day.out [data-k="d:20789"]
+           #119 "2"
+         #120 button.day.out [data-k="d:20790"]
+           #121 "3"
+         #122 button.day.out [data-k="d:20791"]
+           #123 "4"
+         #124 button.day.out [data-k="d:20792"]
+           #125 "5"
+         #126 button.day.out [data-k="d:20793"]
+           #127 "6"
+       #25 div.when
+         #128 "Tuesday, November 10"
+       #26 div.events
+         #129 div.none
+           #130 "No events"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #131 "09:00"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #132 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 1  (clicks fed to guest: []) ---
+   [type] #28 = "Dentist"
+   [page] 132 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #43 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #44 button.day.out [data-k="d:20752"]
+           #45 "26"
+         #46 button.day.out [data-k="d:20753"]
+           #47 "27"
+         #48 button.day.out [data-k="d:20754"]
+           #49 "28"
+         #50 button.day.out [data-k="d:20755"]
+           #51 "29"
+         #52 button.day.out [data-k="d:20756"]
+           #53 "30"
+         #54 button.day.out [data-k="d:20757"]
+           #55 "31"
+         #56 button.day [data-k="d:20758"]
+           #57 "1"
+         #58 button.day [data-k="d:20759"]
+           #59 "2"
+         #60 button.day [data-k="d:20760"]
+           #61 "3"
+         #62 button.day [data-k="d:20761"]
+           #63 "4"
+         #64 button.day [data-k="d:20762"]
+           #65 "5"
+         #66 button.day [data-k="d:20763"]
+           #67 "6"
+         #68 button.day [data-k="d:20764"]
+           #69 "7"
+         #70 button.day [data-k="d:20765"]
+           #71 "8"
+         #72 button.day [data-k="d:20766"]
+           #73 "9"
+         #74 button.day.today.picked [data-k="d:20767"]
+           #75 "10"
+         #76 button.day [data-k="d:20768"]
+           #77 "11"
+         #78 button.day [data-k="d:20769"]
+           #79 "12"
+         #80 button.day [data-k="d:20770"]
+           #81 "13"
+         #82 button.day [data-k="d:20771"]
+           #83 "14"
+         #84 button.day [data-k="d:20772"]
+           #85 "15"
+         #86 button.day [data-k="d:20773"]
+           #87 "16"
+         #88 button.day [data-k="d:20774"]
+           #89 "17"
+         #90 button.day [data-k="d:20775"]
+           #91 "18"
+         #92 button.day [data-k="d:20776"]
+           #93 "19"
+         #94 button.day [data-k="d:20777"]
+           #95 "20"
+         #96 button.day [data-k="d:20778"]
+           #97 "21"
+         #98 button.day [data-k="d:20779"]
+           #99 "22"
+         #100 button.day [data-k="d:20780"]
+           #101 "23"
+         #102 button.day [data-k="d:20781"]
+           #103 "24"
+         #104 button.day [data-k="d:20782"]
+           #105 "25"
+         #106 button.day [data-k="d:20783"]
+           #107 "26"
+         #108 button.day [data-k="d:20784"]
+           #109 "27"
+         #110 button.day [data-k="d:20785"]
+           #111 "28"
+         #112 button.day [data-k="d:20786"]
+           #113 "29"
+         #114 button.day [data-k="d:20787"]
+           #115 "30"
+         #116 button.day.out [data-k="d:20788"]
+           #117 "1"
+         #118 button.day.out [data-k="d:20789"]
+           #119 "2"
+         #120 button.day.out [data-k="d:20790"]
+           #121 "3"
+         #122 button.day.out [data-k="d:20791"]
+           #123 "4"
+         #124 button.day.out [data-k="d:20792"]
+           #125 "5"
+         #126 button.day.out [data-k="d:20793"]
+           #127 "6"
+       #25 div.when
+         #128 "Tuesday, November 10"
+       #26 div.events
+         #129 div.none
+           #130 "No events"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value="Dentist"
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #131 "09:00"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #132 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 2  (clicks fed to guest: []) ---
+   [tap] #33
+   [page] 132 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #133 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #134 button.day.out [data-k="d:20752"]
+           #135 "26"
+         #136 button.day.out [data-k="d:20753"]
+           #137 "27"
+         #138 button.day.out [data-k="d:20754"]
+           #139 "28"
+         #140 button.day.out [data-k="d:20755"]
+           #141 "29"
+         #142 button.day.out [data-k="d:20756"]
+           #143 "30"
+         #144 button.day.out [data-k="d:20757"]
+           #145 "31"
+         #146 button.day [data-k="d:20758"]
+           #147 "1"
+         #148 button.day [data-k="d:20759"]
+           #149 "2"
+         #150 button.day [data-k="d:20760"]
+           #151 "3"
+         #152 button.day [data-k="d:20761"]
+           #153 "4"
+         #154 button.day [data-k="d:20762"]
+           #155 "5"
+         #156 button.day [data-k="d:20763"]
+           #157 "6"
+         #158 button.day [data-k="d:20764"]
+           #159 "7"
+         #160 button.day [data-k="d:20765"]
+           #161 "8"
+         #162 button.day [data-k="d:20766"]
+           #163 "9"
+         #164 button.day.today.picked [data-k="d:20767"]
+           #165 "10"
+         #166 button.day [data-k="d:20768"]
+           #167 "11"
+         #168 button.day [data-k="d:20769"]
+           #169 "12"
+         #170 button.day [data-k="d:20770"]
+           #171 "13"
+         #172 button.day [data-k="d:20771"]
+           #173 "14"
+         #174 button.day [data-k="d:20772"]
+           #175 "15"
+         #176 button.day [data-k="d:20773"]
+           #177 "16"
+         #178 button.day [data-k="d:20774"]
+           #179 "17"
+         #180 button.day [data-k="d:20775"]
+           #181 "18"
+         #182 button.day [data-k="d:20776"]
+           #183 "19"
+         #184 button.day [data-k="d:20777"]
+           #185 "20"
+         #186 button.day [data-k="d:20778"]
+           #187 "21"
+         #188 button.day [data-k="d:20779"]
+           #189 "22"
+         #190 button.day [data-k="d:20780"]
+           #191 "23"
+         #192 button.day [data-k="d:20781"]
+           #193 "24"
+         #194 button.day [data-k="d:20782"]
+           #195 "25"
+         #196 button.day [data-k="d:20783"]
+           #197 "26"
+         #198 button.day [data-k="d:20784"]
+           #199 "27"
+         #200 button.day [data-k="d:20785"]
+           #201 "28"
+         #202 button.day [data-k="d:20786"]
+           #203 "29"
+         #204 button.day [data-k="d:20787"]
+           #205 "30"
+         #206 button.day.out [data-k="d:20788"]
+           #207 "1"
+         #208 button.day.out [data-k="d:20789"]
+           #209 "2"
+         #210 button.day.out [data-k="d:20790"]
+           #211 "3"
+         #212 button.day.out [data-k="d:20791"]
+           #213 "4"
+         #214 button.day.out [data-k="d:20792"]
+           #215 "5"
+         #216 button.day.out [data-k="d:20793"]
+           #217 "6"
+       #25 div.when
+         #218 "Tuesday, November 10"
+       #26 div.events
+         #219 div.none
+           #220 "No events"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value="Dentist"
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #221 "10:00"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #222 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 3  (clicks fed to guest: []) ---
+   [tap] #33
+   [page] 132 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #223 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #224 button.day.out [data-k="d:20752"]
+           #225 "26"
+         #226 button.day.out [data-k="d:20753"]
+           #227 "27"
+         #228 button.day.out [data-k="d:20754"]
+           #229 "28"
+         #230 button.day.out [data-k="d:20755"]
+           #231 "29"
+         #232 button.day.out [data-k="d:20756"]
+           #233 "30"
+         #234 button.day.out [data-k="d:20757"]
+           #235 "31"
+         #236 button.day [data-k="d:20758"]
+           #237 "1"
+         #238 button.day [data-k="d:20759"]
+           #239 "2"
+         #240 button.day [data-k="d:20760"]
+           #241 "3"
+         #242 button.day [data-k="d:20761"]
+           #243 "4"
+         #244 button.day [data-k="d:20762"]
+           #245 "5"
+         #246 button.day [data-k="d:20763"]
+           #247 "6"
+         #248 button.day [data-k="d:20764"]
+           #249 "7"
+         #250 button.day [data-k="d:20765"]
+           #251 "8"
+         #252 button.day [data-k="d:20766"]
+           #253 "9"
+         #254 button.day.today.picked [data-k="d:20767"]
+           #255 "10"
+         #256 button.day [data-k="d:20768"]
+           #257 "11"
+         #258 button.day [data-k="d:20769"]
+           #259 "12"
+         #260 button.day [data-k="d:20770"]
+           #261 "13"
+         #262 button.day [data-k="d:20771"]
+           #263 "14"
+         #264 button.day [data-k="d:20772"]
+           #265 "15"
+         #266 button.day [data-k="d:20773"]
+           #267 "16"
+         #268 button.day [data-k="d:20774"]
+           #269 "17"
+         #270 button.day [data-k="d:20775"]
+           #271 "18"
+         #272 button.day [data-k="d:20776"]
+           #273 "19"
+         #274 button.day [data-k="d:20777"]
+           #275 "20"
+         #276 button.day [data-k="d:20778"]
+           #277 "21"
+         #278 button.day [data-k="d:20779"]
+           #279 "22"
+         #280 button.day [data-k="d:20780"]
+           #281 "23"
+         #282 button.day [data-k="d:20781"]
+           #283 "24"
+         #284 button.day [data-k="d:20782"]
+           #285 "25"
+         #286 button.day [data-k="d:20783"]
+           #287 "26"
+         #288 button.day [data-k="d:20784"]
+           #289 "27"
+         #290 button.day [data-k="d:20785"]
+           #291 "28"
+         #292 button.day [data-k="d:20786"]
+           #293 "29"
+         #294 button.day [data-k="d:20787"]
+           #295 "30"
+         #296 button.day.out [data-k="d:20788"]
+           #297 "1"
+         #298 button.day.out [data-k="d:20789"]
+           #299 "2"
+         #300 button.day.out [data-k="d:20790"]
+           #301 "3"
+         #302 button.day.out [data-k="d:20791"]
+           #303 "4"
+         #304 button.day.out [data-k="d:20792"]
+           #305 "5"
+         #306 button.day.out [data-k="d:20793"]
+           #307 "6"
+       #25 div.when
+         #308 "Tuesday, November 10"
+       #26 div.events
+         #309 div.none
+           #310 "No events"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value="Dentist"
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #311 "11:00"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #312 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 4  (clicks fed to guest: []) ---
+   [tap] #33
+   [page] 132 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #313 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #314 button.day.out [data-k="d:20752"]
+           #315 "26"
+         #316 button.day.out [data-k="d:20753"]
+           #317 "27"
+         #318 button.day.out [data-k="d:20754"]
+           #319 "28"
+         #320 button.day.out [data-k="d:20755"]
+           #321 "29"
+         #322 button.day.out [data-k="d:20756"]
+           #323 "30"
+         #324 button.day.out [data-k="d:20757"]
+           #325 "31"
+         #326 button.day [data-k="d:20758"]
+           #327 "1"
+         #328 button.day [data-k="d:20759"]
+           #329 "2"
+         #330 button.day [data-k="d:20760"]
+           #331 "3"
+         #332 button.day [data-k="d:20761"]
+           #333 "4"
+         #334 button.day [data-k="d:20762"]
+           #335 "5"
+         #336 button.day [data-k="d:20763"]
+           #337 "6"
+         #338 button.day [data-k="d:20764"]
+           #339 "7"
+         #340 button.day [data-k="d:20765"]
+           #341 "8"
+         #342 button.day [data-k="d:20766"]
+           #343 "9"
+         #344 button.day.today.picked [data-k="d:20767"]
+           #345 "10"
+         #346 button.day [data-k="d:20768"]
+           #347 "11"
+         #348 button.day [data-k="d:20769"]
+           #349 "12"
+         #350 button.day [data-k="d:20770"]
+           #351 "13"
+         #352 button.day [data-k="d:20771"]
+           #353 "14"
+         #354 button.day [data-k="d:20772"]
+           #355 "15"
+         #356 button.day [data-k="d:20773"]
+           #357 "16"
+         #358 button.day [data-k="d:20774"]
+           #359 "17"
+         #360 button.day [data-k="d:20775"]
+           #361 "18"
+         #362 button.day [data-k="d:20776"]
+           #363 "19"
+         #364 button.day [data-k="d:20777"]
+           #365 "20"
+         #366 button.day [data-k="d:20778"]
+           #367 "21"
+         #368 button.day [data-k="d:20779"]
+           #369 "22"
+         #370 button.day [data-k="d:20780"]
+           #371 "23"
+         #372 button.day [data-k="d:20781"]
+           #373 "24"
+         #374 button.day [data-k="d:20782"]
+           #375 "25"
+         #376 button.day [data-k="d:20783"]
+           #377 "26"
+         #378 button.day [data-k="d:20784"]
+           #379 "27"
+         #380 button.day [data-k="d:20785"]
+           #381 "28"
+         #382 button.day [data-k="d:20786"]
+           #383 "29"
+         #384 button.day [data-k="d:20787"]
+           #385 "30"
+         #386 button.day.out [data-k="d:20788"]
+           #387 "1"
+         #388 button.day.out [data-k="d:20789"]
+           #389 "2"
+         #390 button.day.out [data-k="d:20790"]
+           #391 "3"
+         #392 button.day.out [data-k="d:20791"]
+           #393 "4"
+         #394 button.day.out [data-k="d:20792"]
+           #395 "5"
+         #396 button.day.out [data-k="d:20793"]
+           #397 "6"
+       #25 div.when
+         #398 "Tuesday, November 10"
+       #26 div.events
+         #399 div.none
+           #400 "No events"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value="Dentist"
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #401 "12:00"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #402 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 5  (clicks fed to guest: []) ---
+   [tap] #37
+   [page] 132 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #403 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #404 button.day.out [data-k="d:20752"]
+           #405 "26"
+         #406 button.day.out [data-k="d:20753"]
+           #407 "27"
+         #408 button.day.out [data-k="d:20754"]
+           #409 "28"
+         #410 button.day.out [data-k="d:20755"]
+           #411 "29"
+         #412 button.day.out [data-k="d:20756"]
+           #413 "30"
+         #414 button.day.out [data-k="d:20757"]
+           #415 "31"
+         #416 button.day [data-k="d:20758"]
+           #417 "1"
+         #418 button.day [data-k="d:20759"]
+           #419 "2"
+         #420 button.day [data-k="d:20760"]
+           #421 "3"
+         #422 button.day [data-k="d:20761"]
+           #423 "4"
+         #424 button.day [data-k="d:20762"]
+           #425 "5"
+         #426 button.day [data-k="d:20763"]
+           #427 "6"
+         #428 button.day [data-k="d:20764"]
+           #429 "7"
+         #430 button.day [data-k="d:20765"]
+           #431 "8"
+         #432 button.day [data-k="d:20766"]
+           #433 "9"
+         #434 button.day.today.picked [data-k="d:20767"]
+           #435 "10"
+         #436 button.day [data-k="d:20768"]
+           #437 "11"
+         #438 button.day [data-k="d:20769"]
+           #439 "12"
+         #440 button.day [data-k="d:20770"]
+           #441 "13"
+         #442 button.day [data-k="d:20771"]
+           #443 "14"
+         #444 button.day [data-k="d:20772"]
+           #445 "15"
+         #446 button.day [data-k="d:20773"]
+           #447 "16"
+         #448 button.day [data-k="d:20774"]
+           #449 "17"
+         #450 button.day [data-k="d:20775"]
+           #451 "18"
+         #452 button.day [data-k="d:20776"]
+           #453 "19"
+         #454 button.day [data-k="d:20777"]
+           #455 "20"
+         #456 button.day [data-k="d:20778"]
+           #457 "21"
+         #458 button.day [data-k="d:20779"]
+           #459 "22"
+         #460 button.day [data-k="d:20780"]
+           #461 "23"
+         #462 button.day [data-k="d:20781"]
+           #463 "24"
+         #464 button.day [data-k="d:20782"]
+           #465 "25"
+         #466 button.day [data-k="d:20783"]
+           #467 "26"
+         #468 button.day [data-k="d:20784"]
+           #469 "27"
+         #470 button.day [data-k="d:20785"]
+           #471 "28"
+         #472 button.day [data-k="d:20786"]
+           #473 "29"
+         #474 button.day [data-k="d:20787"]
+           #475 "30"
+         #476 button.day.out [data-k="d:20788"]
+           #477 "1"
+         #478 button.day.out [data-k="d:20789"]
+           #479 "2"
+         #480 button.day.out [data-k="d:20790"]
+           #481 "3"
+         #482 button.day.out [data-k="d:20791"]
+           #483 "4"
+         #484 button.day.out [data-k="d:20792"]
+           #485 "5"
+         #486 button.day.out [data-k="d:20793"]
+           #487 "6"
+       #25 div.when
+         #488 "Tuesday, November 10"
+       #26 div.events
+         #489 div.none
+           #490 "No events"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value="Dentist"
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #491 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #492 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 6  (clicks fed to guest: []) ---
+   [tap] #41
+   [page] 137 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #493 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #494 button.day.out [data-k="d:20752"]
+           #495 "26"
+         #496 button.day.out [data-k="d:20753"]
+           #497 "27"
+         #498 button.day.out [data-k="d:20754"]
+           #499 "28"
+         #500 button.day.out [data-k="d:20755"]
+           #501 "29"
+         #502 button.day.out [data-k="d:20756"]
+           #503 "30"
+         #504 button.day.out [data-k="d:20757"]
+           #505 "31"
+         #506 button.day [data-k="d:20758"]
+           #507 "1"
+         #508 button.day [data-k="d:20759"]
+           #509 "2"
+         #510 button.day [data-k="d:20760"]
+           #511 "3"
+         #512 button.day [data-k="d:20761"]
+           #513 "4"
+         #514 button.day [data-k="d:20762"]
+           #515 "5"
+         #516 button.day [data-k="d:20763"]
+           #517 "6"
+         #518 button.day [data-k="d:20764"]
+           #519 "7"
+         #520 button.day [data-k="d:20765"]
+           #521 "8"
+         #522 button.day [data-k="d:20766"]
+           #523 "9"
+         #524 button.day.has.today.picked [data-k="d:20767"]
+           #525 "10"
+         #526 button.day [data-k="d:20768"]
+           #527 "11"
+         #528 button.day [data-k="d:20769"]
+           #529 "12"
+         #530 button.day [data-k="d:20770"]
+           #531 "13"
+         #532 button.day [data-k="d:20771"]
+           #533 "14"
+         #534 button.day [data-k="d:20772"]
+           #535 "15"
+         #536 button.day [data-k="d:20773"]
+           #537 "16"
+         #538 button.day [data-k="d:20774"]
+           #539 "17"
+         #540 button.day [data-k="d:20775"]
+           #541 "18"
+         #542 button.day [data-k="d:20776"]
+           #543 "19"
+         #544 button.day [data-k="d:20777"]
+           #545 "20"
+         #546 button.day [data-k="d:20778"]
+           #547 "21"
+         #548 button.day [data-k="d:20779"]
+           #549 "22"
+         #550 button.day [data-k="d:20780"]
+           #551 "23"
+         #552 button.day [data-k="d:20781"]
+           #553 "24"
+         #554 button.day [data-k="d:20782"]
+           #555 "25"
+         #556 button.day [data-k="d:20783"]
+           #557 "26"
+         #558 button.day [data-k="d:20784"]
+           #559 "27"
+         #560 button.day [data-k="d:20785"]
+           #561 "28"
+         #562 button.day [data-k="d:20786"]
+           #563 "29"
+         #564 button.day [data-k="d:20787"]
+           #565 "30"
+         #566 button.day.out [data-k="d:20788"]
+           #567 "1"
+         #568 button.day.out [data-k="d:20789"]
+           #569 "2"
+         #570 button.day.out [data-k="d:20790"]
+           #571 "3"
+         #572 button.day.out [data-k="d:20791"]
+           #573 "4"
+         #574 button.day.out [data-k="d:20792"]
+           #575 "5"
+         #576 button.day.out [data-k="d:20793"]
+           #577 "6"
+       #25 div.when
+         #578 "Tuesday, November 10"
+       #26 div.events
+         #579 div.event
+           #580 div.at
+             #581 "12:15 ·"
+           #582 div.what
+             #583 "Dentist"
+           #584 button [data-k="x:1"]
+             #585 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #586 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #587 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+   [call] arche:phone/background@0.1.0#wake-at(1794294900000)
+
+--- frame 7  (clicks fed to guest: []) ---
+   [page] 137 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #493 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #494 button.day.out [data-k="d:20752"]
+           #495 "26"
+         #496 button.day.out [data-k="d:20753"]
+           #497 "27"
+         #498 button.day.out [data-k="d:20754"]
+           #499 "28"
+         #500 button.day.out [data-k="d:20755"]
+           #501 "29"
+         #502 button.day.out [data-k="d:20756"]
+           #503 "30"
+         #504 button.day.out [data-k="d:20757"]
+           #505 "31"
+         #506 button.day [data-k="d:20758"]
+           #507 "1"
+         #508 button.day [data-k="d:20759"]
+           #509 "2"
+         #510 button.day [data-k="d:20760"]
+           #511 "3"
+         #512 button.day [data-k="d:20761"]
+           #513 "4"
+         #514 button.day [data-k="d:20762"]
+           #515 "5"
+         #516 button.day [data-k="d:20763"]
+           #517 "6"
+         #518 button.day [data-k="d:20764"]
+           #519 "7"
+         #520 button.day [data-k="d:20765"]
+           #521 "8"
+         #522 button.day [data-k="d:20766"]
+           #523 "9"
+         #524 button.day.has.today.picked [data-k="d:20767"]
+           #525 "10"
+         #526 button.day [data-k="d:20768"]
+           #527 "11"
+         #528 button.day [data-k="d:20769"]
+           #529 "12"
+         #530 button.day [data-k="d:20770"]
+           #531 "13"
+         #532 button.day [data-k="d:20771"]
+           #533 "14"
+         #534 button.day [data-k="d:20772"]
+           #535 "15"
+         #536 button.day [data-k="d:20773"]
+           #537 "16"
+         #538 button.day [data-k="d:20774"]
+           #539 "17"
+         #540 button.day [data-k="d:20775"]
+           #541 "18"
+         #542 button.day [data-k="d:20776"]
+           #543 "19"
+         #544 button.day [data-k="d:20777"]
+           #545 "20"
+         #546 button.day [data-k="d:20778"]
+           #547 "21"
+         #548 button.day [data-k="d:20779"]
+           #549 "22"
+         #550 button.day [data-k="d:20780"]
+           #551 "23"
+         #552 button.day [data-k="d:20781"]
+           #553 "24"
+         #554 button.day [data-k="d:20782"]
+           #555 "25"
+         #556 button.day [data-k="d:20783"]
+           #557 "26"
+         #558 button.day [data-k="d:20784"]
+           #559 "27"
+         #560 button.day [data-k="d:20785"]
+           #561 "28"
+         #562 button.day [data-k="d:20786"]
+           #563 "29"
+         #564 button.day [data-k="d:20787"]
+           #565 "30"
+         #566 button.day.out [data-k="d:20788"]
+           #567 "1"
+         #568 button.day.out [data-k="d:20789"]
+           #569 "2"
+         #570 button.day.out [data-k="d:20790"]
+           #571 "3"
+         #572 button.day.out [data-k="d:20791"]
+           #573 "4"
+         #574 button.day.out [data-k="d:20792"]
+           #575 "5"
+         #576 button.day.out [data-k="d:20793"]
+           #577 "6"
+       #25 div.when
+         #578 "Tuesday, November 10"
+       #26 div.events
+         #579 div.event
+           #580 div.at
+             #581 "12:15 ·"
+           #582 div.what
+             #583 "Dentist"
+           #584 button [data-k="x:1"]
+             #585 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #586 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #587 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/notify@0.1.0#post("Dentist", "12:15")
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 8  (clicks fed to guest: []) ---
+   [type] #28 = "Lunch"
+   [page] 137 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #493 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #494 button.day.out [data-k="d:20752"]
+           #495 "26"
+         #496 button.day.out [data-k="d:20753"]
+           #497 "27"
+         #498 button.day.out [data-k="d:20754"]
+           #499 "28"
+         #500 button.day.out [data-k="d:20755"]
+           #501 "29"
+         #502 button.day.out [data-k="d:20756"]
+           #503 "30"
+         #504 button.day.out [data-k="d:20757"]
+           #505 "31"
+         #506 button.day [data-k="d:20758"]
+           #507 "1"
+         #508 button.day [data-k="d:20759"]
+           #509 "2"
+         #510 button.day [data-k="d:20760"]
+           #511 "3"
+         #512 button.day [data-k="d:20761"]
+           #513 "4"
+         #514 button.day [data-k="d:20762"]
+           #515 "5"
+         #516 button.day [data-k="d:20763"]
+           #517 "6"
+         #518 button.day [data-k="d:20764"]
+           #519 "7"
+         #520 button.day [data-k="d:20765"]
+           #521 "8"
+         #522 button.day [data-k="d:20766"]
+           #523 "9"
+         #524 button.day.has.today.picked [data-k="d:20767"]
+           #525 "10"
+         #526 button.day [data-k="d:20768"]
+           #527 "11"
+         #528 button.day [data-k="d:20769"]
+           #529 "12"
+         #530 button.day [data-k="d:20770"]
+           #531 "13"
+         #532 button.day [data-k="d:20771"]
+           #533 "14"
+         #534 button.day [data-k="d:20772"]
+           #535 "15"
+         #536 button.day [data-k="d:20773"]
+           #537 "16"
+         #538 button.day [data-k="d:20774"]
+           #539 "17"
+         #540 button.day [data-k="d:20775"]
+           #541 "18"
+         #542 button.day [data-k="d:20776"]
+           #543 "19"
+         #544 button.day [data-k="d:20777"]
+           #545 "20"
+         #546 button.day [data-k="d:20778"]
+           #547 "21"
+         #548 button.day [data-k="d:20779"]
+           #549 "22"
+         #550 button.day [data-k="d:20780"]
+           #551 "23"
+         #552 button.day [data-k="d:20781"]
+           #553 "24"
+         #554 button.day [data-k="d:20782"]
+           #555 "25"
+         #556 button.day [data-k="d:20783"]
+           #557 "26"
+         #558 button.day [data-k="d:20784"]
+           #559 "27"
+         #560 button.day [data-k="d:20785"]
+           #561 "28"
+         #562 button.day [data-k="d:20786"]
+           #563 "29"
+         #564 button.day [data-k="d:20787"]
+           #565 "30"
+         #566 button.day.out [data-k="d:20788"]
+           #567 "1"
+         #568 button.day.out [data-k="d:20789"]
+           #569 "2"
+         #570 button.day.out [data-k="d:20790"]
+           #571 "3"
+         #572 button.day.out [data-k="d:20791"]
+           #573 "4"
+         #574 button.day.out [data-k="d:20792"]
+           #575 "5"
+         #576 button.day.out [data-k="d:20793"]
+           #577 "6"
+       #25 div.when
+         #578 "Tuesday, November 10"
+       #26 div.events
+         #579 div.event
+           #580 div.at
+             #581 "12:15 ·"
+           #582 div.what
+             #583 "Dentist"
+           #584 button [data-k="x:1"]
+             #585 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value="Lunch"
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #586 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #587 "Remind: on"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 9  (clicks fed to guest: []) ---
+   [tap] #40
+   [page] 137 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #588 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #589 button.day.out [data-k="d:20752"]
+           #590 "26"
+         #591 button.day.out [data-k="d:20753"]
+           #592 "27"
+         #593 button.day.out [data-k="d:20754"]
+           #594 "28"
+         #595 button.day.out [data-k="d:20755"]
+           #596 "29"
+         #597 button.day.out [data-k="d:20756"]
+           #598 "30"
+         #599 button.day.out [data-k="d:20757"]
+           #600 "31"
+         #601 button.day [data-k="d:20758"]
+           #602 "1"
+         #603 button.day [data-k="d:20759"]
+           #604 "2"
+         #605 button.day [data-k="d:20760"]
+           #606 "3"
+         #607 button.day [data-k="d:20761"]
+           #608 "4"
+         #609 button.day [data-k="d:20762"]
+           #610 "5"
+         #611 button.day [data-k="d:20763"]
+           #612 "6"
+         #613 button.day [data-k="d:20764"]
+           #614 "7"
+         #615 button.day [data-k="d:20765"]
+           #616 "8"
+         #617 button.day [data-k="d:20766"]
+           #618 "9"
+         #619 button.day.has.today.picked [data-k="d:20767"]
+           #620 "10"
+         #621 button.day [data-k="d:20768"]
+           #622 "11"
+         #623 button.day [data-k="d:20769"]
+           #624 "12"
+         #625 button.day [data-k="d:20770"]
+           #626 "13"
+         #627 button.day [data-k="d:20771"]
+           #628 "14"
+         #629 button.day [data-k="d:20772"]
+           #630 "15"
+         #631 button.day [data-k="d:20773"]
+           #632 "16"
+         #633 button.day [data-k="d:20774"]
+           #634 "17"
+         #635 button.day [data-k="d:20775"]
+           #636 "18"
+         #637 button.day [data-k="d:20776"]
+           #638 "19"
+         #639 button.day [data-k="d:20777"]
+           #640 "20"
+         #641 button.day [data-k="d:20778"]
+           #642 "21"
+         #643 button.day [data-k="d:20779"]
+           #644 "22"
+         #645 button.day [data-k="d:20780"]
+           #646 "23"
+         #647 button.day [data-k="d:20781"]
+           #648 "24"
+         #649 button.day [data-k="d:20782"]
+           #650 "25"
+         #651 button.day [data-k="d:20783"]
+           #652 "26"
+         #653 button.day [data-k="d:20784"]
+           #654 "27"
+         #655 button.day [data-k="d:20785"]
+           #656 "28"
+         #657 button.day [data-k="d:20786"]
+           #658 "29"
+         #659 button.day [data-k="d:20787"]
+           #660 "30"
+         #661 button.day.out [data-k="d:20788"]
+           #662 "1"
+         #663 button.day.out [data-k="d:20789"]
+           #664 "2"
+         #665 button.day.out [data-k="d:20790"]
+           #666 "3"
+         #667 button.day.out [data-k="d:20791"]
+           #668 "4"
+         #669 button.day.out [data-k="d:20792"]
+           #670 "5"
+         #671 button.day.out [data-k="d:20793"]
+           #672 "6"
+       #25 div.when
+         #673 "Tuesday, November 10"
+       #26 div.events
+         #674 div.event
+           #675 div.at
+             #676 "12:15 ·"
+           #677 div.what
+             #678 "Dentist"
+           #679 button [data-k="x:1"]
+             #680 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value="Lunch"
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #681 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #682 "Remind: off"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 10  (clicks fed to guest: []) ---
+   [tap] #41
+   [page] 144 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #683 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #684 button.day.out [data-k="d:20752"]
+           #685 "26"
+         #686 button.day.out [data-k="d:20753"]
+           #687 "27"
+         #688 button.day.out [data-k="d:20754"]
+           #689 "28"
+         #690 button.day.out [data-k="d:20755"]
+           #691 "29"
+         #692 button.day.out [data-k="d:20756"]
+           #693 "30"
+         #694 button.day.out [data-k="d:20757"]
+           #695 "31"
+         #696 button.day [data-k="d:20758"]
+           #697 "1"
+         #698 button.day [data-k="d:20759"]
+           #699 "2"
+         #700 button.day [data-k="d:20760"]
+           #701 "3"
+         #702 button.day [data-k="d:20761"]
+           #703 "4"
+         #704 button.day [data-k="d:20762"]
+           #705 "5"
+         #706 button.day [data-k="d:20763"]
+           #707 "6"
+         #708 button.day [data-k="d:20764"]
+           #709 "7"
+         #710 button.day [data-k="d:20765"]
+           #711 "8"
+         #712 button.day [data-k="d:20766"]
+           #713 "9"
+         #714 button.day.has.today.picked [data-k="d:20767"]
+           #715 "10"
+         #716 button.day [data-k="d:20768"]
+           #717 "11"
+         #718 button.day [data-k="d:20769"]
+           #719 "12"
+         #720 button.day [data-k="d:20770"]
+           #721 "13"
+         #722 button.day [data-k="d:20771"]
+           #723 "14"
+         #724 button.day [data-k="d:20772"]
+           #725 "15"
+         #726 button.day [data-k="d:20773"]
+           #727 "16"
+         #728 button.day [data-k="d:20774"]
+           #729 "17"
+         #730 button.day [data-k="d:20775"]
+           #731 "18"
+         #732 button.day [data-k="d:20776"]
+           #733 "19"
+         #734 button.day [data-k="d:20777"]
+           #735 "20"
+         #736 button.day [data-k="d:20778"]
+           #737 "21"
+         #738 button.day [data-k="d:20779"]
+           #739 "22"
+         #740 button.day [data-k="d:20780"]
+           #741 "23"
+         #742 button.day [data-k="d:20781"]
+           #743 "24"
+         #744 button.day [data-k="d:20782"]
+           #745 "25"
+         #746 button.day [data-k="d:20783"]
+           #747 "26"
+         #748 button.day [data-k="d:20784"]
+           #749 "27"
+         #750 button.day [data-k="d:20785"]
+           #751 "28"
+         #752 button.day [data-k="d:20786"]
+           #753 "29"
+         #754 button.day [data-k="d:20787"]
+           #755 "30"
+         #756 button.day.out [data-k="d:20788"]
+           #757 "1"
+         #758 button.day.out [data-k="d:20789"]
+           #759 "2"
+         #760 button.day.out [data-k="d:20790"]
+           #761 "3"
+         #762 button.day.out [data-k="d:20791"]
+           #763 "4"
+         #764 button.day.out [data-k="d:20792"]
+           #765 "5"
+         #766 button.day.out [data-k="d:20793"]
+           #767 "6"
+       #25 div.when
+         #768 "Tuesday, November 10"
+       #26 div.events
+         #769 div.event
+           #770 div.at
+             #771 "12:15 ·"
+           #772 div.what
+             #773 "Dentist"
+           #774 button [data-k="x:1"]
+             #775 "✕"
+         #776 div.event
+           #777 div.at
+             #778 "12:15"
+           #779 div.what
+             #780 "Lunch"
+           #781 button [data-k="x:2"]
+             #782 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #783 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #784 "Remind: off"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 11  (clicks fed to guest: []) ---
+   [tap] #7
+   [page] 144 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #785 "December 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #786 button.day.out [data-k="d:20787"]
+           #787 "30"
+         #788 button.day [data-k="d:20788"]
+           #789 "1"
+         #790 button.day [data-k="d:20789"]
+           #791 "2"
+         #792 button.day [data-k="d:20790"]
+           #793 "3"
+         #794 button.day [data-k="d:20791"]
+           #795 "4"
+         #796 button.day [data-k="d:20792"]
+           #797 "5"
+         #798 button.day [data-k="d:20793"]
+           #799 "6"
+         #800 button.day [data-k="d:20794"]
+           #801 "7"
+         #802 button.day [data-k="d:20795"]
+           #803 "8"
+         #804 button.day [data-k="d:20796"]
+           #805 "9"
+         #806 button.day [data-k="d:20797"]
+           #807 "10"
+         #808 button.day [data-k="d:20798"]
+           #809 "11"
+         #810 button.day [data-k="d:20799"]
+           #811 "12"
+         #812 button.day [data-k="d:20800"]
+           #813 "13"
+         #814 button.day [data-k="d:20801"]
+           #815 "14"
+         #816 button.day [data-k="d:20802"]
+           #817 "15"
+         #818 button.day [data-k="d:20803"]
+           #819 "16"
+         #820 button.day [data-k="d:20804"]
+           #821 "17"
+         #822 button.day [data-k="d:20805"]
+           #823 "18"
+         #824 button.day [data-k="d:20806"]
+           #825 "19"
+         #826 button.day [data-k="d:20807"]
+           #827 "20"
+         #828 button.day [data-k="d:20808"]
+           #829 "21"
+         #830 button.day [data-k="d:20809"]
+           #831 "22"
+         #832 button.day [data-k="d:20810"]
+           #833 "23"
+         #834 button.day [data-k="d:20811"]
+           #835 "24"
+         #836 button.day [data-k="d:20812"]
+           #837 "25"
+         #838 button.day [data-k="d:20813"]
+           #839 "26"
+         #840 button.day [data-k="d:20814"]
+           #841 "27"
+         #842 button.day [data-k="d:20815"]
+           #843 "28"
+         #844 button.day [data-k="d:20816"]
+           #845 "29"
+         #846 button.day [data-k="d:20817"]
+           #847 "30"
+         #848 button.day [data-k="d:20818"]
+           #849 "31"
+         #850 button.day.out [data-k="d:20819"]
+           #851 "1"
+         #852 button.day.out [data-k="d:20820"]
+           #853 "2"
+         #854 button.day.out [data-k="d:20821"]
+           #855 "3"
+         #856 button.day.out [data-k="d:20822"]
+           #857 "4"
+         #858 button.day.out [data-k="d:20823"]
+           #859 "5"
+         #860 button.day.out [data-k="d:20824"]
+           #861 "6"
+         #862 button.day.out [data-k="d:20825"]
+           #863 "7"
+         #864 button.day.out [data-k="d:20826"]
+           #865 "8"
+         #866 button.day.out [data-k="d:20827"]
+           #867 "9"
+         #868 button.day.out [data-k="d:20828"]
+           #869 "10"
+       #25 div.when
+         #870 "Tuesday, November 10"
+       #26 div.events
+         #871 div.event
+           #872 div.at
+             #873 "12:15 ·"
+           #874 div.what
+             #875 "Dentist"
+           #876 button [data-k="x:1"]
+             #877 "✕"
+         #878 div.event
+           #879 div.at
+             #880 "12:15"
+           #881 div.what
+             #882 "Lunch"
+           #883 button [data-k="x:2"]
+             #884 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #885 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #886 "Remind: off"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 12  (clicks fed to guest: []) ---
+   [tap] #5
+   [page] 144 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #887 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #888 button.day.out [data-k="d:20752"]
+           #889 "26"
+         #890 button.day.out [data-k="d:20753"]
+           #891 "27"
+         #892 button.day.out [data-k="d:20754"]
+           #893 "28"
+         #894 button.day.out [data-k="d:20755"]
+           #895 "29"
+         #896 button.day.out [data-k="d:20756"]
+           #897 "30"
+         #898 button.day.out [data-k="d:20757"]
+           #899 "31"
+         #900 button.day [data-k="d:20758"]
+           #901 "1"
+         #902 button.day [data-k="d:20759"]
+           #903 "2"
+         #904 button.day [data-k="d:20760"]
+           #905 "3"
+         #906 button.day [data-k="d:20761"]
+           #907 "4"
+         #908 button.day [data-k="d:20762"]
+           #909 "5"
+         #910 button.day [data-k="d:20763"]
+           #911 "6"
+         #912 button.day [data-k="d:20764"]
+           #913 "7"
+         #914 button.day [data-k="d:20765"]
+           #915 "8"
+         #916 button.day [data-k="d:20766"]
+           #917 "9"
+         #918 button.day.has.today.picked [data-k="d:20767"]
+           #919 "10"
+         #920 button.day [data-k="d:20768"]
+           #921 "11"
+         #922 button.day [data-k="d:20769"]
+           #923 "12"
+         #924 button.day [data-k="d:20770"]
+           #925 "13"
+         #926 button.day [data-k="d:20771"]
+           #927 "14"
+         #928 button.day [data-k="d:20772"]
+           #929 "15"
+         #930 button.day [data-k="d:20773"]
+           #931 "16"
+         #932 button.day [data-k="d:20774"]
+           #933 "17"
+         #934 button.day [data-k="d:20775"]
+           #935 "18"
+         #936 button.day [data-k="d:20776"]
+           #937 "19"
+         #938 button.day [data-k="d:20777"]
+           #939 "20"
+         #940 button.day [data-k="d:20778"]
+           #941 "21"
+         #942 button.day [data-k="d:20779"]
+           #943 "22"
+         #944 button.day [data-k="d:20780"]
+           #945 "23"
+         #946 button.day [data-k="d:20781"]
+           #947 "24"
+         #948 button.day [data-k="d:20782"]
+           #949 "25"
+         #950 button.day [data-k="d:20783"]
+           #951 "26"
+         #952 button.day [data-k="d:20784"]
+           #953 "27"
+         #954 button.day [data-k="d:20785"]
+           #955 "28"
+         #956 button.day [data-k="d:20786"]
+           #957 "29"
+         #958 button.day [data-k="d:20787"]
+           #959 "30"
+         #960 button.day.out [data-k="d:20788"]
+           #961 "1"
+         #962 button.day.out [data-k="d:20789"]
+           #963 "2"
+         #964 button.day.out [data-k="d:20790"]
+           #965 "3"
+         #966 button.day.out [data-k="d:20791"]
+           #967 "4"
+         #968 button.day.out [data-k="d:20792"]
+           #969 "5"
+         #970 button.day.out [data-k="d:20793"]
+           #971 "6"
+       #25 div.when
+         #972 "Tuesday, November 10"
+       #26 div.events
+         #973 div.event
+           #974 div.at
+             #975 "12:15 ·"
+           #976 div.what
+             #977 "Dentist"
+           #978 button [data-k="x:1"]
+             #979 "✕"
+         #980 div.event
+           #981 div.at
+             #982 "12:15"
+           #983 div.what
+             #984 "Lunch"
+           #985 button [data-k="x:2"]
+             #986 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #987 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #988 "Remind: off"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 13  (clicks fed to guest: []) ---
+   [tap] #985
+   [page] 137 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #989 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #990 button.day.out [data-k="d:20752"]
+           #991 "26"
+         #992 button.day.out [data-k="d:20753"]
+           #993 "27"
+         #994 button.day.out [data-k="d:20754"]
+           #995 "28"
+         #996 button.day.out [data-k="d:20755"]
+           #997 "29"
+         #998 button.day.out [data-k="d:20756"]
+           #999 "30"
+         #1000 button.day.out [data-k="d:20757"]
+           #1001 "31"
+         #1002 button.day [data-k="d:20758"]
+           #1003 "1"
+         #1004 button.day [data-k="d:20759"]
+           #1005 "2"
+         #1006 button.day [data-k="d:20760"]
+           #1007 "3"
+         #1008 button.day [data-k="d:20761"]
+           #1009 "4"
+         #1010 button.day [data-k="d:20762"]
+           #1011 "5"
+         #1012 button.day [data-k="d:20763"]
+           #1013 "6"
+         #1014 button.day [data-k="d:20764"]
+           #1015 "7"
+         #1016 button.day [data-k="d:20765"]
+           #1017 "8"
+         #1018 button.day [data-k="d:20766"]
+           #1019 "9"
+         #1020 button.day.has.today.picked [data-k="d:20767"]
+           #1021 "10"
+         #1022 button.day [data-k="d:20768"]
+           #1023 "11"
+         #1024 button.day [data-k="d:20769"]
+           #1025 "12"
+         #1026 button.day [data-k="d:20770"]
+           #1027 "13"
+         #1028 button.day [data-k="d:20771"]
+           #1029 "14"
+         #1030 button.day [data-k="d:20772"]
+           #1031 "15"
+         #1032 button.day [data-k="d:20773"]
+           #1033 "16"
+         #1034 button.day [data-k="d:20774"]
+           #1035 "17"
+         #1036 button.day [data-k="d:20775"]
+           #1037 "18"
+         #1038 button.day [data-k="d:20776"]
+           #1039 "19"
+         #1040 button.day [data-k="d:20777"]
+           #1041 "20"
+         #1042 button.day [data-k="d:20778"]
+           #1043 "21"
+         #1044 button.day [data-k="d:20779"]
+           #1045 "22"
+         #1046 button.day [data-k="d:20780"]
+           #1047 "23"
+         #1048 button.day [data-k="d:20781"]
+           #1049 "24"
+         #1050 button.day [data-k="d:20782"]
+           #1051 "25"
+         #1052 button.day [data-k="d:20783"]
+           #1053 "26"
+         #1054 button.day [data-k="d:20784"]
+           #1055 "27"
+         #1056 button.day [data-k="d:20785"]
+           #1057 "28"
+         #1058 button.day [data-k="d:20786"]
+           #1059 "29"
+         #1060 button.day [data-k="d:20787"]
+           #1061 "30"
+         #1062 button.day.out [data-k="d:20788"]
+           #1063 "1"
+         #1064 button.day.out [data-k="d:20789"]
+           #1065 "2"
+         #1066 button.day.out [data-k="d:20790"]
+           #1067 "3"
+         #1068 button.day.out [data-k="d:20791"]
+           #1069 "4"
+         #1070 button.day.out [data-k="d:20792"]
+           #1071 "5"
+         #1072 button.day.out [data-k="d:20793"]
+           #1073 "6"
+       #25 div.when
+         #1074 "Tuesday, November 10"
+       #26 div.events
+         #1075 div.event
+           #1076 div.at
+             #1077 "12:15 ·"
+           #1078 div.what
+             #1079 "Dentist"
+           #1080 button [data-k="x:1"]
+             #1081 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #1082 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #1083 "Remind: off"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 14  (clicks fed to guest: []) ---
+   [page] 137 nodes
+   #1 body
+     #2 div.cal {click input}
+       #3 div.head
+         #4 div.month
+           #989 "November 2026"
+         #5 button [data-k="prev"]
+           #6 "‹"
+         #7 button [data-k="next"]
+           #8 "›"
+       #9 div.names
+         #10 div.name
+           #11 "Mo"
+         #12 div.name
+           #13 "Tu"
+         #14 div.name
+           #15 "We"
+         #16 div.name
+           #17 "Th"
+         #18 div.name
+           #19 "Fr"
+         #20 div.name
+           #21 "Sa"
+         #22 div.name
+           #23 "Su"
+       #24 div.grid
+         #990 button.day.out [data-k="d:20752"]
+           #991 "26"
+         #992 button.day.out [data-k="d:20753"]
+           #993 "27"
+         #994 button.day.out [data-k="d:20754"]
+           #995 "28"
+         #996 button.day.out [data-k="d:20755"]
+           #997 "29"
+         #998 button.day.out [data-k="d:20756"]
+           #999 "30"
+         #1000 button.day.out [data-k="d:20757"]
+           #1001 "31"
+         #1002 button.day [data-k="d:20758"]
+           #1003 "1"
+         #1004 button.day [data-k="d:20759"]
+           #1005 "2"
+         #1006 button.day [data-k="d:20760"]
+           #1007 "3"
+         #1008 button.day [data-k="d:20761"]
+           #1009 "4"
+         #1010 button.day [data-k="d:20762"]
+           #1011 "5"
+         #1012 button.day [data-k="d:20763"]
+           #1013 "6"
+         #1014 button.day [data-k="d:20764"]
+           #1015 "7"
+         #1016 button.day [data-k="d:20765"]
+           #1017 "8"
+         #1018 button.day [data-k="d:20766"]
+           #1019 "9"
+         #1020 button.day.has.today.picked [data-k="d:20767"]
+           #1021 "10"
+         #1022 button.day [data-k="d:20768"]
+           #1023 "11"
+         #1024 button.day [data-k="d:20769"]
+           #1025 "12"
+         #1026 button.day [data-k="d:20770"]
+           #1027 "13"
+         #1028 button.day [data-k="d:20771"]
+           #1029 "14"
+         #1030 button.day [data-k="d:20772"]
+           #1031 "15"
+         #1032 button.day [data-k="d:20773"]
+           #1033 "16"
+         #1034 button.day [data-k="d:20774"]
+           #1035 "17"
+         #1036 button.day [data-k="d:20775"]
+           #1037 "18"
+         #1038 button.day [data-k="d:20776"]
+           #1039 "19"
+         #1040 button.day [data-k="d:20777"]
+           #1041 "20"
+         #1042 button.day [data-k="d:20778"]
+           #1043 "21"
+         #1044 button.day [data-k="d:20779"]
+           #1045 "22"
+         #1046 button.day [data-k="d:20780"]
+           #1047 "23"
+         #1048 button.day [data-k="d:20781"]
+           #1049 "24"
+         #1050 button.day [data-k="d:20782"]
+           #1051 "25"
+         #1052 button.day [data-k="d:20783"]
+           #1053 "26"
+         #1054 button.day [data-k="d:20784"]
+           #1055 "27"
+         #1056 button.day [data-k="d:20785"]
+           #1057 "28"
+         #1058 button.day [data-k="d:20786"]
+           #1059 "29"
+         #1060 button.day [data-k="d:20787"]
+           #1061 "30"
+         #1062 button.day.out [data-k="d:20788"]
+           #1063 "1"
+         #1064 button.day.out [data-k="d:20789"]
+           #1065 "2"
+         #1066 button.day.out [data-k="d:20790"]
+           #1067 "3"
+         #1068 button.day.out [data-k="d:20791"]
+           #1069 "4"
+         #1070 button.day.out [data-k="d:20792"]
+           #1071 "5"
+         #1072 button.day.out [data-k="d:20793"]
+           #1073 "6"
+       #25 div.when
+         #1074 "Tuesday, November 10"
+       #26 div.events
+         #1075 div.event
+           #1076 div.at
+             #1077 "12:15 ·"
+           #1078 div.what
+             #1079 "Dentist"
+           #1080 button [data-k="x:1"]
+             #1081 "✕"
+       #27 div.new
+         #28 input.title [placeholder="New event"] value=""
+         #29 div.row
+           #30 button [data-k="h-"]
+             #31 "−1 h"
+           #32 div.time
+             #1082 "12:15"
+           #33 button [data-k="h+"]
+             #34 "+1 h"
+           #35 button [data-k="m-"]
+             #36 "−15"
+           #37 button [data-k="m+"]
+             #38 "+15"
+         #39 div.row
+           #40 button.remind [data-k="remind"]
+             #1083 "Remind: off"
+           #41 button.go [data-k="add"]
+             #42 "Add"
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)

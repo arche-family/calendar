@@ -1,0 +1,6 @@
+name: calendar
+version: 1
+title: Calendar
+about: The month, its events and their reminders, in Arche
+publisher: arche
+needs: storage

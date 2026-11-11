@@ -1,0 +1,591 @@
+/// Calendar, the Arche phone's, written in Arche, as Android's: the month,
+/// a grid of its weeks from Monday, today marked, the day picked filled,
+/// and a dot on a day that has events; ‹ and › go to the month before and
+/// after. The day picked has its events under the grid, in the order of
+/// their times, each with ✕ to delete it; a new one is its title, its time
+/// set an hour or a quarter of an hour at a time, whether to be reminded,
+/// and Add. Time is the shell's (now-millis), as the user reads it
+/// (utc-offset).
+///
+/// An app of the phone's world (arche:phone, wit/): an event to be
+/// reminded of has the phone wake the app at its time (background's
+/// wake-at), off the screen or asleep, and the app, woken, posts its
+/// notification (notify's post): the time it asked for has come, whatever
+/// its clock says. The phone wakes an app at one time, so the app asks for
+/// the soonest, and again once woken. The events, up to when their
+/// reminders were posted and the time it asked for, are kept in the app's
+/// storage.
+import alloc;
+import background;
+import dom;
+import host_api;
+import notify;
+import std;
+
+const SHEET: str = "body { padding: 0; } .cal { display: flex; flex-direction: column; gap: 12px; padding: 16px; } .head { display: flex; flex-direction: row; align-items: center; gap: 8px; } .month { font-size: 24px; color: var(--nimadir-text); flex: 1; } .names, .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; } .name { font-size: 13px; color: var(--nimadir-muted); text-align: center; } .day { padding: 10px 0; border-radius: 20px; font-size: 16px; border: 0; background: transparent; color: var(--nimadir-text); } .day.out { color: var(--nimadir-muted); } .day.has { background: var(--nimadir-surface); } .day.today { color: var(--nimadir-accent); } .day.picked { background: var(--nimadir-accent); color: var(--nimadir-bg); } .when { font-size: 18px; color: var(--nimadir-text); } .events { display: flex; flex-direction: column; gap: 8px; } .event { display: flex; flex-direction: row; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 16px; background: var(--nimadir-surface); } .at { font-size: 15px; color: var(--nimadir-muted); } .what { font-size: 16px; color: var(--nimadir-text); flex: 1; } .none { font-size: 15px; color: var(--nimadir-muted); } .new { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 24px; background: var(--nimadir-surface); } .row { display: flex; flex-direction: row; align-items: center; gap: 8px; } .time { font-size: 28px; color: var(--nimadir-text); } button { padding: 10px 14px; border-radius: 20px; font-size: 15px; border: 0; background: var(--nimadir-accent-wash); color: var(--nimadir-text); } button.go { padding: 12px 24px; background: var(--nimadir-accent); color: var(--nimadir-bg); } input { padding: 12px; border-radius: 12px; border: 0; font-size: 17px; background: var(--nimadir-bg); color: var(--nimadir-text); }";
+
+const DAY_MINUTES: i64 = 1440;
+const DAY_MS: i64 = 86400000;
+
+/// The name of month m, 1 to 12.
+fn month_name(m: i64) -> str {
+    if m == 1 { return "January"; }
+    if m == 2 { return "February"; }
+    if m == 3 { return "March"; }
+    if m == 4 { return "April"; }
+    if m == 5 { return "May"; }
+    if m == 6 { return "June"; }
+    if m == 7 { return "July"; }
+    if m == 8 { return "August"; }
+    if m == 9 { return "September"; }
+    if m == 10 { return "October"; }
+    if m == 11 { return "November"; }
+    return "December";
+}
+
+/// The name of the day of the week w, 0 for Monday.
+fn weekday_name(w: i64) -> str {
+    if w == 0 { return "Monday"; }
+    if w == 1 { return "Tuesday"; }
+    if w == 2 { return "Wednesday"; }
+    if w == 3 { return "Thursday"; }
+    if w == 4 { return "Friday"; }
+    if w == 5 { return "Saturday"; }
+    return "Sunday";
+}
+
+/// An event: its day, in days since 1970; its time, in minutes of the
+/// day as the user reads it; whether to be reminded of it; its title.
+type Event = struct {
+    id: u64,
+    day: i64,
+    minute: i64,
+    remind: bool,
+    title: alloc.String,
+}
+
+type Calendar = struct {
+    events: alloc.List(Event),
+    next: u64,
+    /// Up to when reminders have been posted, and the time the phone was
+    /// asked to wake the app at (0 for none), ms since 1970.
+    told: i64,
+    wake: i64,
+    /// The month shown, and the day picked.
+    year: i64,
+    month: i64,
+    picked: i64,
+    /// The new event: its title as typed, its time, whether to remind.
+    title: alloc.String,
+    at: i64,
+    remind: bool,
+    /// The page's nodes.
+    month_node: u32,
+    grid: u32,
+    when: u32,
+    list: u32,
+    field: u32,
+    time: u32,
+    remind_node: u32,
+}
+
+/// A day of the calendar: its year, month (1 to 12) and day.
+type Civil = struct {
+    y: i64,
+    m: i64,
+    d: i64,
+}
+
+/// The day y-m-d, in days since 1970-01-01 (Howard Hinnant's
+/// days_from_civil).
+fn days_of(y: i64, m: i64, d: i64) -> i64 {
+    var yy = y;
+    if m <= 2 {
+        yy -= 1;
+    }
+    var era = yy / 400;
+    if yy < 0 and yy % 400 != 0 {
+        era -= 1;
+    }
+    let yoe = yy - era * 400;
+    var mp = m - 3;
+    if m <= 2 {
+        mp = m + 9;
+    }
+    let doy = (153 * mp + 2) / 5 + d - 1;
+    let doe = yoe * 365 + yoe / 4 - yoe / 100 + doy;
+    return era * 146097 + doe - 719468;
+}
+
+/// The day days since 1970-01-01 is (civil_from_days).
+fn civil_of(days: i64) -> Civil {
+    let z = days + 719468;
+    var era = z / 146097;
+    if z < 0 and z % 146097 != 0 {
+        era -= 1;
+    }
+    let doe = z - era * 146097;
+    let yoe = (doe - doe / 1460 + doe / 36524 - doe / 146096) / 365;
+    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    let mp = (5 * doy + 2) / 153;
+    let d = doy - (153 * mp + 2) / 5 + 1;
+    var m = mp + 3;
+    if mp >= 10 {
+        m = mp - 9;
+    }
+    var y = yoe + era * 400;
+    if m <= 2 {
+        y += 1;
+    }
+    return Civil { y: y, m: m, d: d };
+}
+
+/// The day of the week of days, 0 for Monday.
+fn weekday(days: i64) -> i64 {
+    var w = (days + 3) % 7;
+    if w < 0 {
+        w += 7;
+    }
+    return w;
+}
+
+/// n / d rounded down.
+fn floor_div(n: i64, d: i64) -> i64 {
+    var q = n / d;
+    if n % d != 0 and n < 0 {
+        q -= 1;
+    }
+    return q;
+}
+
+/// The day now is, as the user reads it.
+fn today(host: &mut std.Host) -> i64 {
+    return floor_div(n: host_api.now_millis(host) + offset_ms(host), d: DAY_MS);
+}
+
+fn offset_ms(host: &mut std.Host) -> i64 {
+    return host_api.utc_offset(host) as i64 * 60000;
+}
+
+/// When e is, in ms since 1970.
+fn at_ms(e: &Event, offset: i64) -> i64 {
+    return (e.day * DAY_MINUTES + e.minute) * 60000 - offset;
+}
+
+fn init(host: &mut std.Host, a: alloc.Allocator) -> Calendar {
+    _ = dom.add_stylesheet(host, css: SHEET);
+    let root = dom.root(host);
+    let markup = "<div class='cal'><div class='head'><div class='month'></div><button data-k='prev'>‹</button><button data-k='next'>›</button></div><div class='names'><div class='name'>Mo</div><div class='name'>Tu</div><div class='name'>We</div><div class='name'>Th</div><div class='name'>Fr</div><div class='name'>Sa</div><div class='name'>Su</div></div><div class='grid'></div><div class='when'></div><div class='events'></div><div class='new'><input class='title' placeholder='New event'><div class='row'><button data-k='h-'>−1 h</button><div class='time'></div><button data-k='h+'>+1 h</button><button data-k='m-'>−15</button><button data-k='m+'>+15</button></div><div class='row'><button class='remind' data-k='remind'></button><button class='go' data-k='add'>Add</button></div></div></div>";
+    var why = alloc.String.init(a);
+    if not dom.set_markup(host, item: root, markup: markup, why: &mut why, a: a) {
+        host_api.log(host, msg: why.view());
+    }
+    let cal = first(host, selector: ".cal", a: a);
+    dom.listen(host, item: cal, kind: "click");
+    dom.listen(host, item: cal, kind: "input");
+    let now_day = today(host);
+    let c = civil_of(now_day);
+    var state = Calendar {
+        events: alloc.List(Event).init(a),
+        next: 1,
+        told: host_api.now_millis(host),
+        wake: 0,
+        year: c.y,
+        month: c.m,
+        picked: now_day,
+        title: alloc.String.init(a),
+        at: 9 * 60,
+        remind: true,
+        month_node: first(host, selector: ".month", a: a),
+        grid: first(host, selector: ".grid", a: a),
+        when: first(host, selector: ".when", a: a),
+        list: first(host, selector: ".events", a: a),
+        field: first(host, selector: ".title", a: a),
+        time: first(host, selector: ".time", a: a),
+        remind_node: first(host, selector: ".remind", a: a),
+    };
+    match host_api.storage_get(host, key: "events", a: a) {
+        some(kept) => { load(&mut state, text: kept.view(), a: a); }
+        none => { }
+    }
+    match host_api.storage_get(host, key: "times", a: a) {
+        some(kept) => {
+            let k = kept.view();
+            state.told = number(k) as i64;
+            var sp: usize = 0;
+            while sp < k.len() and k.bytes()[sp] != ' ' {
+                sp += 1;
+            }
+            if sp < k.len() {
+                state.wake = number(k[sp + 1..k.len()]) as i64;
+            }
+        }
+        none => { keep_times(&state, host: host, a: a); }
+    }
+    show(&mut state, host: host, a: a);
+    return state;
+}
+
+fn update(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
+    if background.woken(host) {
+        remind(state, host: host, a: a);
+    }
+    var changed = false;
+    for e in dom.events(host, a: a).items() {
+        if e.kind.view().eq("click") {
+            match key_of(host, n: e.target, a: a) {
+                some(k) => {
+                    press(state, host: host, key: k.view(), a: a);
+                    changed = true;
+                }
+                none => { }
+            }
+        } else if e.kind.view().eq("input") and e.target == state.field {
+            state.title = alloc.String.from(e.value.view(), a);
+        }
+    }
+    if changed {
+        show(state, host: host, a: a);
+    }
+}
+
+fn press(state: &mut Calendar, host: &mut std.Host, key: str, a: alloc.Allocator) {
+    if key.eq("prev") or key.eq("next") {
+        var m = state.month - 1;
+        if key.eq("prev") {
+            m -= 1;
+        } else {
+            m += 1;
+        }
+        state.year += floor_div(n: m, d: 12);
+        state.month = m - floor_div(n: m, d: 12) * 12 + 1;
+    } else if key.starts_with("d:") {
+        let s = key[2..key.len()];
+        if s.starts_with("-") {
+            state.picked = 0 - number(s[1..s.len()]) as i64;
+        } else {
+            state.picked = number(s) as i64;
+        }
+        let c = civil_of(state.picked);
+        state.year = c.y;
+        state.month = c.m;
+    } else if key.eq("h+") or key.eq("h-") or key.eq("m+") or key.eq("m-") {
+        var step: i64 = 15;
+        if key.starts_with("h") {
+            step = 60;
+        }
+        if key.bytes()[1] == '-' {
+            step = DAY_MINUTES - step;
+        }
+        state.at = (state.at + step) % DAY_MINUTES;
+    } else if key.eq("remind") {
+        state.remind = not state.remind;
+    } else if key.eq("add") {
+        if state.title.len() == 0 {
+            return;
+        }
+        state.events.push(Event { id: state.next, day: state.picked, minute: state.at, remind: state.remind, title: alloc.String.from(state.title.view(), a) });
+        state.next += 1;
+        state.title = alloc.String.init(a);
+        dom.set_attribute(host, item: state.field, name: "value", value_: "");
+        save(state, host: host, a: a);
+        schedule(state, host: host, a: a);
+    } else if key.starts_with("x:") {
+        let id = number(key[2..key.len()]);
+        var kept = alloc.List(Event).init(a);
+        for e in state.events.items() {
+            if e.id != id {
+                kept.push(Event { id: e.id, day: e.day, minute: e.minute, remind: e.remind, title: alloc.String.from(e.title.view(), a) });
+            }
+        }
+        state.events = kept;
+        save(state, host: host, a: a);
+        schedule(state, host: host, a: a);
+    }
+}
+
+/// Woken: the reminders whose time has come since the last were posted,
+/// posted, the time the app asked to be woken at come too; then the phone
+/// asked to wake the app for the next.
+fn remind(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
+    var until = host_api.now_millis(host);
+    if state.wake > until {
+        until = state.wake;
+    }
+    let offset = offset_ms(host);
+    for e in state.events.items() {
+        let t = at_ms(e, offset: offset);
+        if e.remind and t > state.told and t <= until {
+            var text = alloc.String.init(a);
+            minutes_text(&mut text, minutes: e.minute);
+            _ = notify.post(host, title: e.title.view(), text: text.view());
+        }
+    }
+    if until > state.told {
+        state.told = until;
+    }
+    schedule(state, host: host, a: a);
+}
+
+/// The phone asked to wake the app at the soonest reminder to come; for
+/// none, not to.
+fn schedule(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
+    var from = host_api.now_millis(host);
+    if state.told > from {
+        from = state.told;
+    }
+    let offset = offset_ms(host);
+    var soonest: i64 = 0;
+    for e in state.events.items() {
+        let t = at_ms(e, offset: offset);
+        if e.remind and t > from and (soonest == 0 or t < soonest) {
+            soonest = t;
+        }
+    }
+    background.wake_at(host, at_millis: soonest);
+    state.wake = soonest;
+    keep_times(state, host: host, a: a);
+}
+
+/// The page as it is: the month and its grid, the day picked and its
+/// events, and the new event's time and reminder.
+fn show(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
+    var title = alloc.String.from(month_name(state.month), a);
+    title.push_str(" ");
+    title.push_i64(state.year);
+    dom.set_text(host, item: state.month_node, text: title.view());
+    // Six weeks from the Monday on or before the first.
+    let first_day = days_of(y: state.year, m: state.month, d: 1);
+    let start = first_day - weekday(first_day);
+    let now_day = today(host);
+    var cells = alloc.String.init(a);
+    var k: i64 = 0;
+    while k < 42 : (k += 1) {
+        let day = start + k;
+        let c = civil_of(day);
+        cells.push_str("<button class='day");
+        if c.m != state.month {
+            cells.push_str(" out");
+        }
+        if has_events(state, day: day) {
+            cells.push_str(" has");
+        }
+        if day == now_day {
+            cells.push_str(" today");
+        }
+        if day == state.picked {
+            cells.push_str(" picked");
+        }
+        cells.push_str("' data-k='d:");
+        cells.push_i64(day);
+        cells.push_str("'>");
+        cells.push_i64(c.d);
+        cells.push_str("</button>");
+    }
+    var why = alloc.String.init(a);
+    if not dom.set_markup(host, item: state.grid, markup: cells.view(), why: &mut why, a: a) {
+        host_api.log(host, msg: why.view());
+    }
+    // The day picked: its name, and its events by their times.
+    let p = civil_of(state.picked);
+    var when = alloc.String.from(weekday_name(weekday(state.picked)), a);
+    when.push_str(", ");
+    when.push_str(month_name(p.m));
+    when.push_str(" ");
+    when.push_i64(p.d);
+    dom.set_text(host, item: state.when, text: when.view());
+    for old in dom.children(host, item: state.list, a: a).items() {
+        dom.release(host, item: old.*);
+    }
+    var order = alloc.List(usize).init(a);
+    var i: usize = 0;
+    while i < state.events.len() : (i += 1) {
+        if state.events.items()[i].day == state.picked {
+            // Into order by time: back while the one before is later.
+            order.push(i);
+            var j = order.len() - 1;
+            while j > 0 and state.events.items()[order.items()[j - 1]].minute > state.events.items()[order.items()[j]].minute : (j -= 1) {
+                let t = order.items()[j];
+                let before = order.items()[j - 1];
+                order.items_mut()[j] = before;
+                order.items_mut()[j - 1] = t;
+            }
+        }
+    }
+    if order.len() == 0 {
+        line(host, parent_: state.list, tag: "div", class: "none", text: "No events", a: a);
+    }
+    for at in order.items() {
+        let e = &state.events.items()[at.*];
+        let row = dom.create_element(host, tag: "div");
+        dom.set_attribute(host, item: row, name: "class", value_: "event");
+        var t = alloc.String.init(a);
+        minutes_text(&mut t, minutes: e.minute);
+        if e.remind {
+            t.push_str(" ·");
+        }
+        line(host, parent_: row, tag: "div", class: "at", text: t.view(), a: a);
+        line(host, parent_: row, tag: "div", class: "what", text: e.title.view(), a: a);
+        let x = dom.create_element(host, tag: "button");
+        var k2 = alloc.String.from("x:", a);
+        k2.push_u64(e.id);
+        dom.set_attribute(host, item: x, name: "data-k", value_: k2.view());
+        dom.set_text(host, item: x, text: "✕");
+        dom.append_child(host, parent_: row, child: x);
+        dom.append_child(host, parent_: state.list, child: row);
+    }
+    var at_text = alloc.String.init(a);
+    minutes_text(&mut at_text, minutes: state.at);
+    dom.set_text(host, item: state.time, text: at_text.view());
+    if state.remind {
+        dom.set_text(host, item: state.remind_node, text: "Remind: on");
+    } else {
+        dom.set_text(host, item: state.remind_node, text: "Remind: off");
+    }
+}
+
+/// Whether day has an event.
+fn has_events(state: &Calendar, day: i64) -> bool {
+    for e in state.events.items() {
+        if e.day == day {
+            return true;
+        }
+    }
+    return false;
+}
+
+/// An element of tag and class with text, last under parent_.
+fn line(host: &mut std.Host, parent_: u32, tag: str, class: str, text: str, a: alloc.Allocator) {
+    let d = dom.create_element(host, tag: tag);
+    dom.set_attribute(host, item: d, name: "class", value_: class);
+    dom.set_text(host, item: d, text: text);
+    dom.append_child(host, parent_: parent_, child: d);
+}
+
+/// Minutes of the day as "09:05".
+fn minutes_text(out: &mut alloc.String, minutes: i64) {
+    two(out, n: minutes / 60);
+    out.push_str(":");
+    two(out, n: minutes % 60);
+}
+
+fn two(out: &mut alloc.String, n: i64) {
+    if n < 10 {
+        out.push_str("0");
+    }
+    out.push_i64(n);
+}
+
+/// The events kept, a line each: number, day, minute, 1 or 0 for the
+/// reminder, and the title, parted by tabs.
+fn save(state: &Calendar, host: &mut std.Host, a: alloc.Allocator) {
+    var text = alloc.String.init(a);
+    for e in state.events.items() {
+        text.push_u64(e.id);
+        text.push_str("\t");
+        text.push_i64(e.day);
+        text.push_str("\t");
+        text.push_i64(e.minute);
+        if e.remind {
+            text.push_str("\t1\t");
+        } else {
+            text.push_str("\t0\t");
+        }
+        for c in e.title.view().bytes() {
+            if c.* == '\t' or c.* == '\n' {
+                text.push_str(" ");
+            } else {
+                text.push_ascii(c.*);
+            }
+        }
+        text.push_str("\n");
+    }
+    var why = alloc.String.init(a);
+    if not host_api.storage_set(host, key: "events", value: text.view(), why: &mut why, a: a) {
+        host_api.log(host, msg: why.view());
+    }
+}
+
+/// Up to when reminders were posted, and the time the app asked to be
+/// woken at, kept as "told wake".
+fn keep_times(state: &Calendar, host: &mut std.Host, a: alloc.Allocator) {
+    var text = alloc.String.init(a);
+    text.push_i64(state.told);
+    text.push_str(" ");
+    text.push_i64(state.wake);
+    var why = alloc.String.init(a);
+    if not host_api.storage_set(host, key: "times", value: text.view(), why: &mut why, a: a) {
+        host_api.log(host, msg: why.view());
+    }
+}
+
+/// The events kept, from text, as save wrote it.
+fn load(state: &mut Calendar, text: str, a: alloc.Allocator) {
+    let b = text.bytes();
+    var at: usize = 0;
+    while at < b.len() {
+        var end = at;
+        while end < b.len() and b[end] != '\n' {
+            end += 1;
+        }
+        let l = text[at..end];
+        at = end + 1;
+        var tabs: [4]usize = [0; 4];
+        var n: usize = 0;
+        var k: usize = 0;
+        while k < l.len() and n < 4 : (k += 1) {
+            if l.bytes()[k] == '\t' {
+                tabs[n] = k;
+                n += 1;
+            }
+        }
+        if n < 4 {
+            continue;
+        }
+        let id = number(l[0..tabs[0]]);
+        let day_text = l[tabs[0] + 1..tabs[1]];
+        var day = number(day_text) as i64;
+        if day_text.starts_with("-") {
+            day = 0 - number(day_text[1..day_text.len()]) as i64;
+        }
+        state.events.push(Event { id: id, day: day, minute: number(l[tabs[1] + 1..tabs[2]]) as i64, remind: l[tabs[2] + 1..tabs[3]].eq("1"), title: alloc.String.from(l[tabs[3] + 1..l.len()], a) });
+        if id >= state.next {
+            state.next = id + 1;
+        }
+    }
+}
+
+/// The number s begins with.
+fn number(s: str) -> u64 {
+    var n: u64 = 0;
+    for c in s.bytes() {
+        if c.* < '0' or c.* > '9' {
+            break;
+        }
+        n = n * 10 + (c.* - '0') as u64;
+    }
+    return n;
+}
+
+/// The first node under the page that selector finds; 0 for none.
+fn first(host: &mut std.Host, selector: str, a: alloc.Allocator) -> u32 {
+    let found = dom.query_all(host, scope: dom.root(host), selector: selector, a: a);
+    if found.len() == 0 {
+        return 0;
+    }
+    return found.items()[0];
+}
+
+/// The key a click on n is: its data-k, or its nearest ancestor's.
+fn key_of(host: &mut std.Host, n: u32, a: alloc.Allocator) -> ?alloc.String {
+    var at = n;
+    var hops: u32 = 0;
+    while at != 0 and hops < 8 : (hops += 1) {
+        match dom.get_attribute(host, item: at, name: "data-k", a: a) {
+            some(k) => { return k; }
+            none => { }
+        }
+        at = dom.parent(host, item: at) orelse 0;
+    }
+    return none;
+}
