@@ -947,8 +947,8 @@
              #581 "12:15 ·"
            #582 div.what
              #583 "Dentist"
-           #584 button [data-k="x:1"]
-             #585 "✕"
+           #584 button.icon [data-k="x:1"]
+             #585 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
          #29 div.time
@@ -1090,8 +1090,8 @@
              #581 "12:15 ·"
            #582 div.what
              #583 "Dentist"
-           #584 button [data-k="x:1"]
-             #585 "✕"
+           #584 button.icon [data-k="x:1"]
+             #585 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
          #29 div.time
@@ -1234,8 +1234,8 @@
              #581 "12:15 ·"
            #582 div.what
              #583 "Dentist"
-           #584 button [data-k="x:1"]
-             #585 "✕"
+           #584 button.icon [data-k="x:1"]
+             #585 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Тушлик"
          #29 div.time
@@ -1377,8 +1377,8 @@
              #676 "12:15 ·"
            #677 div.what
              #678 "Dentist"
-           #679 button [data-k="x:1"]
-             #680 "✕"
+           #679 button.icon [data-k="x:1"]
+             #680 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value="Тушлик"
          #29 div.time
@@ -1520,15 +1520,15 @@
              #771 "12:15 ·"
            #772 div.what
              #773 "Dentist"
-           #774 button [data-k="x:1"]
-             #775 "✕"
+           #774 button.icon [data-k="x:1"]
+             #775 "close"
          #776 div.event
            #777 div.at
              #778 "12:15"
            #779 div.what
              #780 "Тушлик"
-           #781 button [data-k="x:2"]
-             #782 "✕"
+           #781 button.icon [data-k="x:2"]
+             #782 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
          #29 div.time
@@ -1671,15 +1671,15 @@
              #873 "12:15 ·"
            #874 div.what
              #875 "Dentist"
-           #876 button [data-k="x:1"]
-             #877 "✕"
+           #876 button.icon [data-k="x:1"]
+             #877 "close"
          #878 div.event
            #879 div.at
              #880 "12:15"
            #881 div.what
              #882 "Тушлик"
-           #883 button [data-k="x:2"]
-             #884 "✕"
+           #883 button.icon [data-k="x:2"]
+             #884 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
          #29 div.time
@@ -1821,15 +1821,15 @@
              #975 "12:15 ·"
            #976 div.what
              #977 "Dentist"
-           #978 button [data-k="x:1"]
-             #979 "✕"
+           #978 button.icon [data-k="x:1"]
+             #979 "close"
          #980 div.event
            #981 div.at
              #982 "12:15"
            #983 div.what
              #984 "Тушлик"
-           #985 button [data-k="x:2"]
-             #986 "✕"
+           #985 button.icon [data-k="x:2"]
+             #986 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
          #29 div.time
@@ -1971,8 +1971,8 @@
              #1077 "12:15 ·"
            #1078 div.what
              #1079 "Dentist"
-           #1080 button [data-k="x:1"]
-             #1081 "✕"
+           #1080 button.icon [data-k="x:1"]
+             #1081 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
          #29 div.time
@@ -2114,8 +2114,8 @@
              #1077 "12:15 ·"
            #1078 div.what
              #1079 "Dentist"
-           #1080 button [data-k="x:1"]
-             #1081 "✕"
+           #1080 button.icon [data-k="x:1"]
+             #1081 "close"
        #27 div.new
          #28 input.title [placeholder="New event"] value=""
          #29 div.time
