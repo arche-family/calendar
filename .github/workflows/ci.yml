@@ -1,8 +1,9 @@
 name: ci
 
+# Run by hand only (Actions' "Run workflow"): the account's Actions minutes
+# are few; the tests run on the machine they are written on.
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   # The app built with the Arche compiler of arche-lang's main, as a
