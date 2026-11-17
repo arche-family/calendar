@@ -1,2138 +1,2963 @@
 === headless run: 15 frames ===
 
 --- frame 0  (clicks fed to guest: []) ---
-   [page] 132 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #43 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #44 button.day.out [data-k="d:20752"]
-           #45 "26"
-         #46 button.day.out [data-k="d:20753"]
-           #47 "27"
-         #48 button.day.out [data-k="d:20754"]
-           #49 "28"
-         #50 button.day.out [data-k="d:20755"]
-           #51 "29"
-         #52 button.day.out [data-k="d:20756"]
-           #53 "30"
-         #54 button.day.out [data-k="d:20757"]
-           #55 "31"
-         #56 button.day [data-k="d:20758"]
-           #57 "1"
-         #58 button.day [data-k="d:20759"]
-           #59 "2"
-         #60 button.day [data-k="d:20760"]
-           #61 "3"
-         #62 button.day [data-k="d:20761"]
-           #63 "4"
-         #64 button.day [data-k="d:20762"]
-           #65 "5"
-         #66 button.day [data-k="d:20763"]
-           #67 "6"
-         #68 button.day [data-k="d:20764"]
-           #69 "7"
-         #70 button.day [data-k="d:20765"]
-           #71 "8"
-         #72 button.day [data-k="d:20766"]
-           #73 "9"
-         #74 button.day.today.picked [data-k="d:20767"]
-           #75 "10"
-         #76 button.day [data-k="d:20768"]
-           #77 "11"
-         #78 button.day [data-k="d:20769"]
-           #79 "12"
-         #80 button.day [data-k="d:20770"]
-           #81 "13"
-         #82 button.day [data-k="d:20771"]
-           #83 "14"
-         #84 button.day [data-k="d:20772"]
-           #85 "15"
-         #86 button.day [data-k="d:20773"]
-           #87 "16"
-         #88 button.day [data-k="d:20774"]
-           #89 "17"
-         #90 button.day [data-k="d:20775"]
-           #91 "18"
-         #92 button.day [data-k="d:20776"]
-           #93 "19"
-         #94 button.day [data-k="d:20777"]
-           #95 "20"
-         #96 button.day [data-k="d:20778"]
-           #97 "21"
-         #98 button.day [data-k="d:20779"]
-           #99 "22"
-         #100 button.day [data-k="d:20780"]
-           #101 "23"
-         #102 button.day [data-k="d:20781"]
-           #103 "24"
-         #104 button.day [data-k="d:20782"]
-           #105 "25"
-         #106 button.day [data-k="d:20783"]
-           #107 "26"
-         #108 button.day [data-k="d:20784"]
-           #109 "27"
-         #110 button.day [data-k="d:20785"]
-           #111 "28"
-         #112 button.day [data-k="d:20786"]
-           #113 "29"
-         #114 button.day [data-k="d:20787"]
-           #115 "30"
-         #116 button.day.out [data-k="d:20788"]
-           #117 "1"
-         #118 button.day.out [data-k="d:20789"]
-           #119 "2"
-         #120 button.day.out [data-k="d:20790"]
-           #121 "3"
-         #122 button.day.out [data-k="d:20791"]
-           #123 "4"
-         #124 button.day.out [data-k="d:20792"]
-           #125 "5"
-         #126 button.day.out [data-k="d:20793"]
-           #127 "6"
-       #25 div.when
-         #128 "Tuesday, November 10"
-       #26 div.events
-         #129 div.none
-           #130 "No events"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #131 "09:00"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #132 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [page] 186 nodes
+   #1 body {back}
+     #2 div.app {click input}
+       #3 div.monthpage
+         #4 div.appbar
+           #5 div.big.month
+             #83 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #84 div.blank
+             #85 div.blank
+             #86 div.blank
+             #87 div.blank
+             #88 div.blank
+             #89 div.blank
+             #90 button.day.end [data-k="d:20758"]
+               #91 span
+                 #92 "1"
+             #93 button.day [data-k="d:20759"]
+               #94 span
+                 #95 "2"
+             #96 button.day [data-k="d:20760"]
+               #97 span
+                 #98 "3"
+             #99 button.day [data-k="d:20761"]
+               #100 span
+                 #101 "4"
+             #102 button.day [data-k="d:20762"]
+               #103 span
+                 #104 "5"
+             #105 button.day [data-k="d:20763"]
+               #106 span
+                 #107 "6"
+             #108 button.day.end [data-k="d:20764"]
+               #109 span
+                 #110 "7"
+             #111 button.day.end [data-k="d:20765"]
+               #112 span
+                 #113 "8"
+             #114 button.day [data-k="d:20766"]
+               #115 span
+                 #116 "9"
+             #117 button.day.today [data-k="d:20767"]
+               #118 span
+                 #119 "10"
+             #120 button.day [data-k="d:20768"]
+               #121 span
+                 #122 "11"
+             #123 button.day [data-k="d:20769"]
+               #124 span
+                 #125 "12"
+             #126 button.day [data-k="d:20770"]
+               #127 span
+                 #128 "13"
+             #129 button.day.end [data-k="d:20771"]
+               #130 span
+                 #131 "14"
+             #132 button.day.end [data-k="d:20772"]
+               #133 span
+                 #134 "15"
+             #135 button.day [data-k="d:20773"]
+               #136 span
+                 #137 "16"
+             #138 button.day [data-k="d:20774"]
+               #139 span
+                 #140 "17"
+             #141 button.day [data-k="d:20775"]
+               #142 span
+                 #143 "18"
+             #144 button.day [data-k="d:20776"]
+               #145 span
+                 #146 "19"
+             #147 button.day [data-k="d:20777"]
+               #148 span
+                 #149 "20"
+             #150 button.day.end [data-k="d:20778"]
+               #151 span
+                 #152 "21"
+             #153 button.day.end [data-k="d:20779"]
+               #154 span
+                 #155 "22"
+             #156 button.day [data-k="d:20780"]
+               #157 span
+                 #158 "23"
+             #159 button.day [data-k="d:20781"]
+               #160 span
+                 #161 "24"
+             #162 button.day [data-k="d:20782"]
+               #163 span
+                 #164 "25"
+             #165 button.day [data-k="d:20783"]
+               #166 span
+                 #167 "26"
+             #168 button.day [data-k="d:20784"]
+               #169 span
+                 #170 "27"
+             #171 button.day.end [data-k="d:20785"]
+               #172 span
+                 #173 "28"
+             #174 button.day.end [data-k="d:20786"]
+               #175 span
+                 #176 "29"
+             #177 button.day [data-k="d:20787"]
+               #178 span
+                 #179 "30"
+         #33 div.when
+           #180 "Tuesday, November 10"
+         #34 div.events
+           #181 div.none
+             #182 "No events today"
+       #35 div.newpage.hidden
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value=""
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #186 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #183 "09:00"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #184 "09"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #185 "00"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 1  (clicks fed to guest: []) ---
-   [type] #28 = "Dentist"
-   [page] 132 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #43 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #44 button.day.out [data-k="d:20752"]
-           #45 "26"
-         #46 button.day.out [data-k="d:20753"]
-           #47 "27"
-         #48 button.day.out [data-k="d:20754"]
-           #49 "28"
-         #50 button.day.out [data-k="d:20755"]
-           #51 "29"
-         #52 button.day.out [data-k="d:20756"]
-           #53 "30"
-         #54 button.day.out [data-k="d:20757"]
-           #55 "31"
-         #56 button.day [data-k="d:20758"]
-           #57 "1"
-         #58 button.day [data-k="d:20759"]
-           #59 "2"
-         #60 button.day [data-k="d:20760"]
-           #61 "3"
-         #62 button.day [data-k="d:20761"]
-           #63 "4"
-         #64 button.day [data-k="d:20762"]
-           #65 "5"
-         #66 button.day [data-k="d:20763"]
-           #67 "6"
-         #68 button.day [data-k="d:20764"]
-           #69 "7"
-         #70 button.day [data-k="d:20765"]
-           #71 "8"
-         #72 button.day [data-k="d:20766"]
-           #73 "9"
-         #74 button.day.today.picked [data-k="d:20767"]
-           #75 "10"
-         #76 button.day [data-k="d:20768"]
-           #77 "11"
-         #78 button.day [data-k="d:20769"]
-           #79 "12"
-         #80 button.day [data-k="d:20770"]
-           #81 "13"
-         #82 button.day [data-k="d:20771"]
-           #83 "14"
-         #84 button.day [data-k="d:20772"]
-           #85 "15"
-         #86 button.day [data-k="d:20773"]
-           #87 "16"
-         #88 button.day [data-k="d:20774"]
-           #89 "17"
-         #90 button.day [data-k="d:20775"]
-           #91 "18"
-         #92 button.day [data-k="d:20776"]
-           #93 "19"
-         #94 button.day [data-k="d:20777"]
-           #95 "20"
-         #96 button.day [data-k="d:20778"]
-           #97 "21"
-         #98 button.day [data-k="d:20779"]
-           #99 "22"
-         #100 button.day [data-k="d:20780"]
-           #101 "23"
-         #102 button.day [data-k="d:20781"]
-           #103 "24"
-         #104 button.day [data-k="d:20782"]
-           #105 "25"
-         #106 button.day [data-k="d:20783"]
-           #107 "26"
-         #108 button.day [data-k="d:20784"]
-           #109 "27"
-         #110 button.day [data-k="d:20785"]
-           #111 "28"
-         #112 button.day [data-k="d:20786"]
-           #113 "29"
-         #114 button.day [data-k="d:20787"]
-           #115 "30"
-         #116 button.day.out [data-k="d:20788"]
-           #117 "1"
-         #118 button.day.out [data-k="d:20789"]
-           #119 "2"
-         #120 button.day.out [data-k="d:20790"]
-           #121 "3"
-         #122 button.day.out [data-k="d:20791"]
-           #123 "4"
-         #124 button.day.out [data-k="d:20792"]
-           #125 "5"
-         #126 button.day.out [data-k="d:20793"]
-           #127 "6"
-       #25 div.when
-         #128 "Tuesday, November 10"
-       #26 div.events
-         #129 div.none
-           #130 "No events"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.time
-           #131 "09:00"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #132 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #13
+   [page] 186 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #187 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #188 div.blank
+             #189 div.blank
+             #190 div.blank
+             #191 div.blank
+             #192 div.blank
+             #193 div.blank
+             #194 button.day.end [data-k="d:20758"]
+               #195 span
+                 #196 "1"
+             #197 button.day [data-k="d:20759"]
+               #198 span
+                 #199 "2"
+             #200 button.day [data-k="d:20760"]
+               #201 span
+                 #202 "3"
+             #203 button.day [data-k="d:20761"]
+               #204 span
+                 #205 "4"
+             #206 button.day [data-k="d:20762"]
+               #207 span
+                 #208 "5"
+             #209 button.day [data-k="d:20763"]
+               #210 span
+                 #211 "6"
+             #212 button.day.end [data-k="d:20764"]
+               #213 span
+                 #214 "7"
+             #215 button.day.end [data-k="d:20765"]
+               #216 span
+                 #217 "8"
+             #218 button.day [data-k="d:20766"]
+               #219 span
+                 #220 "9"
+             #221 button.day.today [data-k="d:20767"]
+               #222 span
+                 #223 "10"
+             #224 button.day [data-k="d:20768"]
+               #225 span
+                 #226 "11"
+             #227 button.day [data-k="d:20769"]
+               #228 span
+                 #229 "12"
+             #230 button.day [data-k="d:20770"]
+               #231 span
+                 #232 "13"
+             #233 button.day.end [data-k="d:20771"]
+               #234 span
+                 #235 "14"
+             #236 button.day.end [data-k="d:20772"]
+               #237 span
+                 #238 "15"
+             #239 button.day [data-k="d:20773"]
+               #240 span
+                 #241 "16"
+             #242 button.day [data-k="d:20774"]
+               #243 span
+                 #244 "17"
+             #245 button.day [data-k="d:20775"]
+               #246 span
+                 #247 "18"
+             #248 button.day [data-k="d:20776"]
+               #249 span
+                 #250 "19"
+             #251 button.day [data-k="d:20777"]
+               #252 span
+                 #253 "20"
+             #254 button.day.end [data-k="d:20778"]
+               #255 span
+                 #256 "21"
+             #257 button.day.end [data-k="d:20779"]
+               #258 span
+                 #259 "22"
+             #260 button.day [data-k="d:20780"]
+               #261 span
+                 #262 "23"
+             #263 button.day [data-k="d:20781"]
+               #264 span
+                 #265 "24"
+             #266 button.day [data-k="d:20782"]
+               #267 span
+                 #268 "25"
+             #269 button.day [data-k="d:20783"]
+               #270 span
+                 #271 "26"
+             #272 button.day [data-k="d:20784"]
+               #273 span
+                 #274 "27"
+             #275 button.day.end [data-k="d:20785"]
+               #276 span
+                 #277 "28"
+             #278 button.day.end [data-k="d:20786"]
+               #279 span
+                 #280 "29"
+             #281 button.day [data-k="d:20787"]
+               #282 span
+                 #283 "30"
+         #33 div.when
+           #284 "Tuesday, November 10"
+         #34 div.events
+           #285 div.none
+             #286 "No events today"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #290 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #287 "09:00"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #288 "09"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #289 "00"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 2  (clicks fed to guest: []) ---
-   [tap] #33
-   [page] 132 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #133 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #134 button.day.out [data-k="d:20752"]
-           #135 "26"
-         #136 button.day.out [data-k="d:20753"]
-           #137 "27"
-         #138 button.day.out [data-k="d:20754"]
-           #139 "28"
-         #140 button.day.out [data-k="d:20755"]
-           #141 "29"
-         #142 button.day.out [data-k="d:20756"]
-           #143 "30"
-         #144 button.day.out [data-k="d:20757"]
-           #145 "31"
-         #146 button.day [data-k="d:20758"]
-           #147 "1"
-         #148 button.day [data-k="d:20759"]
-           #149 "2"
-         #150 button.day [data-k="d:20760"]
-           #151 "3"
-         #152 button.day [data-k="d:20761"]
-           #153 "4"
-         #154 button.day [data-k="d:20762"]
-           #155 "5"
-         #156 button.day [data-k="d:20763"]
-           #157 "6"
-         #158 button.day [data-k="d:20764"]
-           #159 "7"
-         #160 button.day [data-k="d:20765"]
-           #161 "8"
-         #162 button.day [data-k="d:20766"]
-           #163 "9"
-         #164 button.day.today.picked [data-k="d:20767"]
-           #165 "10"
-         #166 button.day [data-k="d:20768"]
-           #167 "11"
-         #168 button.day [data-k="d:20769"]
-           #169 "12"
-         #170 button.day [data-k="d:20770"]
-           #171 "13"
-         #172 button.day [data-k="d:20771"]
-           #173 "14"
-         #174 button.day [data-k="d:20772"]
-           #175 "15"
-         #176 button.day [data-k="d:20773"]
-           #177 "16"
-         #178 button.day [data-k="d:20774"]
-           #179 "17"
-         #180 button.day [data-k="d:20775"]
-           #181 "18"
-         #182 button.day [data-k="d:20776"]
-           #183 "19"
-         #184 button.day [data-k="d:20777"]
-           #185 "20"
-         #186 button.day [data-k="d:20778"]
-           #187 "21"
-         #188 button.day [data-k="d:20779"]
-           #189 "22"
-         #190 button.day [data-k="d:20780"]
-           #191 "23"
-         #192 button.day [data-k="d:20781"]
-           #193 "24"
-         #194 button.day [data-k="d:20782"]
-           #195 "25"
-         #196 button.day [data-k="d:20783"]
-           #197 "26"
-         #198 button.day [data-k="d:20784"]
-           #199 "27"
-         #200 button.day [data-k="d:20785"]
-           #201 "28"
-         #202 button.day [data-k="d:20786"]
-           #203 "29"
-         #204 button.day [data-k="d:20787"]
-           #205 "30"
-         #206 button.day.out [data-k="d:20788"]
-           #207 "1"
-         #208 button.day.out [data-k="d:20789"]
-           #209 "2"
-         #210 button.day.out [data-k="d:20790"]
-           #211 "3"
-         #212 button.day.out [data-k="d:20791"]
-           #213 "4"
-         #214 button.day.out [data-k="d:20792"]
-           #215 "5"
-         #216 button.day.out [data-k="d:20793"]
-           #217 "6"
-       #25 div.when
-         #218 "Tuesday, November 10"
-       #26 div.events
-         #219 div.none
-           #220 "No events"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.time
-           #221 "10:00"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #222 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [type] #48 = "Dentist"
+   [page] 186 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #187 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #188 div.blank
+             #189 div.blank
+             #190 div.blank
+             #191 div.blank
+             #192 div.blank
+             #193 div.blank
+             #194 button.day.end [data-k="d:20758"]
+               #195 span
+                 #196 "1"
+             #197 button.day [data-k="d:20759"]
+               #198 span
+                 #199 "2"
+             #200 button.day [data-k="d:20760"]
+               #201 span
+                 #202 "3"
+             #203 button.day [data-k="d:20761"]
+               #204 span
+                 #205 "4"
+             #206 button.day [data-k="d:20762"]
+               #207 span
+                 #208 "5"
+             #209 button.day [data-k="d:20763"]
+               #210 span
+                 #211 "6"
+             #212 button.day.end [data-k="d:20764"]
+               #213 span
+                 #214 "7"
+             #215 button.day.end [data-k="d:20765"]
+               #216 span
+                 #217 "8"
+             #218 button.day [data-k="d:20766"]
+               #219 span
+                 #220 "9"
+             #221 button.day.today [data-k="d:20767"]
+               #222 span
+                 #223 "10"
+             #224 button.day [data-k="d:20768"]
+               #225 span
+                 #226 "11"
+             #227 button.day [data-k="d:20769"]
+               #228 span
+                 #229 "12"
+             #230 button.day [data-k="d:20770"]
+               #231 span
+                 #232 "13"
+             #233 button.day.end [data-k="d:20771"]
+               #234 span
+                 #235 "14"
+             #236 button.day.end [data-k="d:20772"]
+               #237 span
+                 #238 "15"
+             #239 button.day [data-k="d:20773"]
+               #240 span
+                 #241 "16"
+             #242 button.day [data-k="d:20774"]
+               #243 span
+                 #244 "17"
+             #245 button.day [data-k="d:20775"]
+               #246 span
+                 #247 "18"
+             #248 button.day [data-k="d:20776"]
+               #249 span
+                 #250 "19"
+             #251 button.day [data-k="d:20777"]
+               #252 span
+                 #253 "20"
+             #254 button.day.end [data-k="d:20778"]
+               #255 span
+                 #256 "21"
+             #257 button.day.end [data-k="d:20779"]
+               #258 span
+                 #259 "22"
+             #260 button.day [data-k="d:20780"]
+               #261 span
+                 #262 "23"
+             #263 button.day [data-k="d:20781"]
+               #264 span
+                 #265 "24"
+             #266 button.day [data-k="d:20782"]
+               #267 span
+                 #268 "25"
+             #269 button.day [data-k="d:20783"]
+               #270 span
+                 #271 "26"
+             #272 button.day [data-k="d:20784"]
+               #273 span
+                 #274 "27"
+             #275 button.day.end [data-k="d:20785"]
+               #276 span
+                 #277 "28"
+             #278 button.day.end [data-k="d:20786"]
+               #279 span
+                 #280 "29"
+             #281 button.day [data-k="d:20787"]
+               #282 span
+                 #283 "30"
+         #33 div.when
+           #284 "Tuesday, November 10"
+         #34 div.events
+           #285 div.none
+             #286 "No events today"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="Dentist" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #290 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #287 "09:00"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #288 "09"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #289 "00"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 3  (clicks fed to guest: []) ---
-   [tap] #33
-   [page] 132 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #223 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #224 button.day.out [data-k="d:20752"]
-           #225 "26"
-         #226 button.day.out [data-k="d:20753"]
-           #227 "27"
-         #228 button.day.out [data-k="d:20754"]
-           #229 "28"
-         #230 button.day.out [data-k="d:20755"]
-           #231 "29"
-         #232 button.day.out [data-k="d:20756"]
-           #233 "30"
-         #234 button.day.out [data-k="d:20757"]
-           #235 "31"
-         #236 button.day [data-k="d:20758"]
-           #237 "1"
-         #238 button.day [data-k="d:20759"]
-           #239 "2"
-         #240 button.day [data-k="d:20760"]
-           #241 "3"
-         #242 button.day [data-k="d:20761"]
-           #243 "4"
-         #244 button.day [data-k="d:20762"]
-           #245 "5"
-         #246 button.day [data-k="d:20763"]
-           #247 "6"
-         #248 button.day [data-k="d:20764"]
-           #249 "7"
-         #250 button.day [data-k="d:20765"]
-           #251 "8"
-         #252 button.day [data-k="d:20766"]
-           #253 "9"
-         #254 button.day.today.picked [data-k="d:20767"]
-           #255 "10"
-         #256 button.day [data-k="d:20768"]
-           #257 "11"
-         #258 button.day [data-k="d:20769"]
-           #259 "12"
-         #260 button.day [data-k="d:20770"]
-           #261 "13"
-         #262 button.day [data-k="d:20771"]
-           #263 "14"
-         #264 button.day [data-k="d:20772"]
-           #265 "15"
-         #266 button.day [data-k="d:20773"]
-           #267 "16"
-         #268 button.day [data-k="d:20774"]
-           #269 "17"
-         #270 button.day [data-k="d:20775"]
-           #271 "18"
-         #272 button.day [data-k="d:20776"]
-           #273 "19"
-         #274 button.day [data-k="d:20777"]
-           #275 "20"
-         #276 button.day [data-k="d:20778"]
-           #277 "21"
-         #278 button.day [data-k="d:20779"]
-           #279 "22"
-         #280 button.day [data-k="d:20780"]
-           #281 "23"
-         #282 button.day [data-k="d:20781"]
-           #283 "24"
-         #284 button.day [data-k="d:20782"]
-           #285 "25"
-         #286 button.day [data-k="d:20783"]
-           #287 "26"
-         #288 button.day [data-k="d:20784"]
-           #289 "27"
-         #290 button.day [data-k="d:20785"]
-           #291 "28"
-         #292 button.day [data-k="d:20786"]
-           #293 "29"
-         #294 button.day [data-k="d:20787"]
-           #295 "30"
-         #296 button.day.out [data-k="d:20788"]
-           #297 "1"
-         #298 button.day.out [data-k="d:20789"]
-           #299 "2"
-         #300 button.day.out [data-k="d:20790"]
-           #301 "3"
-         #302 button.day.out [data-k="d:20791"]
-           #303 "4"
-         #304 button.day.out [data-k="d:20792"]
-           #305 "5"
-         #306 button.day.out [data-k="d:20793"]
-           #307 "6"
-       #25 div.when
-         #308 "Tuesday, November 10"
-       #26 div.events
-         #309 div.none
-           #310 "No events"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.time
-           #311 "11:00"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #312 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #60
+   [page] 186 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #291 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #292 div.blank
+             #293 div.blank
+             #294 div.blank
+             #295 div.blank
+             #296 div.blank
+             #297 div.blank
+             #298 button.day.end [data-k="d:20758"]
+               #299 span
+                 #300 "1"
+             #301 button.day [data-k="d:20759"]
+               #302 span
+                 #303 "2"
+             #304 button.day [data-k="d:20760"]
+               #305 span
+                 #306 "3"
+             #307 button.day [data-k="d:20761"]
+               #308 span
+                 #309 "4"
+             #310 button.day [data-k="d:20762"]
+               #311 span
+                 #312 "5"
+             #313 button.day [data-k="d:20763"]
+               #314 span
+                 #315 "6"
+             #316 button.day.end [data-k="d:20764"]
+               #317 span
+                 #318 "7"
+             #319 button.day.end [data-k="d:20765"]
+               #320 span
+                 #321 "8"
+             #322 button.day [data-k="d:20766"]
+               #323 span
+                 #324 "9"
+             #325 button.day.today [data-k="d:20767"]
+               #326 span
+                 #327 "10"
+             #328 button.day [data-k="d:20768"]
+               #329 span
+                 #330 "11"
+             #331 button.day [data-k="d:20769"]
+               #332 span
+                 #333 "12"
+             #334 button.day [data-k="d:20770"]
+               #335 span
+                 #336 "13"
+             #337 button.day.end [data-k="d:20771"]
+               #338 span
+                 #339 "14"
+             #340 button.day.end [data-k="d:20772"]
+               #341 span
+                 #342 "15"
+             #343 button.day [data-k="d:20773"]
+               #344 span
+                 #345 "16"
+             #346 button.day [data-k="d:20774"]
+               #347 span
+                 #348 "17"
+             #349 button.day [data-k="d:20775"]
+               #350 span
+                 #351 "18"
+             #352 button.day [data-k="d:20776"]
+               #353 span
+                 #354 "19"
+             #355 button.day [data-k="d:20777"]
+               #356 span
+                 #357 "20"
+             #358 button.day.end [data-k="d:20778"]
+               #359 span
+                 #360 "21"
+             #361 button.day.end [data-k="d:20779"]
+               #362 span
+                 #363 "22"
+             #364 button.day [data-k="d:20780"]
+               #365 span
+                 #366 "23"
+             #367 button.day [data-k="d:20781"]
+               #368 span
+                 #369 "24"
+             #370 button.day [data-k="d:20782"]
+               #371 span
+                 #372 "25"
+             #373 button.day [data-k="d:20783"]
+               #374 span
+                 #375 "26"
+             #376 button.day [data-k="d:20784"]
+               #377 span
+                 #378 "27"
+             #379 button.day.end [data-k="d:20785"]
+               #380 span
+                 #381 "28"
+             #382 button.day.end [data-k="d:20786"]
+               #383 span
+                 #384 "29"
+             #385 button.day [data-k="d:20787"]
+               #386 span
+                 #387 "30"
+         #33 div.when
+           #388 "Tuesday, November 10"
+         #34 div.events
+           #389 div.none
+             #390 "No events today"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="Dentist" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #394 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #391 "10:00"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #392 "10"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #393 "00"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 4  (clicks fed to guest: []) ---
-   [tap] #33
-   [page] 132 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #313 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #314 button.day.out [data-k="d:20752"]
-           #315 "26"
-         #316 button.day.out [data-k="d:20753"]
-           #317 "27"
-         #318 button.day.out [data-k="d:20754"]
-           #319 "28"
-         #320 button.day.out [data-k="d:20755"]
-           #321 "29"
-         #322 button.day.out [data-k="d:20756"]
-           #323 "30"
-         #324 button.day.out [data-k="d:20757"]
-           #325 "31"
-         #326 button.day [data-k="d:20758"]
-           #327 "1"
-         #328 button.day [data-k="d:20759"]
-           #329 "2"
-         #330 button.day [data-k="d:20760"]
-           #331 "3"
-         #332 button.day [data-k="d:20761"]
-           #333 "4"
-         #334 button.day [data-k="d:20762"]
-           #335 "5"
-         #336 button.day [data-k="d:20763"]
-           #337 "6"
-         #338 button.day [data-k="d:20764"]
-           #339 "7"
-         #340 button.day [data-k="d:20765"]
-           #341 "8"
-         #342 button.day [data-k="d:20766"]
-           #343 "9"
-         #344 button.day.today.picked [data-k="d:20767"]
-           #345 "10"
-         #346 button.day [data-k="d:20768"]
-           #347 "11"
-         #348 button.day [data-k="d:20769"]
-           #349 "12"
-         #350 button.day [data-k="d:20770"]
-           #351 "13"
-         #352 button.day [data-k="d:20771"]
-           #353 "14"
-         #354 button.day [data-k="d:20772"]
-           #355 "15"
-         #356 button.day [data-k="d:20773"]
-           #357 "16"
-         #358 button.day [data-k="d:20774"]
-           #359 "17"
-         #360 button.day [data-k="d:20775"]
-           #361 "18"
-         #362 button.day [data-k="d:20776"]
-           #363 "19"
-         #364 button.day [data-k="d:20777"]
-           #365 "20"
-         #366 button.day [data-k="d:20778"]
-           #367 "21"
-         #368 button.day [data-k="d:20779"]
-           #369 "22"
-         #370 button.day [data-k="d:20780"]
-           #371 "23"
-         #372 button.day [data-k="d:20781"]
-           #373 "24"
-         #374 button.day [data-k="d:20782"]
-           #375 "25"
-         #376 button.day [data-k="d:20783"]
-           #377 "26"
-         #378 button.day [data-k="d:20784"]
-           #379 "27"
-         #380 button.day [data-k="d:20785"]
-           #381 "28"
-         #382 button.day [data-k="d:20786"]
-           #383 "29"
-         #384 button.day [data-k="d:20787"]
-           #385 "30"
-         #386 button.day.out [data-k="d:20788"]
-           #387 "1"
-         #388 button.day.out [data-k="d:20789"]
-           #389 "2"
-         #390 button.day.out [data-k="d:20790"]
-           #391 "3"
-         #392 button.day.out [data-k="d:20791"]
-           #393 "4"
-         #394 button.day.out [data-k="d:20792"]
-           #395 "5"
-         #396 button.day.out [data-k="d:20793"]
-           #397 "6"
-       #25 div.when
-         #398 "Tuesday, November 10"
-       #26 div.events
-         #399 div.none
-           #400 "No events"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.time
-           #401 "12:00"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #402 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #60
+   [page] 186 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #395 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #396 div.blank
+             #397 div.blank
+             #398 div.blank
+             #399 div.blank
+             #400 div.blank
+             #401 div.blank
+             #402 button.day.end [data-k="d:20758"]
+               #403 span
+                 #404 "1"
+             #405 button.day [data-k="d:20759"]
+               #406 span
+                 #407 "2"
+             #408 button.day [data-k="d:20760"]
+               #409 span
+                 #410 "3"
+             #411 button.day [data-k="d:20761"]
+               #412 span
+                 #413 "4"
+             #414 button.day [data-k="d:20762"]
+               #415 span
+                 #416 "5"
+             #417 button.day [data-k="d:20763"]
+               #418 span
+                 #419 "6"
+             #420 button.day.end [data-k="d:20764"]
+               #421 span
+                 #422 "7"
+             #423 button.day.end [data-k="d:20765"]
+               #424 span
+                 #425 "8"
+             #426 button.day [data-k="d:20766"]
+               #427 span
+                 #428 "9"
+             #429 button.day.today [data-k="d:20767"]
+               #430 span
+                 #431 "10"
+             #432 button.day [data-k="d:20768"]
+               #433 span
+                 #434 "11"
+             #435 button.day [data-k="d:20769"]
+               #436 span
+                 #437 "12"
+             #438 button.day [data-k="d:20770"]
+               #439 span
+                 #440 "13"
+             #441 button.day.end [data-k="d:20771"]
+               #442 span
+                 #443 "14"
+             #444 button.day.end [data-k="d:20772"]
+               #445 span
+                 #446 "15"
+             #447 button.day [data-k="d:20773"]
+               #448 span
+                 #449 "16"
+             #450 button.day [data-k="d:20774"]
+               #451 span
+                 #452 "17"
+             #453 button.day [data-k="d:20775"]
+               #454 span
+                 #455 "18"
+             #456 button.day [data-k="d:20776"]
+               #457 span
+                 #458 "19"
+             #459 button.day [data-k="d:20777"]
+               #460 span
+                 #461 "20"
+             #462 button.day.end [data-k="d:20778"]
+               #463 span
+                 #464 "21"
+             #465 button.day.end [data-k="d:20779"]
+               #466 span
+                 #467 "22"
+             #468 button.day [data-k="d:20780"]
+               #469 span
+                 #470 "23"
+             #471 button.day [data-k="d:20781"]
+               #472 span
+                 #473 "24"
+             #474 button.day [data-k="d:20782"]
+               #475 span
+                 #476 "25"
+             #477 button.day [data-k="d:20783"]
+               #478 span
+                 #479 "26"
+             #480 button.day [data-k="d:20784"]
+               #481 span
+                 #482 "27"
+             #483 button.day.end [data-k="d:20785"]
+               #484 span
+                 #485 "28"
+             #486 button.day.end [data-k="d:20786"]
+               #487 span
+                 #488 "29"
+             #489 button.day [data-k="d:20787"]
+               #490 span
+                 #491 "30"
+         #33 div.when
+           #492 "Tuesday, November 10"
+         #34 div.events
+           #493 div.none
+             #494 "No events today"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="Dentist" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #498 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #495 "11:00"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #496 "11"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #497 "00"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 5  (clicks fed to guest: []) ---
-   [tap] #37
-   [page] 132 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #403 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #404 button.day.out [data-k="d:20752"]
-           #405 "26"
-         #406 button.day.out [data-k="d:20753"]
-           #407 "27"
-         #408 button.day.out [data-k="d:20754"]
-           #409 "28"
-         #410 button.day.out [data-k="d:20755"]
-           #411 "29"
-         #412 button.day.out [data-k="d:20756"]
-           #413 "30"
-         #414 button.day.out [data-k="d:20757"]
-           #415 "31"
-         #416 button.day [data-k="d:20758"]
-           #417 "1"
-         #418 button.day [data-k="d:20759"]
-           #419 "2"
-         #420 button.day [data-k="d:20760"]
-           #421 "3"
-         #422 button.day [data-k="d:20761"]
-           #423 "4"
-         #424 button.day [data-k="d:20762"]
-           #425 "5"
-         #426 button.day [data-k="d:20763"]
-           #427 "6"
-         #428 button.day [data-k="d:20764"]
-           #429 "7"
-         #430 button.day [data-k="d:20765"]
-           #431 "8"
-         #432 button.day [data-k="d:20766"]
-           #433 "9"
-         #434 button.day.today.picked [data-k="d:20767"]
-           #435 "10"
-         #436 button.day [data-k="d:20768"]
-           #437 "11"
-         #438 button.day [data-k="d:20769"]
-           #439 "12"
-         #440 button.day [data-k="d:20770"]
-           #441 "13"
-         #442 button.day [data-k="d:20771"]
-           #443 "14"
-         #444 button.day [data-k="d:20772"]
-           #445 "15"
-         #446 button.day [data-k="d:20773"]
-           #447 "16"
-         #448 button.day [data-k="d:20774"]
-           #449 "17"
-         #450 button.day [data-k="d:20775"]
-           #451 "18"
-         #452 button.day [data-k="d:20776"]
-           #453 "19"
-         #454 button.day [data-k="d:20777"]
-           #455 "20"
-         #456 button.day [data-k="d:20778"]
-           #457 "21"
-         #458 button.day [data-k="d:20779"]
-           #459 "22"
-         #460 button.day [data-k="d:20780"]
-           #461 "23"
-         #462 button.day [data-k="d:20781"]
-           #463 "24"
-         #464 button.day [data-k="d:20782"]
-           #465 "25"
-         #466 button.day [data-k="d:20783"]
-           #467 "26"
-         #468 button.day [data-k="d:20784"]
-           #469 "27"
-         #470 button.day [data-k="d:20785"]
-           #471 "28"
-         #472 button.day [data-k="d:20786"]
-           #473 "29"
-         #474 button.day [data-k="d:20787"]
-           #475 "30"
-         #476 button.day.out [data-k="d:20788"]
-           #477 "1"
-         #478 button.day.out [data-k="d:20789"]
-           #479 "2"
-         #480 button.day.out [data-k="d:20790"]
-           #481 "3"
-         #482 button.day.out [data-k="d:20791"]
-           #483 "4"
-         #484 button.day.out [data-k="d:20792"]
-           #485 "5"
-         #486 button.day.out [data-k="d:20793"]
-           #487 "6"
-       #25 div.when
-         #488 "Tuesday, November 10"
-       #26 div.events
-         #489 div.none
-           #490 "No events"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value="Dentist"
-         #29 div.time
-           #491 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #492 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #60
+   [page] 186 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #499 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #500 div.blank
+             #501 div.blank
+             #502 div.blank
+             #503 div.blank
+             #504 div.blank
+             #505 div.blank
+             #506 button.day.end [data-k="d:20758"]
+               #507 span
+                 #508 "1"
+             #509 button.day [data-k="d:20759"]
+               #510 span
+                 #511 "2"
+             #512 button.day [data-k="d:20760"]
+               #513 span
+                 #514 "3"
+             #515 button.day [data-k="d:20761"]
+               #516 span
+                 #517 "4"
+             #518 button.day [data-k="d:20762"]
+               #519 span
+                 #520 "5"
+             #521 button.day [data-k="d:20763"]
+               #522 span
+                 #523 "6"
+             #524 button.day.end [data-k="d:20764"]
+               #525 span
+                 #526 "7"
+             #527 button.day.end [data-k="d:20765"]
+               #528 span
+                 #529 "8"
+             #530 button.day [data-k="d:20766"]
+               #531 span
+                 #532 "9"
+             #533 button.day.today [data-k="d:20767"]
+               #534 span
+                 #535 "10"
+             #536 button.day [data-k="d:20768"]
+               #537 span
+                 #538 "11"
+             #539 button.day [data-k="d:20769"]
+               #540 span
+                 #541 "12"
+             #542 button.day [data-k="d:20770"]
+               #543 span
+                 #544 "13"
+             #545 button.day.end [data-k="d:20771"]
+               #546 span
+                 #547 "14"
+             #548 button.day.end [data-k="d:20772"]
+               #549 span
+                 #550 "15"
+             #551 button.day [data-k="d:20773"]
+               #552 span
+                 #553 "16"
+             #554 button.day [data-k="d:20774"]
+               #555 span
+                 #556 "17"
+             #557 button.day [data-k="d:20775"]
+               #558 span
+                 #559 "18"
+             #560 button.day [data-k="d:20776"]
+               #561 span
+                 #562 "19"
+             #563 button.day [data-k="d:20777"]
+               #564 span
+                 #565 "20"
+             #566 button.day.end [data-k="d:20778"]
+               #567 span
+                 #568 "21"
+             #569 button.day.end [data-k="d:20779"]
+               #570 span
+                 #571 "22"
+             #572 button.day [data-k="d:20780"]
+               #573 span
+                 #574 "23"
+             #575 button.day [data-k="d:20781"]
+               #576 span
+                 #577 "24"
+             #578 button.day [data-k="d:20782"]
+               #579 span
+                 #580 "25"
+             #581 button.day [data-k="d:20783"]
+               #582 span
+                 #583 "26"
+             #584 button.day [data-k="d:20784"]
+               #585 span
+                 #586 "27"
+             #587 button.day.end [data-k="d:20785"]
+               #588 span
+                 #589 "28"
+             #590 button.day.end [data-k="d:20786"]
+               #591 span
+                 #592 "29"
+             #593 button.day [data-k="d:20787"]
+               #594 span
+                 #595 "30"
+         #33 div.when
+           #596 "Tuesday, November 10"
+         #34 div.events
+           #597 div.none
+             #598 "No events today"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="Dentist" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #602 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #599 "12:00"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #600 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #601 "00"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 6  (clicks fed to guest: []) ---
+   [tap] #70
+   [page] 186 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #603 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #604 div.blank
+             #605 div.blank
+             #606 div.blank
+             #607 div.blank
+             #608 div.blank
+             #609 div.blank
+             #610 button.day.end [data-k="d:20758"]
+               #611 span
+                 #612 "1"
+             #613 button.day [data-k="d:20759"]
+               #614 span
+                 #615 "2"
+             #616 button.day [data-k="d:20760"]
+               #617 span
+                 #618 "3"
+             #619 button.day [data-k="d:20761"]
+               #620 span
+                 #621 "4"
+             #622 button.day [data-k="d:20762"]
+               #623 span
+                 #624 "5"
+             #625 button.day [data-k="d:20763"]
+               #626 span
+                 #627 "6"
+             #628 button.day.end [data-k="d:20764"]
+               #629 span
+                 #630 "7"
+             #631 button.day.end [data-k="d:20765"]
+               #632 span
+                 #633 "8"
+             #634 button.day [data-k="d:20766"]
+               #635 span
+                 #636 "9"
+             #637 button.day.today [data-k="d:20767"]
+               #638 span
+                 #639 "10"
+             #640 button.day [data-k="d:20768"]
+               #641 span
+                 #642 "11"
+             #643 button.day [data-k="d:20769"]
+               #644 span
+                 #645 "12"
+             #646 button.day [data-k="d:20770"]
+               #647 span
+                 #648 "13"
+             #649 button.day.end [data-k="d:20771"]
+               #650 span
+                 #651 "14"
+             #652 button.day.end [data-k="d:20772"]
+               #653 span
+                 #654 "15"
+             #655 button.day [data-k="d:20773"]
+               #656 span
+                 #657 "16"
+             #658 button.day [data-k="d:20774"]
+               #659 span
+                 #660 "17"
+             #661 button.day [data-k="d:20775"]
+               #662 span
+                 #663 "18"
+             #664 button.day [data-k="d:20776"]
+               #665 span
+                 #666 "19"
+             #667 button.day [data-k="d:20777"]
+               #668 span
+                 #669 "20"
+             #670 button.day.end [data-k="d:20778"]
+               #671 span
+                 #672 "21"
+             #673 button.day.end [data-k="d:20779"]
+               #674 span
+                 #675 "22"
+             #676 button.day [data-k="d:20780"]
+               #677 span
+                 #678 "23"
+             #679 button.day [data-k="d:20781"]
+               #680 span
+                 #681 "24"
+             #682 button.day [data-k="d:20782"]
+               #683 span
+                 #684 "25"
+             #685 button.day [data-k="d:20783"]
+               #686 span
+                 #687 "26"
+             #688 button.day [data-k="d:20784"]
+               #689 span
+                 #690 "27"
+             #691 button.day.end [data-k="d:20785"]
+               #692 span
+                 #693 "28"
+             #694 button.day.end [data-k="d:20786"]
+               #695 span
+                 #696 "29"
+             #697 button.day [data-k="d:20787"]
+               #698 span
+                 #699 "30"
+         #33 div.when
+           #700 "Tuesday, November 10"
+         #34 div.events
+           #701 div.none
+             #702 "No events today"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="Dentist" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #706 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #703 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #704 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #705 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
+   [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
+
+--- frame 7  (clicks fed to guest: []) ---
    [tap] #41
-   [page] 137 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #493 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #494 button.day.out [data-k="d:20752"]
-           #495 "26"
-         #496 button.day.out [data-k="d:20753"]
-           #497 "27"
-         #498 button.day.out [data-k="d:20754"]
-           #499 "28"
-         #500 button.day.out [data-k="d:20755"]
-           #501 "29"
-         #502 button.day.out [data-k="d:20756"]
-           #503 "30"
-         #504 button.day.out [data-k="d:20757"]
-           #505 "31"
-         #506 button.day [data-k="d:20758"]
-           #507 "1"
-         #508 button.day [data-k="d:20759"]
-           #509 "2"
-         #510 button.day [data-k="d:20760"]
-           #511 "3"
-         #512 button.day [data-k="d:20761"]
-           #513 "4"
-         #514 button.day [data-k="d:20762"]
-           #515 "5"
-         #516 button.day [data-k="d:20763"]
-           #517 "6"
-         #518 button.day [data-k="d:20764"]
-           #519 "7"
-         #520 button.day [data-k="d:20765"]
-           #521 "8"
-         #522 button.day [data-k="d:20766"]
-           #523 "9"
-         #524 button.day.has.today.picked [data-k="d:20767"]
-           #525 "10"
-         #526 button.day [data-k="d:20768"]
-           #527 "11"
-         #528 button.day [data-k="d:20769"]
-           #529 "12"
-         #530 button.day [data-k="d:20770"]
-           #531 "13"
-         #532 button.day [data-k="d:20771"]
-           #533 "14"
-         #534 button.day [data-k="d:20772"]
-           #535 "15"
-         #536 button.day [data-k="d:20773"]
-           #537 "16"
-         #538 button.day [data-k="d:20774"]
-           #539 "17"
-         #540 button.day [data-k="d:20775"]
-           #541 "18"
-         #542 button.day [data-k="d:20776"]
-           #543 "19"
-         #544 button.day [data-k="d:20777"]
-           #545 "20"
-         #546 button.day [data-k="d:20778"]
-           #547 "21"
-         #548 button.day [data-k="d:20779"]
-           #549 "22"
-         #550 button.day [data-k="d:20780"]
-           #551 "23"
-         #552 button.day [data-k="d:20781"]
-           #553 "24"
-         #554 button.day [data-k="d:20782"]
-           #555 "25"
-         #556 button.day [data-k="d:20783"]
-           #557 "26"
-         #558 button.day [data-k="d:20784"]
-           #559 "27"
-         #560 button.day [data-k="d:20785"]
-           #561 "28"
-         #562 button.day [data-k="d:20786"]
-           #563 "29"
-         #564 button.day [data-k="d:20787"]
-           #565 "30"
-         #566 button.day.out [data-k="d:20788"]
-           #567 "1"
-         #568 button.day.out [data-k="d:20789"]
-           #569 "2"
-         #570 button.day.out [data-k="d:20790"]
-           #571 "3"
-         #572 button.day.out [data-k="d:20791"]
-           #573 "4"
-         #574 button.day.out [data-k="d:20792"]
-           #575 "5"
-         #576 button.day.out [data-k="d:20793"]
-           #577 "6"
-       #25 div.when
-         #578 "Tuesday, November 10"
-       #26 div.events
-         #579 div.event
-           #580 div.at
-             #581 "12:15 ·"
-           #582 div.what
-             #583 "Dentist"
-           #584 button.icon [data-k="x:1"]
-             #585 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #586 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #587 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [page] 195 nodes
+   #1 body {back}
+     #2 div.app {click input}
+       #3 div.monthpage
+         #4 div.appbar
+           #5 div.big.month
+             #707 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #708 div.blank
+             #709 div.blank
+             #710 div.blank
+             #711 div.blank
+             #712 div.blank
+             #713 div.blank
+             #714 button.day.end [data-k="d:20758"]
+               #715 span
+                 #716 "1"
+             #717 button.day [data-k="d:20759"]
+               #718 span
+                 #719 "2"
+             #720 button.day [data-k="d:20760"]
+               #721 span
+                 #722 "3"
+             #723 button.day [data-k="d:20761"]
+               #724 span
+                 #725 "4"
+             #726 button.day [data-k="d:20762"]
+               #727 span
+                 #728 "5"
+             #729 button.day [data-k="d:20763"]
+               #730 span
+                 #731 "6"
+             #732 button.day.end [data-k="d:20764"]
+               #733 span
+                 #734 "7"
+             #735 button.day.end [data-k="d:20765"]
+               #736 span
+                 #737 "8"
+             #738 button.day [data-k="d:20766"]
+               #739 span
+                 #740 "9"
+             #741 button.day.today [data-k="d:20767"]
+               #742 span
+                 #743 "10"
+               #744 span.dot
+             #745 button.day [data-k="d:20768"]
+               #746 span
+                 #747 "11"
+             #748 button.day [data-k="d:20769"]
+               #749 span
+                 #750 "12"
+             #751 button.day [data-k="d:20770"]
+               #752 span
+                 #753 "13"
+             #754 button.day.end [data-k="d:20771"]
+               #755 span
+                 #756 "14"
+             #757 button.day.end [data-k="d:20772"]
+               #758 span
+                 #759 "15"
+             #760 button.day [data-k="d:20773"]
+               #761 span
+                 #762 "16"
+             #763 button.day [data-k="d:20774"]
+               #764 span
+                 #765 "17"
+             #766 button.day [data-k="d:20775"]
+               #767 span
+                 #768 "18"
+             #769 button.day [data-k="d:20776"]
+               #770 span
+                 #771 "19"
+             #772 button.day [data-k="d:20777"]
+               #773 span
+                 #774 "20"
+             #775 button.day.end [data-k="d:20778"]
+               #776 span
+                 #777 "21"
+             #778 button.day.end [data-k="d:20779"]
+               #779 span
+                 #780 "22"
+             #781 button.day [data-k="d:20780"]
+               #782 span
+                 #783 "23"
+             #784 button.day [data-k="d:20781"]
+               #785 span
+                 #786 "24"
+             #787 button.day [data-k="d:20782"]
+               #788 span
+                 #789 "25"
+             #790 button.day [data-k="d:20783"]
+               #791 span
+                 #792 "26"
+             #793 button.day [data-k="d:20784"]
+               #794 span
+                 #795 "27"
+             #796 button.day.end [data-k="d:20785"]
+               #797 span
+                 #798 "28"
+             #799 button.day.end [data-k="d:20786"]
+               #800 span
+                 #801 "29"
+             #802 button.day [data-k="d:20787"]
+               #803 span
+                 #804 "30"
+         #33 div.when
+           #805 "Tuesday, November 10"
+         #34 div.events
+           #806 div.event
+             #807 div.bar
+             #808 div.etext
+               #809 div.what
+                 #810 "Dentist"
+               #811 div.at
+                 #812 "12:15 · Reminder"
+             #813 button.iconbtn [data-k="x:1"]
+               #814 span.icon
+                 #815 "delete"
+       #35 div.newpage.hidden
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #819 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #816 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #817 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #818 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
    [call] arche:phone/background@0.1.0#wake-at(1794294900000)
 
---- frame 7  (clicks fed to guest: []) ---
-   [page] 137 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #493 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #494 button.day.out [data-k="d:20752"]
-           #495 "26"
-         #496 button.day.out [data-k="d:20753"]
-           #497 "27"
-         #498 button.day.out [data-k="d:20754"]
-           #499 "28"
-         #500 button.day.out [data-k="d:20755"]
-           #501 "29"
-         #502 button.day.out [data-k="d:20756"]
-           #503 "30"
-         #504 button.day.out [data-k="d:20757"]
-           #505 "31"
-         #506 button.day [data-k="d:20758"]
-           #507 "1"
-         #508 button.day [data-k="d:20759"]
-           #509 "2"
-         #510 button.day [data-k="d:20760"]
-           #511 "3"
-         #512 button.day [data-k="d:20761"]
-           #513 "4"
-         #514 button.day [data-k="d:20762"]
-           #515 "5"
-         #516 button.day [data-k="d:20763"]
-           #517 "6"
-         #518 button.day [data-k="d:20764"]
-           #519 "7"
-         #520 button.day [data-k="d:20765"]
-           #521 "8"
-         #522 button.day [data-k="d:20766"]
-           #523 "9"
-         #524 button.day.has.today.picked [data-k="d:20767"]
-           #525 "10"
-         #526 button.day [data-k="d:20768"]
-           #527 "11"
-         #528 button.day [data-k="d:20769"]
-           #529 "12"
-         #530 button.day [data-k="d:20770"]
-           #531 "13"
-         #532 button.day [data-k="d:20771"]
-           #533 "14"
-         #534 button.day [data-k="d:20772"]
-           #535 "15"
-         #536 button.day [data-k="d:20773"]
-           #537 "16"
-         #538 button.day [data-k="d:20774"]
-           #539 "17"
-         #540 button.day [data-k="d:20775"]
-           #541 "18"
-         #542 button.day [data-k="d:20776"]
-           #543 "19"
-         #544 button.day [data-k="d:20777"]
-           #545 "20"
-         #546 button.day [data-k="d:20778"]
-           #547 "21"
-         #548 button.day [data-k="d:20779"]
-           #549 "22"
-         #550 button.day [data-k="d:20780"]
-           #551 "23"
-         #552 button.day [data-k="d:20781"]
-           #553 "24"
-         #554 button.day [data-k="d:20782"]
-           #555 "25"
-         #556 button.day [data-k="d:20783"]
-           #557 "26"
-         #558 button.day [data-k="d:20784"]
-           #559 "27"
-         #560 button.day [data-k="d:20785"]
-           #561 "28"
-         #562 button.day [data-k="d:20786"]
-           #563 "29"
-         #564 button.day [data-k="d:20787"]
-           #565 "30"
-         #566 button.day.out [data-k="d:20788"]
-           #567 "1"
-         #568 button.day.out [data-k="d:20789"]
-           #569 "2"
-         #570 button.day.out [data-k="d:20790"]
-           #571 "3"
-         #572 button.day.out [data-k="d:20791"]
-           #573 "4"
-         #574 button.day.out [data-k="d:20792"]
-           #575 "5"
-         #576 button.day.out [data-k="d:20793"]
-           #577 "6"
-       #25 div.when
-         #578 "Tuesday, November 10"
-       #26 div.events
-         #579 div.event
-           #580 div.at
-             #581 "12:15 ·"
-           #582 div.what
-             #583 "Dentist"
-           #584 button.icon [data-k="x:1"]
-             #585 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #586 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #587 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+--- frame 8  (clicks fed to guest: []) ---
+   [tap] #13
+   [page] 195 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #820 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #821 div.blank
+             #822 div.blank
+             #823 div.blank
+             #824 div.blank
+             #825 div.blank
+             #826 div.blank
+             #827 button.day.end [data-k="d:20758"]
+               #828 span
+                 #829 "1"
+             #830 button.day [data-k="d:20759"]
+               #831 span
+                 #832 "2"
+             #833 button.day [data-k="d:20760"]
+               #834 span
+                 #835 "3"
+             #836 button.day [data-k="d:20761"]
+               #837 span
+                 #838 "4"
+             #839 button.day [data-k="d:20762"]
+               #840 span
+                 #841 "5"
+             #842 button.day [data-k="d:20763"]
+               #843 span
+                 #844 "6"
+             #845 button.day.end [data-k="d:20764"]
+               #846 span
+                 #847 "7"
+             #848 button.day.end [data-k="d:20765"]
+               #849 span
+                 #850 "8"
+             #851 button.day [data-k="d:20766"]
+               #852 span
+                 #853 "9"
+             #854 button.day.today [data-k="d:20767"]
+               #855 span
+                 #856 "10"
+               #857 span.dot
+             #858 button.day [data-k="d:20768"]
+               #859 span
+                 #860 "11"
+             #861 button.day [data-k="d:20769"]
+               #862 span
+                 #863 "12"
+             #864 button.day [data-k="d:20770"]
+               #865 span
+                 #866 "13"
+             #867 button.day.end [data-k="d:20771"]
+               #868 span
+                 #869 "14"
+             #870 button.day.end [data-k="d:20772"]
+               #871 span
+                 #872 "15"
+             #873 button.day [data-k="d:20773"]
+               #874 span
+                 #875 "16"
+             #876 button.day [data-k="d:20774"]
+               #877 span
+                 #878 "17"
+             #879 button.day [data-k="d:20775"]
+               #880 span
+                 #881 "18"
+             #882 button.day [data-k="d:20776"]
+               #883 span
+                 #884 "19"
+             #885 button.day [data-k="d:20777"]
+               #886 span
+                 #887 "20"
+             #888 button.day.end [data-k="d:20778"]
+               #889 span
+                 #890 "21"
+             #891 button.day.end [data-k="d:20779"]
+               #892 span
+                 #893 "22"
+             #894 button.day [data-k="d:20780"]
+               #895 span
+                 #896 "23"
+             #897 button.day [data-k="d:20781"]
+               #898 span
+                 #899 "24"
+             #900 button.day [data-k="d:20782"]
+               #901 span
+                 #902 "25"
+             #903 button.day [data-k="d:20783"]
+               #904 span
+                 #905 "26"
+             #906 button.day [data-k="d:20784"]
+               #907 span
+                 #908 "27"
+             #909 button.day.end [data-k="d:20785"]
+               #910 span
+                 #911 "28"
+             #912 button.day.end [data-k="d:20786"]
+               #913 span
+                 #914 "29"
+             #915 button.day [data-k="d:20787"]
+               #916 span
+                 #917 "30"
+         #33 div.when
+           #918 "Tuesday, November 10"
+         #34 div.events
+           #919 div.event
+             #920 div.bar
+             #921 div.etext
+               #922 div.what
+                 #923 "Dentist"
+               #924 div.at
+                 #925 "12:15 · Reminder"
+             #926 button.iconbtn [data-k="x:1"]
+               #927 span.icon
+                 #928 "delete"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #932 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #929 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #930 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #931 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/notify@0.1.0#post("Dentist", "12:15")
    [call] arche:phone/background@0.1.0#wake-at(0)
 
---- frame 8  (clicks fed to guest: []) ---
-   [type] #28 = "Тушлик"
-   [page] 137 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #493 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #494 button.day.out [data-k="d:20752"]
-           #495 "26"
-         #496 button.day.out [data-k="d:20753"]
-           #497 "27"
-         #498 button.day.out [data-k="d:20754"]
-           #499 "28"
-         #500 button.day.out [data-k="d:20755"]
-           #501 "29"
-         #502 button.day.out [data-k="d:20756"]
-           #503 "30"
-         #504 button.day.out [data-k="d:20757"]
-           #505 "31"
-         #506 button.day [data-k="d:20758"]
-           #507 "1"
-         #508 button.day [data-k="d:20759"]
-           #509 "2"
-         #510 button.day [data-k="d:20760"]
-           #511 "3"
-         #512 button.day [data-k="d:20761"]
-           #513 "4"
-         #514 button.day [data-k="d:20762"]
-           #515 "5"
-         #516 button.day [data-k="d:20763"]
-           #517 "6"
-         #518 button.day [data-k="d:20764"]
-           #519 "7"
-         #520 button.day [data-k="d:20765"]
-           #521 "8"
-         #522 button.day [data-k="d:20766"]
-           #523 "9"
-         #524 button.day.has.today.picked [data-k="d:20767"]
-           #525 "10"
-         #526 button.day [data-k="d:20768"]
-           #527 "11"
-         #528 button.day [data-k="d:20769"]
-           #529 "12"
-         #530 button.day [data-k="d:20770"]
-           #531 "13"
-         #532 button.day [data-k="d:20771"]
-           #533 "14"
-         #534 button.day [data-k="d:20772"]
-           #535 "15"
-         #536 button.day [data-k="d:20773"]
-           #537 "16"
-         #538 button.day [data-k="d:20774"]
-           #539 "17"
-         #540 button.day [data-k="d:20775"]
-           #541 "18"
-         #542 button.day [data-k="d:20776"]
-           #543 "19"
-         #544 button.day [data-k="d:20777"]
-           #545 "20"
-         #546 button.day [data-k="d:20778"]
-           #547 "21"
-         #548 button.day [data-k="d:20779"]
-           #549 "22"
-         #550 button.day [data-k="d:20780"]
-           #551 "23"
-         #552 button.day [data-k="d:20781"]
-           #553 "24"
-         #554 button.day [data-k="d:20782"]
-           #555 "25"
-         #556 button.day [data-k="d:20783"]
-           #557 "26"
-         #558 button.day [data-k="d:20784"]
-           #559 "27"
-         #560 button.day [data-k="d:20785"]
-           #561 "28"
-         #562 button.day [data-k="d:20786"]
-           #563 "29"
-         #564 button.day [data-k="d:20787"]
-           #565 "30"
-         #566 button.day.out [data-k="d:20788"]
-           #567 "1"
-         #568 button.day.out [data-k="d:20789"]
-           #569 "2"
-         #570 button.day.out [data-k="d:20790"]
-           #571 "3"
-         #572 button.day.out [data-k="d:20791"]
-           #573 "4"
-         #574 button.day.out [data-k="d:20792"]
-           #575 "5"
-         #576 button.day.out [data-k="d:20793"]
-           #577 "6"
-       #25 div.when
-         #578 "Tuesday, November 10"
-       #26 div.events
-         #579 div.event
-           #580 div.at
-             #581 "12:15 ·"
-           #582 div.what
-             #583 "Dentist"
-           #584 button.icon [data-k="x:1"]
-             #585 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value="Тушлик"
-         #29 div.time
-           #586 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #587 "Remind: on"
-           #41 button.go [data-k="add"]
-             #42 "Add"
-   [call] arche:phone/background@0.1.0#woken()
-   [call] arche:phone/background@0.1.0#wake-at(0)
-
 --- frame 9  (clicks fed to guest: []) ---
-   [tap] #40
-   [page] 137 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #588 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #589 button.day.out [data-k="d:20752"]
-           #590 "26"
-         #591 button.day.out [data-k="d:20753"]
-           #592 "27"
-         #593 button.day.out [data-k="d:20754"]
-           #594 "28"
-         #595 button.day.out [data-k="d:20755"]
-           #596 "29"
-         #597 button.day.out [data-k="d:20756"]
-           #598 "30"
-         #599 button.day.out [data-k="d:20757"]
-           #600 "31"
-         #601 button.day [data-k="d:20758"]
-           #602 "1"
-         #603 button.day [data-k="d:20759"]
-           #604 "2"
-         #605 button.day [data-k="d:20760"]
-           #606 "3"
-         #607 button.day [data-k="d:20761"]
-           #608 "4"
-         #609 button.day [data-k="d:20762"]
-           #610 "5"
-         #611 button.day [data-k="d:20763"]
-           #612 "6"
-         #613 button.day [data-k="d:20764"]
-           #614 "7"
-         #615 button.day [data-k="d:20765"]
-           #616 "8"
-         #617 button.day [data-k="d:20766"]
-           #618 "9"
-         #619 button.day.has.today.picked [data-k="d:20767"]
-           #620 "10"
-         #621 button.day [data-k="d:20768"]
-           #622 "11"
-         #623 button.day [data-k="d:20769"]
-           #624 "12"
-         #625 button.day [data-k="d:20770"]
-           #626 "13"
-         #627 button.day [data-k="d:20771"]
-           #628 "14"
-         #629 button.day [data-k="d:20772"]
-           #630 "15"
-         #631 button.day [data-k="d:20773"]
-           #632 "16"
-         #633 button.day [data-k="d:20774"]
-           #634 "17"
-         #635 button.day [data-k="d:20775"]
-           #636 "18"
-         #637 button.day [data-k="d:20776"]
-           #638 "19"
-         #639 button.day [data-k="d:20777"]
-           #640 "20"
-         #641 button.day [data-k="d:20778"]
-           #642 "21"
-         #643 button.day [data-k="d:20779"]
-           #644 "22"
-         #645 button.day [data-k="d:20780"]
-           #646 "23"
-         #647 button.day [data-k="d:20781"]
-           #648 "24"
-         #649 button.day [data-k="d:20782"]
-           #650 "25"
-         #651 button.day [data-k="d:20783"]
-           #652 "26"
-         #653 button.day [data-k="d:20784"]
-           #654 "27"
-         #655 button.day [data-k="d:20785"]
-           #656 "28"
-         #657 button.day [data-k="d:20786"]
-           #658 "29"
-         #659 button.day [data-k="d:20787"]
-           #660 "30"
-         #661 button.day.out [data-k="d:20788"]
-           #662 "1"
-         #663 button.day.out [data-k="d:20789"]
-           #664 "2"
-         #665 button.day.out [data-k="d:20790"]
-           #666 "3"
-         #667 button.day.out [data-k="d:20791"]
-           #668 "4"
-         #669 button.day.out [data-k="d:20792"]
-           #670 "5"
-         #671 button.day.out [data-k="d:20793"]
-           #672 "6"
-       #25 div.when
-         #673 "Tuesday, November 10"
-       #26 div.events
-         #674 div.event
-           #675 div.at
-             #676 "12:15 ·"
-           #677 div.what
-             #678 "Dentist"
-           #679 button.icon [data-k="x:1"]
-             #680 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value="Тушлик"
-         #29 div.time
-           #681 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #682 "Remind: off"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [type] #48 = "Тушлик"
+   [page] 195 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #820 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #821 div.blank
+             #822 div.blank
+             #823 div.blank
+             #824 div.blank
+             #825 div.blank
+             #826 div.blank
+             #827 button.day.end [data-k="d:20758"]
+               #828 span
+                 #829 "1"
+             #830 button.day [data-k="d:20759"]
+               #831 span
+                 #832 "2"
+             #833 button.day [data-k="d:20760"]
+               #834 span
+                 #835 "3"
+             #836 button.day [data-k="d:20761"]
+               #837 span
+                 #838 "4"
+             #839 button.day [data-k="d:20762"]
+               #840 span
+                 #841 "5"
+             #842 button.day [data-k="d:20763"]
+               #843 span
+                 #844 "6"
+             #845 button.day.end [data-k="d:20764"]
+               #846 span
+                 #847 "7"
+             #848 button.day.end [data-k="d:20765"]
+               #849 span
+                 #850 "8"
+             #851 button.day [data-k="d:20766"]
+               #852 span
+                 #853 "9"
+             #854 button.day.today [data-k="d:20767"]
+               #855 span
+                 #856 "10"
+               #857 span.dot
+             #858 button.day [data-k="d:20768"]
+               #859 span
+                 #860 "11"
+             #861 button.day [data-k="d:20769"]
+               #862 span
+                 #863 "12"
+             #864 button.day [data-k="d:20770"]
+               #865 span
+                 #866 "13"
+             #867 button.day.end [data-k="d:20771"]
+               #868 span
+                 #869 "14"
+             #870 button.day.end [data-k="d:20772"]
+               #871 span
+                 #872 "15"
+             #873 button.day [data-k="d:20773"]
+               #874 span
+                 #875 "16"
+             #876 button.day [data-k="d:20774"]
+               #877 span
+                 #878 "17"
+             #879 button.day [data-k="d:20775"]
+               #880 span
+                 #881 "18"
+             #882 button.day [data-k="d:20776"]
+               #883 span
+                 #884 "19"
+             #885 button.day [data-k="d:20777"]
+               #886 span
+                 #887 "20"
+             #888 button.day.end [data-k="d:20778"]
+               #889 span
+                 #890 "21"
+             #891 button.day.end [data-k="d:20779"]
+               #892 span
+                 #893 "22"
+             #894 button.day [data-k="d:20780"]
+               #895 span
+                 #896 "23"
+             #897 button.day [data-k="d:20781"]
+               #898 span
+                 #899 "24"
+             #900 button.day [data-k="d:20782"]
+               #901 span
+                 #902 "25"
+             #903 button.day [data-k="d:20783"]
+               #904 span
+                 #905 "26"
+             #906 button.day [data-k="d:20784"]
+               #907 span
+                 #908 "27"
+             #909 button.day.end [data-k="d:20785"]
+               #910 span
+                 #911 "28"
+             #912 button.day.end [data-k="d:20786"]
+               #913 span
+                 #914 "29"
+             #915 button.day [data-k="d:20787"]
+               #916 span
+                 #917 "30"
+         #33 div.when
+           #918 "Tuesday, November 10"
+         #34 div.events
+           #919 div.event
+             #920 div.bar
+             #921 div.etext
+               #922 div.what
+                 #923 "Dentist"
+               #924 div.at
+                 #925 "12:15 · Reminder"
+             #926 button.iconbtn [data-k="x:1"]
+               #927 span.icon
+                 #928 "delete"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="Тушлик" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #932 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #929 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #930 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #931 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind.on
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 10  (clicks fed to guest: []) ---
-   [tap] #41
-   [page] 144 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #683 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #684 button.day.out [data-k="d:20752"]
-           #685 "26"
-         #686 button.day.out [data-k="d:20753"]
-           #687 "27"
-         #688 button.day.out [data-k="d:20754"]
-           #689 "28"
-         #690 button.day.out [data-k="d:20755"]
-           #691 "29"
-         #692 button.day.out [data-k="d:20756"]
-           #693 "30"
-         #694 button.day.out [data-k="d:20757"]
-           #695 "31"
-         #696 button.day [data-k="d:20758"]
-           #697 "1"
-         #698 button.day [data-k="d:20759"]
-           #699 "2"
-         #700 button.day [data-k="d:20760"]
-           #701 "3"
-         #702 button.day [data-k="d:20761"]
-           #703 "4"
-         #704 button.day [data-k="d:20762"]
-           #705 "5"
-         #706 button.day [data-k="d:20763"]
-           #707 "6"
-         #708 button.day [data-k="d:20764"]
-           #709 "7"
-         #710 button.day [data-k="d:20765"]
-           #711 "8"
-         #712 button.day [data-k="d:20766"]
-           #713 "9"
-         #714 button.day.has.today.picked [data-k="d:20767"]
-           #715 "10"
-         #716 button.day [data-k="d:20768"]
-           #717 "11"
-         #718 button.day [data-k="d:20769"]
-           #719 "12"
-         #720 button.day [data-k="d:20770"]
-           #721 "13"
-         #722 button.day [data-k="d:20771"]
-           #723 "14"
-         #724 button.day [data-k="d:20772"]
-           #725 "15"
-         #726 button.day [data-k="d:20773"]
-           #727 "16"
-         #728 button.day [data-k="d:20774"]
-           #729 "17"
-         #730 button.day [data-k="d:20775"]
-           #731 "18"
-         #732 button.day [data-k="d:20776"]
-           #733 "19"
-         #734 button.day [data-k="d:20777"]
-           #735 "20"
-         #736 button.day [data-k="d:20778"]
-           #737 "21"
-         #738 button.day [data-k="d:20779"]
-           #739 "22"
-         #740 button.day [data-k="d:20780"]
-           #741 "23"
-         #742 button.day [data-k="d:20781"]
-           #743 "24"
-         #744 button.day [data-k="d:20782"]
-           #745 "25"
-         #746 button.day [data-k="d:20783"]
-           #747 "26"
-         #748 button.day [data-k="d:20784"]
-           #749 "27"
-         #750 button.day [data-k="d:20785"]
-           #751 "28"
-         #752 button.day [data-k="d:20786"]
-           #753 "29"
-         #754 button.day [data-k="d:20787"]
-           #755 "30"
-         #756 button.day.out [data-k="d:20788"]
-           #757 "1"
-         #758 button.day.out [data-k="d:20789"]
-           #759 "2"
-         #760 button.day.out [data-k="d:20790"]
-           #761 "3"
-         #762 button.day.out [data-k="d:20791"]
-           #763 "4"
-         #764 button.day.out [data-k="d:20792"]
-           #765 "5"
-         #766 button.day.out [data-k="d:20793"]
-           #767 "6"
-       #25 div.when
-         #768 "Tuesday, November 10"
-       #26 div.events
-         #769 div.event
-           #770 div.at
-             #771 "12:15 ·"
-           #772 div.what
-             #773 "Dentist"
-           #774 button.icon [data-k="x:1"]
-             #775 "close"
-         #776 div.event
-           #777 div.at
-             #778 "12:15"
-           #779 div.what
-             #780 "Тушлик"
-           #781 button.icon [data-k="x:2"]
-             #782 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #783 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #784 "Remind: off"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #78
+   [page] 195 nodes
+   #1 body [data-back="1"] {back}
+     #2 div.app {click input}
+       #3 div.monthpage.hidden
+         #4 div.appbar
+           #5 div.big.month
+             #933 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #934 div.blank
+             #935 div.blank
+             #936 div.blank
+             #937 div.blank
+             #938 div.blank
+             #939 div.blank
+             #940 button.day.end [data-k="d:20758"]
+               #941 span
+                 #942 "1"
+             #943 button.day [data-k="d:20759"]
+               #944 span
+                 #945 "2"
+             #946 button.day [data-k="d:20760"]
+               #947 span
+                 #948 "3"
+             #949 button.day [data-k="d:20761"]
+               #950 span
+                 #951 "4"
+             #952 button.day [data-k="d:20762"]
+               #953 span
+                 #954 "5"
+             #955 button.day [data-k="d:20763"]
+               #956 span
+                 #957 "6"
+             #958 button.day.end [data-k="d:20764"]
+               #959 span
+                 #960 "7"
+             #961 button.day.end [data-k="d:20765"]
+               #962 span
+                 #963 "8"
+             #964 button.day [data-k="d:20766"]
+               #965 span
+                 #966 "9"
+             #967 button.day.today [data-k="d:20767"]
+               #968 span
+                 #969 "10"
+               #970 span.dot
+             #971 button.day [data-k="d:20768"]
+               #972 span
+                 #973 "11"
+             #974 button.day [data-k="d:20769"]
+               #975 span
+                 #976 "12"
+             #977 button.day [data-k="d:20770"]
+               #978 span
+                 #979 "13"
+             #980 button.day.end [data-k="d:20771"]
+               #981 span
+                 #982 "14"
+             #983 button.day.end [data-k="d:20772"]
+               #984 span
+                 #985 "15"
+             #986 button.day [data-k="d:20773"]
+               #987 span
+                 #988 "16"
+             #989 button.day [data-k="d:20774"]
+               #990 span
+                 #991 "17"
+             #992 button.day [data-k="d:20775"]
+               #993 span
+                 #994 "18"
+             #995 button.day [data-k="d:20776"]
+               #996 span
+                 #997 "19"
+             #998 button.day [data-k="d:20777"]
+               #999 span
+                 #1000 "20"
+             #1001 button.day.end [data-k="d:20778"]
+               #1002 span
+                 #1003 "21"
+             #1004 button.day.end [data-k="d:20779"]
+               #1005 span
+                 #1006 "22"
+             #1007 button.day [data-k="d:20780"]
+               #1008 span
+                 #1009 "23"
+             #1010 button.day [data-k="d:20781"]
+               #1011 span
+                 #1012 "24"
+             #1013 button.day [data-k="d:20782"]
+               #1014 span
+                 #1015 "25"
+             #1016 button.day [data-k="d:20783"]
+               #1017 span
+                 #1018 "26"
+             #1019 button.day [data-k="d:20784"]
+               #1020 span
+                 #1021 "27"
+             #1022 button.day.end [data-k="d:20785"]
+               #1023 span
+                 #1024 "28"
+             #1025 button.day.end [data-k="d:20786"]
+               #1026 span
+                 #1027 "29"
+             #1028 button.day [data-k="d:20787"]
+               #1029 span
+                 #1030 "30"
+         #33 div.when
+           #1031 "Tuesday, November 10"
+         #34 div.events
+           #1032 div.event
+             #1033 div.bar
+             #1034 div.etext
+               #1035 div.what
+                 #1036 "Dentist"
+               #1037 div.at
+                 #1038 "12:15 · Reminder"
+             #1039 button.iconbtn [data-k="x:1"]
+               #1040 span.icon
+                 #1041 "delete"
+       #35 div.newpage
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="Тушлик" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #1045 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #1042 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #1043 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #1044 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
-   [call] arche:phone/background@0.1.0#wake-at(0)
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 11  (clicks fed to guest: []) ---
-   [tap] #7
-   [page] 144 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #785 "December 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #786 button.day.out [data-k="d:20787"]
-           #787 "30"
-         #788 button.day [data-k="d:20788"]
-           #789 "1"
-         #790 button.day [data-k="d:20789"]
-           #791 "2"
-         #792 button.day [data-k="d:20790"]
-           #793 "3"
-         #794 button.day [data-k="d:20791"]
-           #795 "4"
-         #796 button.day [data-k="d:20792"]
-           #797 "5"
-         #798 button.day [data-k="d:20793"]
-           #799 "6"
-         #800 button.day [data-k="d:20794"]
-           #801 "7"
-         #802 button.day [data-k="d:20795"]
-           #803 "8"
-         #804 button.day [data-k="d:20796"]
-           #805 "9"
-         #806 button.day [data-k="d:20797"]
-           #807 "10"
-         #808 button.day [data-k="d:20798"]
-           #809 "11"
-         #810 button.day [data-k="d:20799"]
-           #811 "12"
-         #812 button.day [data-k="d:20800"]
-           #813 "13"
-         #814 button.day [data-k="d:20801"]
-           #815 "14"
-         #816 button.day [data-k="d:20802"]
-           #817 "15"
-         #818 button.day [data-k="d:20803"]
-           #819 "16"
-         #820 button.day [data-k="d:20804"]
-           #821 "17"
-         #822 button.day [data-k="d:20805"]
-           #823 "18"
-         #824 button.day [data-k="d:20806"]
-           #825 "19"
-         #826 button.day [data-k="d:20807"]
-           #827 "20"
-         #828 button.day [data-k="d:20808"]
-           #829 "21"
-         #830 button.day [data-k="d:20809"]
-           #831 "22"
-         #832 button.day [data-k="d:20810"]
-           #833 "23"
-         #834 button.day [data-k="d:20811"]
-           #835 "24"
-         #836 button.day [data-k="d:20812"]
-           #837 "25"
-         #838 button.day [data-k="d:20813"]
-           #839 "26"
-         #840 button.day [data-k="d:20814"]
-           #841 "27"
-         #842 button.day [data-k="d:20815"]
-           #843 "28"
-         #844 button.day [data-k="d:20816"]
-           #845 "29"
-         #846 button.day [data-k="d:20817"]
-           #847 "30"
-         #848 button.day [data-k="d:20818"]
-           #849 "31"
-         #850 button.day.out [data-k="d:20819"]
-           #851 "1"
-         #852 button.day.out [data-k="d:20820"]
-           #853 "2"
-         #854 button.day.out [data-k="d:20821"]
-           #855 "3"
-         #856 button.day.out [data-k="d:20822"]
-           #857 "4"
-         #858 button.day.out [data-k="d:20823"]
-           #859 "5"
-         #860 button.day.out [data-k="d:20824"]
-           #861 "6"
-         #862 button.day.out [data-k="d:20825"]
-           #863 "7"
-         #864 button.day.out [data-k="d:20826"]
-           #865 "8"
-         #866 button.day.out [data-k="d:20827"]
-           #867 "9"
-         #868 button.day.out [data-k="d:20828"]
-           #869 "10"
-       #25 div.when
-         #870 "Tuesday, November 10"
-       #26 div.events
-         #871 div.event
-           #872 div.at
-             #873 "12:15 ·"
-           #874 div.what
-             #875 "Dentist"
-           #876 button.icon [data-k="x:1"]
-             #877 "close"
-         #878 div.event
-           #879 div.at
-             #880 "12:15"
-           #881 div.what
-             #882 "Тушлик"
-           #883 button.icon [data-k="x:2"]
-             #884 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #885 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #886 "Remind: off"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #41
+   [page] 205 nodes
+   #1 body {back}
+     #2 div.app {click input}
+       #3 div.monthpage
+         #4 div.appbar
+           #5 div.big.month
+             #1046 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #1047 div.blank
+             #1048 div.blank
+             #1049 div.blank
+             #1050 div.blank
+             #1051 div.blank
+             #1052 div.blank
+             #1053 button.day.end [data-k="d:20758"]
+               #1054 span
+                 #1055 "1"
+             #1056 button.day [data-k="d:20759"]
+               #1057 span
+                 #1058 "2"
+             #1059 button.day [data-k="d:20760"]
+               #1060 span
+                 #1061 "3"
+             #1062 button.day [data-k="d:20761"]
+               #1063 span
+                 #1064 "4"
+             #1065 button.day [data-k="d:20762"]
+               #1066 span
+                 #1067 "5"
+             #1068 button.day [data-k="d:20763"]
+               #1069 span
+                 #1070 "6"
+             #1071 button.day.end [data-k="d:20764"]
+               #1072 span
+                 #1073 "7"
+             #1074 button.day.end [data-k="d:20765"]
+               #1075 span
+                 #1076 "8"
+             #1077 button.day [data-k="d:20766"]
+               #1078 span
+                 #1079 "9"
+             #1080 button.day.today [data-k="d:20767"]
+               #1081 span
+                 #1082 "10"
+               #1083 span.dot
+             #1084 button.day [data-k="d:20768"]
+               #1085 span
+                 #1086 "11"
+             #1087 button.day [data-k="d:20769"]
+               #1088 span
+                 #1089 "12"
+             #1090 button.day [data-k="d:20770"]
+               #1091 span
+                 #1092 "13"
+             #1093 button.day.end [data-k="d:20771"]
+               #1094 span
+                 #1095 "14"
+             #1096 button.day.end [data-k="d:20772"]
+               #1097 span
+                 #1098 "15"
+             #1099 button.day [data-k="d:20773"]
+               #1100 span
+                 #1101 "16"
+             #1102 button.day [data-k="d:20774"]
+               #1103 span
+                 #1104 "17"
+             #1105 button.day [data-k="d:20775"]
+               #1106 span
+                 #1107 "18"
+             #1108 button.day [data-k="d:20776"]
+               #1109 span
+                 #1110 "19"
+             #1111 button.day [data-k="d:20777"]
+               #1112 span
+                 #1113 "20"
+             #1114 button.day.end [data-k="d:20778"]
+               #1115 span
+                 #1116 "21"
+             #1117 button.day.end [data-k="d:20779"]
+               #1118 span
+                 #1119 "22"
+             #1120 button.day [data-k="d:20780"]
+               #1121 span
+                 #1122 "23"
+             #1123 button.day [data-k="d:20781"]
+               #1124 span
+                 #1125 "24"
+             #1126 button.day [data-k="d:20782"]
+               #1127 span
+                 #1128 "25"
+             #1129 button.day [data-k="d:20783"]
+               #1130 span
+                 #1131 "26"
+             #1132 button.day [data-k="d:20784"]
+               #1133 span
+                 #1134 "27"
+             #1135 button.day.end [data-k="d:20785"]
+               #1136 span
+                 #1137 "28"
+             #1138 button.day.end [data-k="d:20786"]
+               #1139 span
+                 #1140 "29"
+             #1141 button.day [data-k="d:20787"]
+               #1142 span
+                 #1143 "30"
+         #33 div.when
+           #1144 "Tuesday, November 10"
+         #34 div.events
+           #1145 div.event
+             #1146 div.bar
+             #1147 div.etext
+               #1148 div.what
+                 #1149 "Dentist"
+               #1150 div.at
+                 #1151 "12:15 · Reminder"
+             #1152 button.iconbtn [data-k="x:1"]
+               #1153 span.icon
+                 #1154 "delete"
+           #1155 div.event
+             #1156 div.bar
+             #1157 div.etext
+               #1158 div.what
+                 #1159 "Тушлик"
+               #1160 div.at
+                 #1161 "12:15"
+             #1162 button.iconbtn [data-k="x:2"]
+               #1163 span.icon
+                 #1164 "delete"
+       #35 div.newpage.hidden
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #1168 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #1165 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #1166 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #1167 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 12  (clicks fed to guest: []) ---
-   [tap] #5
-   [page] 144 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #887 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #888 button.day.out [data-k="d:20752"]
-           #889 "26"
-         #890 button.day.out [data-k="d:20753"]
-           #891 "27"
-         #892 button.day.out [data-k="d:20754"]
-           #893 "28"
-         #894 button.day.out [data-k="d:20755"]
-           #895 "29"
-         #896 button.day.out [data-k="d:20756"]
-           #897 "30"
-         #898 button.day.out [data-k="d:20757"]
-           #899 "31"
-         #900 button.day [data-k="d:20758"]
-           #901 "1"
-         #902 button.day [data-k="d:20759"]
-           #903 "2"
-         #904 button.day [data-k="d:20760"]
-           #905 "3"
-         #906 button.day [data-k="d:20761"]
-           #907 "4"
-         #908 button.day [data-k="d:20762"]
-           #909 "5"
-         #910 button.day [data-k="d:20763"]
-           #911 "6"
-         #912 button.day [data-k="d:20764"]
-           #913 "7"
-         #914 button.day [data-k="d:20765"]
-           #915 "8"
-         #916 button.day [data-k="d:20766"]
-           #917 "9"
-         #918 button.day.has.today.picked [data-k="d:20767"]
-           #919 "10"
-         #920 button.day [data-k="d:20768"]
-           #921 "11"
-         #922 button.day [data-k="d:20769"]
-           #923 "12"
-         #924 button.day [data-k="d:20770"]
-           #925 "13"
-         #926 button.day [data-k="d:20771"]
-           #927 "14"
-         #928 button.day [data-k="d:20772"]
-           #929 "15"
-         #930 button.day [data-k="d:20773"]
-           #931 "16"
-         #932 button.day [data-k="d:20774"]
-           #933 "17"
-         #934 button.day [data-k="d:20775"]
-           #935 "18"
-         #936 button.day [data-k="d:20776"]
-           #937 "19"
-         #938 button.day [data-k="d:20777"]
-           #939 "20"
-         #940 button.day [data-k="d:20778"]
-           #941 "21"
-         #942 button.day [data-k="d:20779"]
-           #943 "22"
-         #944 button.day [data-k="d:20780"]
-           #945 "23"
-         #946 button.day [data-k="d:20781"]
-           #947 "24"
-         #948 button.day [data-k="d:20782"]
-           #949 "25"
-         #950 button.day [data-k="d:20783"]
-           #951 "26"
-         #952 button.day [data-k="d:20784"]
-           #953 "27"
-         #954 button.day [data-k="d:20785"]
-           #955 "28"
-         #956 button.day [data-k="d:20786"]
-           #957 "29"
-         #958 button.day [data-k="d:20787"]
-           #959 "30"
-         #960 button.day.out [data-k="d:20788"]
-           #961 "1"
-         #962 button.day.out [data-k="d:20789"]
-           #963 "2"
-         #964 button.day.out [data-k="d:20790"]
-           #965 "3"
-         #966 button.day.out [data-k="d:20791"]
-           #967 "4"
-         #968 button.day.out [data-k="d:20792"]
-           #969 "5"
-         #970 button.day.out [data-k="d:20793"]
-           #971 "6"
-       #25 div.when
-         #972 "Tuesday, November 10"
-       #26 div.events
-         #973 div.event
-           #974 div.at
-             #975 "12:15 ·"
-           #976 div.what
-             #977 "Dentist"
-           #978 button.icon [data-k="x:1"]
-             #979 "close"
-         #980 div.event
-           #981 div.at
-             #982 "12:15"
-           #983 div.what
-             #984 "Тушлик"
-           #985 button.icon [data-k="x:2"]
-             #986 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #987 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #988 "Remind: off"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #1162
+   [page] 195 nodes
+   #1 body {back}
+     #2 div.app {click input}
+       #3 div.monthpage
+         #4 div.appbar
+           #5 div.big.month
+             #1169 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #1170 div.blank
+             #1171 div.blank
+             #1172 div.blank
+             #1173 div.blank
+             #1174 div.blank
+             #1175 div.blank
+             #1176 button.day.end [data-k="d:20758"]
+               #1177 span
+                 #1178 "1"
+             #1179 button.day [data-k="d:20759"]
+               #1180 span
+                 #1181 "2"
+             #1182 button.day [data-k="d:20760"]
+               #1183 span
+                 #1184 "3"
+             #1185 button.day [data-k="d:20761"]
+               #1186 span
+                 #1187 "4"
+             #1188 button.day [data-k="d:20762"]
+               #1189 span
+                 #1190 "5"
+             #1191 button.day [data-k="d:20763"]
+               #1192 span
+                 #1193 "6"
+             #1194 button.day.end [data-k="d:20764"]
+               #1195 span
+                 #1196 "7"
+             #1197 button.day.end [data-k="d:20765"]
+               #1198 span
+                 #1199 "8"
+             #1200 button.day [data-k="d:20766"]
+               #1201 span
+                 #1202 "9"
+             #1203 button.day.today [data-k="d:20767"]
+               #1204 span
+                 #1205 "10"
+               #1206 span.dot
+             #1207 button.day [data-k="d:20768"]
+               #1208 span
+                 #1209 "11"
+             #1210 button.day [data-k="d:20769"]
+               #1211 span
+                 #1212 "12"
+             #1213 button.day [data-k="d:20770"]
+               #1214 span
+                 #1215 "13"
+             #1216 button.day.end [data-k="d:20771"]
+               #1217 span
+                 #1218 "14"
+             #1219 button.day.end [data-k="d:20772"]
+               #1220 span
+                 #1221 "15"
+             #1222 button.day [data-k="d:20773"]
+               #1223 span
+                 #1224 "16"
+             #1225 button.day [data-k="d:20774"]
+               #1226 span
+                 #1227 "17"
+             #1228 button.day [data-k="d:20775"]
+               #1229 span
+                 #1230 "18"
+             #1231 button.day [data-k="d:20776"]
+               #1232 span
+                 #1233 "19"
+             #1234 button.day [data-k="d:20777"]
+               #1235 span
+                 #1236 "20"
+             #1237 button.day.end [data-k="d:20778"]
+               #1238 span
+                 #1239 "21"
+             #1240 button.day.end [data-k="d:20779"]
+               #1241 span
+                 #1242 "22"
+             #1243 button.day [data-k="d:20780"]
+               #1244 span
+                 #1245 "23"
+             #1246 button.day [data-k="d:20781"]
+               #1247 span
+                 #1248 "24"
+             #1249 button.day [data-k="d:20782"]
+               #1250 span
+                 #1251 "25"
+             #1252 button.day [data-k="d:20783"]
+               #1253 span
+                 #1254 "26"
+             #1255 button.day [data-k="d:20784"]
+               #1256 span
+                 #1257 "27"
+             #1258 button.day.end [data-k="d:20785"]
+               #1259 span
+                 #1260 "28"
+             #1261 button.day.end [data-k="d:20786"]
+               #1262 span
+                 #1263 "29"
+             #1264 button.day [data-k="d:20787"]
+               #1265 span
+                 #1266 "30"
+         #33 div.when
+           #1267 "Tuesday, November 10"
+         #34 div.events
+           #1268 div.event
+             #1269 div.bar
+             #1270 div.etext
+               #1271 div.what
+                 #1272 "Dentist"
+               #1273 div.at
+                 #1274 "12:15 · Reminder"
+             #1275 button.iconbtn [data-k="x:1"]
+               #1276 span.icon
+                 #1277 "delete"
+       #35 div.newpage.hidden
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #1281 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #1278 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #1279 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #1280 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
+   [call] arche:phone/background@0.1.0#wake-at(0)
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 13  (clicks fed to guest: []) ---
-   [tap] #985
-   [page] 137 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #989 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #990 button.day.out [data-k="d:20752"]
-           #991 "26"
-         #992 button.day.out [data-k="d:20753"]
-           #993 "27"
-         #994 button.day.out [data-k="d:20754"]
-           #995 "28"
-         #996 button.day.out [data-k="d:20755"]
-           #997 "29"
-         #998 button.day.out [data-k="d:20756"]
-           #999 "30"
-         #1000 button.day.out [data-k="d:20757"]
-           #1001 "31"
-         #1002 button.day [data-k="d:20758"]
-           #1003 "1"
-         #1004 button.day [data-k="d:20759"]
-           #1005 "2"
-         #1006 button.day [data-k="d:20760"]
-           #1007 "3"
-         #1008 button.day [data-k="d:20761"]
-           #1009 "4"
-         #1010 button.day [data-k="d:20762"]
-           #1011 "5"
-         #1012 button.day [data-k="d:20763"]
-           #1013 "6"
-         #1014 button.day [data-k="d:20764"]
-           #1015 "7"
-         #1016 button.day [data-k="d:20765"]
-           #1017 "8"
-         #1018 button.day [data-k="d:20766"]
-           #1019 "9"
-         #1020 button.day.has.today.picked [data-k="d:20767"]
-           #1021 "10"
-         #1022 button.day [data-k="d:20768"]
-           #1023 "11"
-         #1024 button.day [data-k="d:20769"]
-           #1025 "12"
-         #1026 button.day [data-k="d:20770"]
-           #1027 "13"
-         #1028 button.day [data-k="d:20771"]
-           #1029 "14"
-         #1030 button.day [data-k="d:20772"]
-           #1031 "15"
-         #1032 button.day [data-k="d:20773"]
-           #1033 "16"
-         #1034 button.day [data-k="d:20774"]
-           #1035 "17"
-         #1036 button.day [data-k="d:20775"]
-           #1037 "18"
-         #1038 button.day [data-k="d:20776"]
-           #1039 "19"
-         #1040 button.day [data-k="d:20777"]
-           #1041 "20"
-         #1042 button.day [data-k="d:20778"]
-           #1043 "21"
-         #1044 button.day [data-k="d:20779"]
-           #1045 "22"
-         #1046 button.day [data-k="d:20780"]
-           #1047 "23"
-         #1048 button.day [data-k="d:20781"]
-           #1049 "24"
-         #1050 button.day [data-k="d:20782"]
-           #1051 "25"
-         #1052 button.day [data-k="d:20783"]
-           #1053 "26"
-         #1054 button.day [data-k="d:20784"]
-           #1055 "27"
-         #1056 button.day [data-k="d:20785"]
-           #1057 "28"
-         #1058 button.day [data-k="d:20786"]
-           #1059 "29"
-         #1060 button.day [data-k="d:20787"]
-           #1061 "30"
-         #1062 button.day.out [data-k="d:20788"]
-           #1063 "1"
-         #1064 button.day.out [data-k="d:20789"]
-           #1065 "2"
-         #1066 button.day.out [data-k="d:20790"]
-           #1067 "3"
-         #1068 button.day.out [data-k="d:20791"]
-           #1069 "4"
-         #1070 button.day.out [data-k="d:20792"]
-           #1071 "5"
-         #1072 button.day.out [data-k="d:20793"]
-           #1073 "6"
-       #25 div.when
-         #1074 "Tuesday, November 10"
-       #26 div.events
-         #1075 div.event
-           #1076 div.at
-             #1077 "12:15 ·"
-           #1078 div.what
-             #1079 "Dentist"
-           #1080 button.icon [data-k="x:1"]
-             #1081 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #1082 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #1083 "Remind: off"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #10
+   [page] 192 nodes
+   #1 body {back}
+     #2 div.app {click input}
+       #3 div.monthpage
+         #4 div.appbar
+           #5 div.big.month
+             #1282 "2026 / 12"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #1283 div.blank
+             #1284 button.day [data-k="d:20788"]
+               #1285 span
+                 #1286 "1"
+             #1287 button.day [data-k="d:20789"]
+               #1288 span
+                 #1289 "2"
+             #1290 button.day [data-k="d:20790"]
+               #1291 span
+                 #1292 "3"
+             #1293 button.day [data-k="d:20791"]
+               #1294 span
+                 #1295 "4"
+             #1296 button.day.end [data-k="d:20792"]
+               #1297 span
+                 #1298 "5"
+             #1299 button.day.end [data-k="d:20793"]
+               #1300 span
+                 #1301 "6"
+             #1302 button.day [data-k="d:20794"]
+               #1303 span
+                 #1304 "7"
+             #1305 button.day [data-k="d:20795"]
+               #1306 span
+                 #1307 "8"
+             #1308 button.day [data-k="d:20796"]
+               #1309 span
+                 #1310 "9"
+             #1311 button.day [data-k="d:20797"]
+               #1312 span
+                 #1313 "10"
+             #1314 button.day [data-k="d:20798"]
+               #1315 span
+                 #1316 "11"
+             #1317 button.day.end [data-k="d:20799"]
+               #1318 span
+                 #1319 "12"
+             #1320 button.day.end [data-k="d:20800"]
+               #1321 span
+                 #1322 "13"
+             #1323 button.day [data-k="d:20801"]
+               #1324 span
+                 #1325 "14"
+             #1326 button.day [data-k="d:20802"]
+               #1327 span
+                 #1328 "15"
+             #1329 button.day [data-k="d:20803"]
+               #1330 span
+                 #1331 "16"
+             #1332 button.day [data-k="d:20804"]
+               #1333 span
+                 #1334 "17"
+             #1335 button.day [data-k="d:20805"]
+               #1336 span
+                 #1337 "18"
+             #1338 button.day.end [data-k="d:20806"]
+               #1339 span
+                 #1340 "19"
+             #1341 button.day.end [data-k="d:20807"]
+               #1342 span
+                 #1343 "20"
+             #1344 button.day [data-k="d:20808"]
+               #1345 span
+                 #1346 "21"
+             #1347 button.day [data-k="d:20809"]
+               #1348 span
+                 #1349 "22"
+             #1350 button.day [data-k="d:20810"]
+               #1351 span
+                 #1352 "23"
+             #1353 button.day [data-k="d:20811"]
+               #1354 span
+                 #1355 "24"
+             #1356 button.day [data-k="d:20812"]
+               #1357 span
+                 #1358 "25"
+             #1359 button.day.end [data-k="d:20813"]
+               #1360 span
+                 #1361 "26"
+             #1362 button.day.end [data-k="d:20814"]
+               #1363 span
+                 #1364 "27"
+             #1365 button.day [data-k="d:20815"]
+               #1366 span
+                 #1367 "28"
+             #1368 button.day [data-k="d:20816"]
+               #1369 span
+                 #1370 "29"
+             #1371 button.day [data-k="d:20817"]
+               #1372 span
+                 #1373 "30"
+             #1374 button.day [data-k="d:20818"]
+               #1375 span
+                 #1376 "31"
+         #33 div.when
+           #1377 "Tuesday, November 10"
+         #34 div.events
+           #1378 div.event
+             #1379 div.bar
+             #1380 div.etext
+               #1381 div.what
+                 #1382 "Dentist"
+               #1383 div.at
+                 #1384 "12:15 · Reminder"
+             #1385 button.iconbtn [data-k="x:1"]
+               #1386 span.icon
+                 #1387 "delete"
+       #35 div.newpage.hidden
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #1391 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #1388 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #1389 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #1390 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
-   [call] arche:phone/background@0.1.0#wake-at(0)
    [call] arche:phone/background@0.1.0#wake-at(0)
 
 --- frame 14  (clicks fed to guest: []) ---
-   [page] 137 nodes
-   #1 body
-     #2 div.cal {click input}
-       #3 div.head
-         #4 div.month
-           #989 "November 2026"
-         #5 button [data-k="prev"]
-           #6 "‹"
-         #7 button [data-k="next"]
-           #8 "›"
-       #9 div.names
-         #10 div.name
-           #11 "Mo"
-         #12 div.name
-           #13 "Tu"
-         #14 div.name
-           #15 "We"
-         #16 div.name
-           #17 "Th"
-         #18 div.name
-           #19 "Fr"
-         #20 div.name
-           #21 "Sa"
-         #22 div.name
-           #23 "Su"
-       #24 div.grid
-         #990 button.day.out [data-k="d:20752"]
-           #991 "26"
-         #992 button.day.out [data-k="d:20753"]
-           #993 "27"
-         #994 button.day.out [data-k="d:20754"]
-           #995 "28"
-         #996 button.day.out [data-k="d:20755"]
-           #997 "29"
-         #998 button.day.out [data-k="d:20756"]
-           #999 "30"
-         #1000 button.day.out [data-k="d:20757"]
-           #1001 "31"
-         #1002 button.day [data-k="d:20758"]
-           #1003 "1"
-         #1004 button.day [data-k="d:20759"]
-           #1005 "2"
-         #1006 button.day [data-k="d:20760"]
-           #1007 "3"
-         #1008 button.day [data-k="d:20761"]
-           #1009 "4"
-         #1010 button.day [data-k="d:20762"]
-           #1011 "5"
-         #1012 button.day [data-k="d:20763"]
-           #1013 "6"
-         #1014 button.day [data-k="d:20764"]
-           #1015 "7"
-         #1016 button.day [data-k="d:20765"]
-           #1017 "8"
-         #1018 button.day [data-k="d:20766"]
-           #1019 "9"
-         #1020 button.day.has.today.picked [data-k="d:20767"]
-           #1021 "10"
-         #1022 button.day [data-k="d:20768"]
-           #1023 "11"
-         #1024 button.day [data-k="d:20769"]
-           #1025 "12"
-         #1026 button.day [data-k="d:20770"]
-           #1027 "13"
-         #1028 button.day [data-k="d:20771"]
-           #1029 "14"
-         #1030 button.day [data-k="d:20772"]
-           #1031 "15"
-         #1032 button.day [data-k="d:20773"]
-           #1033 "16"
-         #1034 button.day [data-k="d:20774"]
-           #1035 "17"
-         #1036 button.day [data-k="d:20775"]
-           #1037 "18"
-         #1038 button.day [data-k="d:20776"]
-           #1039 "19"
-         #1040 button.day [data-k="d:20777"]
-           #1041 "20"
-         #1042 button.day [data-k="d:20778"]
-           #1043 "21"
-         #1044 button.day [data-k="d:20779"]
-           #1045 "22"
-         #1046 button.day [data-k="d:20780"]
-           #1047 "23"
-         #1048 button.day [data-k="d:20781"]
-           #1049 "24"
-         #1050 button.day [data-k="d:20782"]
-           #1051 "25"
-         #1052 button.day [data-k="d:20783"]
-           #1053 "26"
-         #1054 button.day [data-k="d:20784"]
-           #1055 "27"
-         #1056 button.day [data-k="d:20785"]
-           #1057 "28"
-         #1058 button.day [data-k="d:20786"]
-           #1059 "29"
-         #1060 button.day [data-k="d:20787"]
-           #1061 "30"
-         #1062 button.day.out [data-k="d:20788"]
-           #1063 "1"
-         #1064 button.day.out [data-k="d:20789"]
-           #1065 "2"
-         #1066 button.day.out [data-k="d:20790"]
-           #1067 "3"
-         #1068 button.day.out [data-k="d:20791"]
-           #1069 "4"
-         #1070 button.day.out [data-k="d:20792"]
-           #1071 "5"
-         #1072 button.day.out [data-k="d:20793"]
-           #1073 "6"
-       #25 div.when
-         #1074 "Tuesday, November 10"
-       #26 div.events
-         #1075 div.event
-           #1076 div.at
-             #1077 "12:15 ·"
-           #1078 div.what
-             #1079 "Dentist"
-           #1080 button.icon [data-k="x:1"]
-             #1081 "close"
-       #27 div.new
-         #28 input.title [placeholder="New event"] value=""
-         #29 div.time
-           #1082 "12:15"
-         #30 div.row
-           #31 button [data-k="h-"]
-             #32 "−1 h"
-           #33 button [data-k="h+"]
-             #34 "+1 h"
-           #35 button [data-k="m-"]
-             #36 "−15"
-           #37 button [data-k="m+"]
-             #38 "+15"
-         #39 div.row
-           #40 button.remind [data-k="remind"]
-             #1083 "Remind: off"
-           #41 button.go [data-k="add"]
-             #42 "Add"
+   [tap] #7
+   [page] 195 nodes
+   #1 body {back}
+     #2 div.app {click input}
+       #3 div.monthpage
+         #4 div.appbar
+           #5 div.big.month
+             #1392 "2026 / 11"
+           #6 div.actions
+             #7 button.iconbtn [data-k="prev"]
+               #8 span.icon
+                 #9 "chevron_left"
+             #10 button.iconbtn [data-k="next"]
+               #11 span.icon
+                 #12 "chevron_right"
+             #13 button.iconbtn [data-k="new"]
+               #14 span.icon
+                 #15 "add"
+         #16 div.monthcard
+           #17 div.names
+             #18 div.name
+               #19 "MON"
+             #20 div.name
+               #21 "TUE"
+             #22 div.name
+               #23 "WED"
+             #24 div.name
+               #25 "THU"
+             #26 div.name
+               #27 "FRI"
+             #28 div.name.end
+               #29 "SAT"
+             #30 div.name.end
+               #31 "SUN"
+           #32 div.grid
+             #1393 div.blank
+             #1394 div.blank
+             #1395 div.blank
+             #1396 div.blank
+             #1397 div.blank
+             #1398 div.blank
+             #1399 button.day.end [data-k="d:20758"]
+               #1400 span
+                 #1401 "1"
+             #1402 button.day [data-k="d:20759"]
+               #1403 span
+                 #1404 "2"
+             #1405 button.day [data-k="d:20760"]
+               #1406 span
+                 #1407 "3"
+             #1408 button.day [data-k="d:20761"]
+               #1409 span
+                 #1410 "4"
+             #1411 button.day [data-k="d:20762"]
+               #1412 span
+                 #1413 "5"
+             #1414 button.day [data-k="d:20763"]
+               #1415 span
+                 #1416 "6"
+             #1417 button.day.end [data-k="d:20764"]
+               #1418 span
+                 #1419 "7"
+             #1420 button.day.end [data-k="d:20765"]
+               #1421 span
+                 #1422 "8"
+             #1423 button.day [data-k="d:20766"]
+               #1424 span
+                 #1425 "9"
+             #1426 button.day.today [data-k="d:20767"]
+               #1427 span
+                 #1428 "10"
+               #1429 span.dot
+             #1430 button.day [data-k="d:20768"]
+               #1431 span
+                 #1432 "11"
+             #1433 button.day [data-k="d:20769"]
+               #1434 span
+                 #1435 "12"
+             #1436 button.day [data-k="d:20770"]
+               #1437 span
+                 #1438 "13"
+             #1439 button.day.end [data-k="d:20771"]
+               #1440 span
+                 #1441 "14"
+             #1442 button.day.end [data-k="d:20772"]
+               #1443 span
+                 #1444 "15"
+             #1445 button.day [data-k="d:20773"]
+               #1446 span
+                 #1447 "16"
+             #1448 button.day [data-k="d:20774"]
+               #1449 span
+                 #1450 "17"
+             #1451 button.day [data-k="d:20775"]
+               #1452 span
+                 #1453 "18"
+             #1454 button.day [data-k="d:20776"]
+               #1455 span
+                 #1456 "19"
+             #1457 button.day [data-k="d:20777"]
+               #1458 span
+                 #1459 "20"
+             #1460 button.day.end [data-k="d:20778"]
+               #1461 span
+                 #1462 "21"
+             #1463 button.day.end [data-k="d:20779"]
+               #1464 span
+                 #1465 "22"
+             #1466 button.day [data-k="d:20780"]
+               #1467 span
+                 #1468 "23"
+             #1469 button.day [data-k="d:20781"]
+               #1470 span
+                 #1471 "24"
+             #1472 button.day [data-k="d:20782"]
+               #1473 span
+                 #1474 "25"
+             #1475 button.day [data-k="d:20783"]
+               #1476 span
+                 #1477 "26"
+             #1478 button.day [data-k="d:20784"]
+               #1479 span
+                 #1480 "27"
+             #1481 button.day.end [data-k="d:20785"]
+               #1482 span
+                 #1483 "28"
+             #1484 button.day.end [data-k="d:20786"]
+               #1485 span
+                 #1486 "29"
+             #1487 button.day [data-k="d:20787"]
+               #1488 span
+                 #1489 "30"
+         #33 div.when
+           #1490 "Tuesday, November 10"
+         #34 div.events
+           #1491 div.event
+             #1492 div.bar
+             #1493 div.etext
+               #1494 div.what
+                 #1495 "Dentist"
+               #1496 div.at
+                 #1497 "12:15 · Reminder"
+             #1498 button.iconbtn [data-k="x:1"]
+               #1499 span.icon
+                 #1500 "delete"
+       #35 div.newpage.hidden
+         #36 div.head
+           #37 button.iconbtn [data-k="cancel"]
+             #38 span.icon
+               #39 "close"
+           #40 div.title
+           #41 button.iconbtn [data-k="add"]
+             #42 span.icon
+               #43 "check"
+         #44 div.big
+           #45 "Add event"
+         #46 div.group
+           #47 div.row
+             #48 input.title [placeholder="Enter event title"] value="" (focused)
+         #49 div.group
+           #50 div.row
+             #51 span.primary.grow
+               #52 "Date"
+             #53 span.trail.datev
+               #1504 "Tue, Nov 10, 2026"
+           #54 div.row
+             #55 span.primary.grow
+               #56 "Time"
+             #57 span.trail.time
+               #1501 "12:15"
+           #58 div.pick
+             #59 div.spin
+               #60 button.iconbtn [data-k="h+"]
+                 #61 span.icon
+                   #62 "expand_less"
+               #63 div.val.hourv
+                 #1502 "12"
+               #64 button.iconbtn [data-k="h-"]
+                 #65 span.icon
+                   #66 "expand_more"
+             #67 div.colon
+               #68 ":"
+             #69 div.spin
+               #70 button.iconbtn [data-k="m+"]
+                 #71 span.icon
+                   #72 "expand_less"
+               #73 div.val.minutev
+                 #1503 "15"
+               #74 button.iconbtn [data-k="m-"]
+                 #75 span.icon
+                   #76 "expand_more"
+         #77 div.group
+           #78 button.row [data-k="remind"]
+             #79 span.primary.grow
+               #80 "Reminder"
+             #81 span.switch.remind
+               #82 span.knob
    [call] arche:phone/background@0.1.0#woken()
    [call] arche:phone/background@0.1.0#wake-at(0)

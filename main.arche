@@ -1,11 +1,12 @@
-/// Calendar, the Arche phone's, written in Arche, as Android's: the month,
-/// a grid of its weeks from Monday, today marked, the day picked filled,
-/// and a dot on a day that has events; ‹ and › go to the month before and
-/// after. The day picked has its events under the grid, in the order of
-/// their times, each with ✕ to delete it; a new one is its title, its time
-/// set an hour or a quarter of an hour at a time, whether to be reminded,
-/// and Add. Time is the shell's (now-millis), as the user reads it
-/// (utc-offset).
+/// Calendar, the Arche phone's, written in Arche, as a phone's calendar is
+/// (arche-os T7, T12): the month, 2026 / 11, its days from Monday on a
+/// card, the weekend's blue, today filled, the day picked washed and a
+/// dot on a day with events; ‹ and › go to the month before and after.
+/// The day picked has its events under the card, in the order of their
+/// times, each with Delete. + opens a new event's page: its title, its
+/// day (the one picked), its time on steppers, whether to be reminded,
+/// and ✓; ✕ and the phone's Back close it. Time is the shell's
+/// (now-millis), as the user reads it (utc-offset).
 ///
 /// An app of the phone's world (arche:phone, wit/): an event to be
 /// reminded of has the phone wake the app at its time (background's
@@ -23,7 +24,7 @@ import host_api;
 import notify;
 import std;
 
-const SHEET: str = ".cal { display: flex; flex-direction: column; gap: 12px; padding: 8px 14px 16px; } .head { display: flex; flex-direction: row; align-items: center; gap: 6px; padding: 8px 4px 0 6px; } .month { font-size: 28px; color: var(--kit-text); flex: 1; } .head button { width: 40px; height: 40px; border-radius: 20px; border: 0; padding: 0; font-size: 22px; background: var(--kit-card); color: var(--kit-text); } .names, .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; } .name { font-size: 12px; font-weight: 500; color: var(--kit-muted); text-align: center; } .grid { padding: 6px; border-radius: 18px; background: var(--kit-card); } .day { padding: 9px 0; border-radius: 12px; font-size: 16px; font-weight: 400; border: 0; background: transparent; color: var(--kit-text); } .day.out { color: var(--kit-muted); } .day.has { background: var(--kit-wash); } .day.today { color: var(--kit-accent); font-weight: 600; } .day.picked { background: var(--kit-accent); color: #ffffff; } .when { font-size: 15px; font-weight: 500; color: var(--kit-muted); padding: 4px 6px 0; } .events { display: flex; flex-direction: column; gap: 8px; } .event { display: flex; flex-direction: row; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 16px; background: var(--kit-card); } .at { font-size: 15px; color: var(--kit-accent); font-weight: 500; } .what { font-size: 16px; color: var(--kit-text); flex: 1; } .event button { width: 32px; height: 32px; border-radius: 16px; border: 0; padding: 0; font-size: 18px; background: var(--kit-ground); color: var(--kit-muted); } .none { font-size: 15px; color: var(--kit-muted); padding: 0 6px; } .new { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 18px; background: var(--kit-card); } .new input { padding: 10px 14px; border-radius: 12px; border: 0; font-size: 17px; background: var(--kit-ground); color: var(--kit-text); } .row { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; } .row button { padding: 8px 14px; border-radius: 18px; border: 0; font-size: 14px; font-weight: 500; background: var(--kit-ground); color: var(--kit-text); } .row button.go { padding: 10px 24px; font-size: 16px; background: var(--kit-accent); color: #ffffff; } .time { font-size: 30px; color: var(--kit-text); text-align: center; }";
+const SHEET: str = ".names { display: grid; grid-template-columns: repeat(7, 1fr); padding: 4px 8px 6px; } .name { font-size: 12px; font-weight: 500; color: var(--kit-muted); text-align: center; } .name.end { color: var(--kit-accent); } .monthcard { background: var(--kit-card); border-radius: 0 0 24px 24px; padding: 0 8px 14px; } .grid { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 6px; } .blank { height: 48px; } button.day { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 48px; margin: 0 4px; padding: 0; border-radius: 14px; font-size: 18px; font-weight: 400; border: 0; background: transparent; color: var(--kit-text); } button.day.end { color: var(--kit-accent); } button.day.picked { background: var(--kit-wash); } button.day.today { background: var(--kit-accent); color: #ffffff; } .dot { width: 5px; height: 5px; border-radius: 3px; background: var(--kit-accent); margin-top: 3px; } .today .dot { background: #ffffff; } .when { font-size: 15px; font-weight: 500; color: var(--kit-muted); padding: 18px 28px 8px; } .events { display: flex; flex-direction: column; gap: 8px; padding: 0 16px 16px; } .event { display: flex; flex-direction: row; align-items: center; gap: 14px; padding: 14px 10px 14px 18px; border-radius: 18px; background: var(--kit-card); } .bar { width: 4px; height: 36px; border-radius: 2px; background: var(--kit-accent); } .etext { display: flex; flex-direction: column; gap: 2px; flex-grow: 1; } .what { font-size: 16px; color: var(--kit-text); } .at { font-size: 13px; color: var(--kit-muted); } .none { font-size: 15px; color: var(--kit-muted); text-align: center; padding: 40px 0; } .newpage .head .title { flex-grow: 1; } .newpage .group .row input { font-size: 17px; } .pick { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 8px; padding: 8px 0 12px; } .spin { display: flex; flex-direction: column; align-items: center; } .val { font-size: 44px; font-weight: 300; color: var(--kit-text); width: 80px; text-align: center; } .colon { font-size: 40px; font-weight: 300; color: var(--kit-muted); } .switch { width: 52px; height: 32px; border-radius: 16px; padding: 4px; display: flex; flex-direction: row; justify-content: flex-start; align-items: center; background: var(--kit-line); flex-shrink: 0; } .switch.on { justify-content: flex-end; background: var(--kit-accent); } .knob { width: 24px; height: 24px; border-radius: 12px; background: #ffffff; } .grow { flex-grow: 1; } .hidden { display: none; }";
 
 const DAY_MINUTES: i64 = 1440;
 const DAY_MS: i64 = 86400000;
@@ -80,13 +81,20 @@ type Calendar = struct {
     title: alloc.String,
     at: i64,
     remind: bool,
+    /// Whether the new event's page is up.
+    adding: bool,
     /// The page's nodes.
+    month_page: u32,
+    new_page: u32,
     month_node: u32,
     grid: u32,
     when: u32,
     list: u32,
     field: u32,
     time: u32,
+    hour_node: u32,
+    minute_node: u32,
+    date_node: u32,
     remind_node: u32,
 }
 
@@ -178,14 +186,15 @@ fn init(host: &mut std.Host, a: alloc.Allocator) -> Calendar {
     _ = dom.add_stylesheet(host, css: kit.view());
     _ = dom.add_stylesheet(host, css: SHEET);
     let root = dom.root(host);
-    let markup = "<div class='cal'><div class='head'><div class='month'></div><button data-k='prev'>‹</button><button data-k='next'>›</button></div><div class='names'><div class='name'>Mo</div><div class='name'>Tu</div><div class='name'>We</div><div class='name'>Th</div><div class='name'>Fr</div><div class='name'>Sa</div><div class='name'>Su</div></div><div class='grid'></div><div class='when'></div><div class='events'></div><div class='new'><input class='title' placeholder='New event'><div class='time'></div><div class='row'><button data-k='h-'>−1 h</button><button data-k='h+'>+1 h</button><button data-k='m-'>−15</button><button data-k='m+'>+15</button></div><div class='row'><button class='remind' data-k='remind'></button><button class='go' data-k='add'>Add</button></div></div></div>";
+    let markup = "<div class='app'><div class='monthpage'><div class='appbar'><div class='big month'></div><div class='actions'><button class='iconbtn' data-k='prev'><span class='icon'>chevron_left</span></button><button class='iconbtn' data-k='next'><span class='icon'>chevron_right</span></button><button class='iconbtn' data-k='new'><span class='icon'>add</span></button></div></div><div class='monthcard'><div class='names'><div class='name'>MON</div><div class='name'>TUE</div><div class='name'>WED</div><div class='name'>THU</div><div class='name'>FRI</div><div class='name end'>SAT</div><div class='name end'>SUN</div></div><div class='grid'></div></div><div class='when'></div><div class='events'></div></div><div class='newpage hidden'><div class='head'><button class='iconbtn' data-k='cancel'><span class='icon'>close</span></button><div class='title'></div><button class='iconbtn' data-k='add'><span class='icon'>check</span></button></div><div class='big'>Add event</div><div class='group'><div class='row'><input class='title' placeholder='Enter event title'></div></div><div class='group'><div class='row'><span class='primary grow'>Date</span><span class='trail datev'></span></div><div class='row'><span class='primary grow'>Time</span><span class='trail time'></span></div><div class='pick'><div class='spin'><button class='iconbtn' data-k='h+'><span class='icon'>expand_less</span></button><div class='val hourv'></div><button class='iconbtn' data-k='h-'><span class='icon'>expand_more</span></button></div><div class='colon'>:</div><div class='spin'><button class='iconbtn' data-k='m+'><span class='icon'>expand_less</span></button><div class='val minutev'></div><button class='iconbtn' data-k='m-'><span class='icon'>expand_more</span></button></div></div></div><div class='group'><button class='row' data-k='remind'><span class='primary grow'>Reminder</span><span class='switch remind'><span class='knob'></span></span></button></div></div></div>";
     var why = alloc.String.init(a);
     if not dom.set_markup(host, item: root, markup: markup, why: &mut why, a: a) {
         host_api.log(host, msg: why.view());
     }
-    let cal = first(host, selector: ".cal", a: a);
+    let cal = first(host, selector: ".app", a: a);
     dom.listen(host, item: cal, kind: "click");
     dom.listen(host, item: cal, kind: "input");
+    dom.listen(host, item: root, kind: "back");
     let now_day = today(host);
     let c = civil_of(now_day);
     var state = Calendar {
@@ -199,12 +208,18 @@ fn init(host: &mut std.Host, a: alloc.Allocator) -> Calendar {
         title: alloc.String.init(a),
         at: 9 * 60,
         remind: true,
+        adding: false,
+        month_page: first(host, selector: ".monthpage", a: a),
+        new_page: first(host, selector: ".newpage", a: a),
         month_node: first(host, selector: ".month", a: a),
         grid: first(host, selector: ".grid", a: a),
         when: first(host, selector: ".when", a: a),
         list: first(host, selector: ".events", a: a),
-        field: first(host, selector: ".title", a: a),
+        field: first(host, selector: "input.title", a: a),
         time: first(host, selector: ".time", a: a),
+        hour_node: first(host, selector: ".hourv", a: a),
+        minute_node: first(host, selector: ".minutev", a: a),
+        date_node: first(host, selector: ".datev", a: a),
         remind_node: first(host, selector: ".remind", a: a),
     };
     match host_api.storage_get(host, key: "events", a: a) {
@@ -235,7 +250,10 @@ fn update(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
     }
     var changed = false;
     for e in dom.events(host, a: a).items() {
-        if e.kind.view().eq("click") {
+        if e.kind.view().eq("back") {
+            press(state, host: host, key: "cancel", a: a);
+            changed = true;
+        } else if e.kind.view().eq("click") {
             match key_of(host, n: e.target, a: a) {
                 some(k) => {
                     press(state, host: host, key: k.view(), a: a);
@@ -283,10 +301,16 @@ fn press(state: &mut Calendar, host: &mut std.Host, key: str, a: alloc.Allocator
         state.at = (state.at + step) % DAY_MINUTES;
     } else if key.eq("remind") {
         state.remind = not state.remind;
+    } else if key.eq("new") {
+        state.adding = true;
+        dom.focus(host, item: state.field);
+    } else if key.eq("cancel") {
+        state.adding = false;
     } else if key.eq("add") {
         if state.title.len() == 0 {
             return;
         }
+        state.adding = false;
         state.events.push(Event { id: state.next, day: state.picked, minute: state.at, remind: state.remind, title: alloc.String.from(state.title.view(), a) });
         state.next += 1;
         state.title = alloc.String.init(a);
@@ -353,36 +377,47 @@ fn schedule(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
 /// The page as it is: the month and its grid, the day picked and its
 /// events, and the new event's time and reminder.
 fn show(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
-    var title = alloc.String.from(month_name(state.month), a);
-    title.push_str(" ");
+    // As a phone's calendar says it: 2026 / 11.
+    var title = alloc.String.init(a);
     title.push_i64(state.year);
+    title.push_str(" / ");
+    title.push_i64(state.month);
     dom.set_text(host, item: state.month_node, text: title.view());
-    // Six weeks from the Monday on or before the first.
+    dom.toggle_class(host, item: state.month_page, name: "hidden", on: state.adding);
+    dom.toggle_class(host, item: state.new_page, name: "hidden", on: not state.adding);
+    if state.adding {
+        dom.set_attribute(host, item: dom.root(host), name: "data-back", value_: "1");
+    } else {
+        dom.remove_attribute(host, item: dom.root(host), name: "data-back");
+    }
+    // The month's days from its Monday's column; the weekend's blue,
+    // today's filled, the day picked's washed, a dot on a day with events.
     let first_day = days_of(y: state.year, m: state.month, d: 1);
-    let start = first_day - weekday(first_day);
     let now_day = today(host);
     var cells = alloc.String.init(a);
     var k: i64 = 0;
-    while k < 42 : (k += 1) {
-        let day = start + k;
-        let c = civil_of(day);
+    while k < weekday(first_day) : (k += 1) {
+        cells.push_str("<div class='blank'></div>");
+    }
+    var day = first_day;
+    while civil_of(day).m == state.month : (day += 1) {
         cells.push_str("<button class='day");
-        if c.m != state.month {
-            cells.push_str(" out");
-        }
-        if has_events(state, day: day) {
-            cells.push_str(" has");
+        if weekday(day) >= 5 {
+            cells.push_str(" end");
         }
         if day == now_day {
             cells.push_str(" today");
-        }
-        if day == state.picked {
+        } else if day == state.picked {
             cells.push_str(" picked");
         }
         cells.push_str("' data-k='d:");
         cells.push_i64(day);
-        cells.push_str("'>");
-        cells.push_i64(c.d);
+        cells.push_str("'><span>");
+        cells.push_i64(civil_of(day).d);
+        cells.push_str("</span>");
+        if has_events(state, day: day) {
+            cells.push_str("<span class='dot'></span>");
+        }
         cells.push_str("</button>");
     }
     var why = alloc.String.init(a);
@@ -416,37 +451,56 @@ fn show(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
         }
     }
     if order.len() == 0 {
-        line(host, parent_: state.list, tag: "div", class: "none", text: "No events", a: a);
+        var none_said = "No events";
+        if state.picked == now_day {
+            none_said = "No events today";
+        }
+        line(host, parent_: state.list, tag: "div", class: "none", text: none_said, a: a);
     }
     for at in order.items() {
         let e = &state.events.items()[at.*];
         let row = dom.create_element(host, tag: "div");
         dom.set_attribute(host, item: row, name: "class", value_: "event");
+        line(host, parent_: row, tag: "div", class: "bar", text: "", a: a);
+        let text = dom.create_element(host, tag: "div");
+        dom.set_attribute(host, item: text, name: "class", value_: "etext");
+        line(host, parent_: text, tag: "div", class: "what", text: e.title.view(), a: a);
         var t = alloc.String.init(a);
         minutes_text(&mut t, minutes: e.minute);
         if e.remind {
-            t.push_str(" ·");
+            t.push_str(" · Reminder");
         }
-        line(host, parent_: row, tag: "div", class: "at", text: t.view(), a: a);
-        line(host, parent_: row, tag: "div", class: "what", text: e.title.view(), a: a);
+        line(host, parent_: text, tag: "div", class: "at", text: t.view(), a: a);
+        dom.append_child(host, parent_: row, child: text);
         let x = dom.create_element(host, tag: "button");
         var k2 = alloc.String.from("x:", a);
         k2.push_u64(e.id);
         dom.set_attribute(host, item: x, name: "data-k", value_: k2.view());
-        // Its icon, close, in the icon font.
-        dom.set_attribute(host, item: x, name: "class", value_: "icon");
-        dom.set_text(host, item: x, text: "close");
+        // Its icon, delete, in the icon font.
+        dom.set_attribute(host, item: x, name: "class", value_: "iconbtn");
+        line(host, parent_: x, tag: "span", class: "icon", text: "delete", a: a);
         dom.append_child(host, parent_: row, child: x);
         dom.append_child(host, parent_: state.list, child: row);
     }
     var at_text = alloc.String.init(a);
     minutes_text(&mut at_text, minutes: state.at);
     dom.set_text(host, item: state.time, text: at_text.view());
-    if state.remind {
-        dom.set_text(host, item: state.remind_node, text: "Remind: on");
-    } else {
-        dom.set_text(host, item: state.remind_node, text: "Remind: off");
-    }
+    var hh = alloc.String.init(a);
+    two(&mut hh, n: state.at / 60);
+    dom.set_text(host, item: state.hour_node, text: hh.view());
+    var mm = alloc.String.init(a);
+    two(&mut mm, n: state.at % 60);
+    dom.set_text(host, item: state.minute_node, text: mm.view());
+    // The day it is on: the one picked.
+    var on_day = alloc.String.from(weekday_name(weekday(state.picked))[0..3], a);
+    on_day.push_str(", ");
+    on_day.push_str(month_name(p.m)[0..3]);
+    on_day.push_str(" ");
+    on_day.push_i64(p.d);
+    on_day.push_str(", ");
+    on_day.push_i64(p.y);
+    dom.set_text(host, item: state.date_node, text: on_day.view());
+    dom.toggle_class(host, item: state.remind_node, name: "on", on: state.remind);
 }
 
 /// Whether day has an event.

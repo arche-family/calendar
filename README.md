@@ -2,11 +2,11 @@
 
 The Arche phone's calendar, written in [Arche](https://github.com/arche-family/arche-lang): a WebAssembly component of the Arche phone's world, which the phone has from its first start. That world is Nimadir's mini-app world and what a phone adds to it, here notifications and background wakes; its WIT is in `wit/` (from arche-os's `phone/wit`), and `world` names it. Nimadir's own shell, which has none of them, does not run it.
 
-It works like Android's:
+It works like a phone's calendar (HyperOS's):
 
-- The month, a grid of its weeks from Monday: today marked, the day picked filled, a day with events shaded. ‹ and › go to the month before and after, and a tap on a day picks it.
-- The day picked has its events under the grid, in the order of their times, each with ✕ to delete it.
-- A new event is its title, its time set an hour or a quarter of an hour at a time, whether to be reminded of it, and Add.
+- The month, 2026 / 11, its days from Monday on a card: the weekend's blue, today filled, the day picked washed, and a dot on a day with events. ‹ and › go to the month before and after, and a tap on a day picks it.
+- The day picked has its events under the card, in the order of their times, each with Delete.
+- + opens a new event's page: its title, its day (the one picked), its time on steppers, whether to be reminded of it, and ✓; ✕ and the phone's Back close it.
 - An event to be reminded of has the phone wake the app at its time (`background.wake-at`), off the screen or asleep, and the app posts its notification (`notify.post`), its title and time. The phone wakes an app at one time, so the app asks for the soonest reminder, and again once woken; woken, it takes the time it asked for as come, whatever its clock says.
 
 The time is the shell's (`now-millis`), as the user reads it (`utc-offset`). The events, up to when their reminders were posted, and the time the app asked to be woken at are kept in the app's storage. It is an app of the page: its taps come as click events, and its typing as input events.
