@@ -1,6 +1,10 @@
 name: calendar
 version: 1
 title: Calendar
-about: The month, its events and their reminders, in Arche
+about: Your month, its events and their reminders
+title.uz: Taqvim
+about.uz: Oy, uning tadbirlari va eslatmalari
+title.ru: Календарь
+about.ru: Месяц, события и напоминания
 publisher: arche
 needs: storage notify background

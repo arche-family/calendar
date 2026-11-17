@@ -6,7 +6,8 @@
 /// times, each with Delete. + opens a new event's page: its title, its
 /// day (the one picked), its time on steppers, whether to be reminded,
 /// and ✓; ✕ and the phone's Back close it. Time is the shell's
-/// (now-millis), as the user reads it (utc-offset).
+/// (now-millis), as the user reads it (utc-offset). What it says is in
+/// the phone's language (host_api's locale): English, Uzbek or Russian.
 ///
 /// An app of the phone's world (arche:phone, wit/): an event to be
 /// reminded of has the phone wake the app at its time (background's
@@ -56,6 +57,167 @@ fn weekday_name(w: i64) -> str {
     return "Sunday";
 }
 
+/// The phone's languages the app speaks.
+const EN: u32 = 0;
+const UZ: u32 = 1;
+const RU: u32 = 2;
+
+/// The days' names in Uzbek and Russian, from Monday, whole and short; and
+/// the months', as a date says them after the day (in Russian, genitive).
+const UZ_DAYS: str = "Dushanba Seshanba Chorshanba Payshanba Juma Shanba Yakshanba";
+const RU_DAYS: str = "Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье";
+const UZ_SHORT: str = "Du Se Ch Pa Ju Sh Ya";
+const RU_SHORT: str = "пн вт ср чт пт сб вс";
+const UZ_MONTHS: str = "yanvar fevral mart aprel may iyun iyul avgust sentabr oktabr noyabr dekabr";
+const RU_MONTHS: str = "января февраля марта апреля мая июня июля августа сентября октября ноября декабря";
+
+/// The language of a locale as the phone says it ("uz-UZ"): English for
+/// one the app does not speak.
+fn lang_of(locale: str) -> u32 {
+    if locale.starts_with("uz") {
+        return UZ;
+    }
+    if locale.starts_with("ru") {
+        return RU;
+    }
+    return EN;
+}
+
+/// s, said in English, in lang: s itself in English, and for what the app
+/// has no words of.
+fn say(lang: u32, s: str) -> str {
+    if s.eq("MON") {
+        if lang == UZ { return "DU"; }
+        if lang == RU { return "ПН"; }
+    }
+    if s.eq("TUE") {
+        if lang == UZ { return "SE"; }
+        if lang == RU { return "ВТ"; }
+    }
+    if s.eq("WED") {
+        if lang == UZ { return "CH"; }
+        if lang == RU { return "СР"; }
+    }
+    if s.eq("THU") {
+        if lang == UZ { return "PA"; }
+        if lang == RU { return "ЧТ"; }
+    }
+    if s.eq("FRI") {
+        if lang == UZ { return "JU"; }
+        if lang == RU { return "ПТ"; }
+    }
+    if s.eq("SAT") {
+        if lang == UZ { return "SH"; }
+        if lang == RU { return "СБ"; }
+    }
+    if s.eq("SUN") {
+        if lang == UZ { return "YA"; }
+        if lang == RU { return "ВС"; }
+    }
+    if s.eq("Add event") {
+        if lang == UZ { return "Tadbir qoʻshish"; }
+        if lang == RU { return "Добавить событие"; }
+    }
+    if s.eq("Enter event title") {
+        if lang == UZ { return "Tadbir nomini kiriting"; }
+        if lang == RU { return "Введите название события"; }
+    }
+    if s.eq("Date") {
+        if lang == UZ { return "Sana"; }
+        if lang == RU { return "Дата"; }
+    }
+    if s.eq("Time") {
+        if lang == UZ { return "Vaqt"; }
+        if lang == RU { return "Время"; }
+    }
+    if s.eq("Reminder") {
+        if lang == UZ { return "Eslatma"; }
+        if lang == RU { return "Напоминание"; }
+    }
+    if s.eq("No events") {
+        if lang == UZ { return "Tadbirlar yoʻq"; }
+        if lang == RU { return "Нет событий"; }
+    }
+    if s.eq("No events today") {
+        if lang == UZ { return "Bugun tadbirlar yoʻq"; }
+        if lang == RU { return "Сегодня нет событий"; }
+    }
+    return s;
+}
+
+/// The n-th word of words, from 0.
+fn nth_word(words: str, n: i64) -> str {
+    let b = words.bytes();
+    var at: usize = 0;
+    var k: i64 = 0;
+    while at < b.len() {
+        var e = at;
+        while e < b.len() and b[e] != ' ' {
+            e += 1;
+        }
+        if k == n {
+            return words[at..e];
+        }
+        k += 1;
+        at = e + 1;
+    }
+    return "";
+}
+
+/// The day picked, as the page heads its events: "Tuesday, November 17",
+/// "Seshanba, 17-noyabr", "Вторник, 17 ноября".
+fn when_text(lang: u32, day: i64, out: &mut alloc.String) {
+    let c = civil_of(day);
+    if lang == UZ {
+        out.push_str(nth_word(UZ_DAYS, n: weekday(day)));
+        out.push_str(", ");
+        out.push_i64(c.d);
+        out.push_str("-");
+        out.push_str(nth_word(UZ_MONTHS, n: c.m - 1));
+    } else if lang == RU {
+        out.push_str(nth_word(RU_DAYS, n: weekday(day)));
+        out.push_str(", ");
+        out.push_i64(c.d);
+        out.push_str(" ");
+        out.push_str(nth_word(RU_MONTHS, n: c.m - 1));
+    } else {
+        out.push_str(weekday_name(weekday(day)));
+        out.push_str(", ");
+        out.push_str(month_name(c.m));
+        out.push_str(" ");
+        out.push_i64(c.d);
+    }
+}
+
+/// The day a new event is on, short: "Tue, Nov 17, 2026", "Se, 17-noyabr,
+/// 2026", "вт, 17 ноября 2026".
+fn on_day_text(lang: u32, day: i64, out: &mut alloc.String) {
+    let c = civil_of(day);
+    if lang == UZ {
+        out.push_str(nth_word(UZ_SHORT, n: weekday(day)));
+        out.push_str(", ");
+        out.push_i64(c.d);
+        out.push_str("-");
+        out.push_str(nth_word(UZ_MONTHS, n: c.m - 1));
+        out.push_str(", ");
+    } else if lang == RU {
+        out.push_str(nth_word(RU_SHORT, n: weekday(day)));
+        out.push_str(", ");
+        out.push_i64(c.d);
+        out.push_str(" ");
+        out.push_str(nth_word(RU_MONTHS, n: c.m - 1));
+        out.push_str(" ");
+    } else {
+        out.push_str(weekday_name(weekday(day))[0..3]);
+        out.push_str(", ");
+        out.push_str(month_name(c.m)[0..3]);
+        out.push_str(" ");
+        out.push_i64(c.d);
+        out.push_str(", ");
+    }
+    out.push_i64(c.y);
+}
+
 /// An event: its day, in days since 1970; its time, in minutes of the
 /// day as the user reads it; whether to be reminded of it; its title.
 type Event = struct {
@@ -96,6 +258,11 @@ type Calendar = struct {
     minute_node: u32,
     date_node: u32,
     remind_node: u32,
+    /// The phone's locale, as it was last read, and its language; the
+    /// stylesheets added, to take back when the page is made again.
+    locale: alloc.String,
+    lang: u32,
+    sheets: [2]u32,
 }
 
 /// A day of the calendar: its year, month (1 to 12) and day.
@@ -183,18 +350,44 @@ fn at_ms(e: &Event, offset: i64) -> i64 {
 
 fn init(host: &mut std.Host, a: alloc.Allocator) -> Calendar {
     let kit = appkit.css(a);
-    _ = dom.add_stylesheet(host, css: kit.view());
-    _ = dom.add_stylesheet(host, css: SHEET);
+    let kit_sheet = dom.add_stylesheet(host, css: kit.view());
+    let sheet = dom.add_stylesheet(host, css: SHEET);
     let root = dom.root(host);
-    let markup = "<div class='app'><div class='monthpage'><div class='appbar'><div class='big month'></div><div class='actions'><button class='iconbtn' data-k='prev'><span class='icon'>chevron_left</span></button><button class='iconbtn' data-k='next'><span class='icon'>chevron_right</span></button><button class='iconbtn' data-k='new'><span class='icon'>add</span></button></div></div><div class='monthcard'><div class='names'><div class='name'>MON</div><div class='name'>TUE</div><div class='name'>WED</div><div class='name'>THU</div><div class='name'>FRI</div><div class='name end'>SAT</div><div class='name end'>SUN</div></div><div class='grid'></div></div><div class='when'></div><div class='events'></div></div><div class='newpage hidden'><div class='head'><button class='iconbtn' data-k='cancel'><span class='icon'>close</span></button><div class='title'></div><button class='iconbtn' data-k='add'><span class='icon'>check</span></button></div><div class='big'>Add event</div><div class='group'><div class='row'><input class='title' placeholder='Enter event title'></div></div><div class='group'><div class='row'><span class='primary grow'>Date</span><span class='trail datev'></span></div><div class='row'><span class='primary grow'>Time</span><span class='trail time'></span></div><div class='pick'><div class='spin'><button class='iconbtn' data-k='h+'><span class='icon'>expand_less</span></button><div class='val hourv'></div><button class='iconbtn' data-k='h-'><span class='icon'>expand_more</span></button></div><div class='colon'>:</div><div class='spin'><button class='iconbtn' data-k='m+'><span class='icon'>expand_less</span></button><div class='val minutev'></div><button class='iconbtn' data-k='m-'><span class='icon'>expand_more</span></button></div></div></div><div class='group'><button class='row' data-k='remind'><span class='primary grow'>Reminder</span><span class='switch remind'><span class='knob'></span></span></button></div></div></div>";
+    let locale = host_api.locale(host, a: a);
+    let lang = lang_of(locale.view());
+    var markup = alloc.String.from("<div class='app'><div class='monthpage'><div class='appbar'><div class='big month'></div><div class='actions'><button class='iconbtn' data-k='prev'><span class='icon'>chevron_left</span></button><button class='iconbtn' data-k='next'><span class='icon'>chevron_right</span></button><button class='iconbtn' data-k='new'><span class='icon'>add</span></button></div></div><div class='monthcard'><div class='names'>", a);
+    // The days' names, from Monday; the weekend's blue.
+    var w: i64 = 0;
+    while w < 7 : (w += 1) {
+        if w < 5 {
+            markup.push_str("<div class='name'>");
+        } else {
+            markup.push_str("<div class='name end'>");
+        }
+        markup.push_str(say(lang, s: nth_word("MON TUE WED THU FRI SAT SUN", n: w)));
+        markup.push_str("</div>");
+    }
+    markup.push_str("</div><div class='grid'></div></div><div class='when'></div><div class='events'></div></div><div class='newpage hidden'><div class='head'><button class='iconbtn' data-k='cancel'><span class='icon'>close</span></button><div class='title'></div><button class='iconbtn' data-k='add'><span class='icon'>check</span></button></div><div class='big'>");
+    markup.push_str(say(lang, s: "Add event"));
+    markup.push_str("</div><div class='group'><div class='row'><input class='title' placeholder='");
+    markup.push_str(say(lang, s: "Enter event title"));
+    markup.push_str("'></div></div><div class='group'><div class='row'><span class='primary grow'>");
+    markup.push_str(say(lang, s: "Date"));
+    markup.push_str("</span><span class='trail datev'></span></div><div class='row'><span class='primary grow'>");
+    markup.push_str(say(lang, s: "Time"));
+    markup.push_str("</span><span class='trail time'></span></div><div class='pick'><div class='spin'><button class='iconbtn' data-k='h+'><span class='icon'>expand_less</span></button><div class='val hourv'></div><button class='iconbtn' data-k='h-'><span class='icon'>expand_more</span></button></div><div class='colon'>:</div><div class='spin'><button class='iconbtn' data-k='m+'><span class='icon'>expand_less</span></button><div class='val minutev'></div><button class='iconbtn' data-k='m-'><span class='icon'>expand_more</span></button></div></div></div><div class='group'><button class='row' data-k='remind'><span class='primary grow'>");
+    markup.push_str(say(lang, s: "Reminder"));
+    markup.push_str("</span><span class='switch remind'><span class='knob'></span></span></button></div></div></div>");
     var why = alloc.String.init(a);
-    if not dom.set_markup(host, item: root, markup: markup, why: &mut why, a: a) {
+    if not dom.set_markup(host, item: root, markup: markup.view(), why: &mut why, a: a) {
         host_api.log(host, msg: why.view());
     }
     let cal = first(host, selector: ".app", a: a);
     dom.listen(host, item: cal, kind: "click");
     dom.listen(host, item: cal, kind: "input");
     dom.listen(host, item: root, kind: "back");
+    // A swipe turns the month, as HyperOS's calendar does (arche-os T12).
+    dom.listen(host, item: cal, kind: "swipe");
     let now_day = today(host);
     let c = civil_of(now_day);
     var state = Calendar {
@@ -221,6 +414,9 @@ fn init(host: &mut std.Host, a: alloc.Allocator) -> Calendar {
         minute_node: first(host, selector: ".minutev", a: a),
         date_node: first(host, selector: ".datev", a: a),
         remind_node: first(host, selector: ".remind", a: a),
+        locale: locale,
+        lang: lang,
+        sheets: [kit_sheet, sheet],
     };
     match host_api.storage_get(host, key: "events", a: a) {
         some(kept) => { load(&mut state, text: kept.view(), a: a); }
@@ -245,6 +441,15 @@ fn init(host: &mut std.Host, a: alloc.Allocator) -> Calendar {
 }
 
 fn update(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
+    // The phone's language changed: the page made again in it, as init
+    // makes it, its stylesheets taken back first. What was on it is lost;
+    // the events are kept.
+    let locale = host_api.locale(host, a: a);
+    if not locale.view().eq(state.locale.view()) {
+        dom.remove_stylesheet(host, sheet: state.sheets[0]);
+        dom.remove_stylesheet(host, sheet: state.sheets[1]);
+        state.* = init(host, a: a);
+    }
     if background.woken(host) {
         remind(state, host: host, a: a);
     }
@@ -252,6 +457,13 @@ fn update(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
     for e in dom.events(host, a: a).items() {
         if e.kind.view().eq("back") {
             press(state, host: host, key: "cancel", a: a);
+            changed = true;
+        } else if e.kind.view().eq("swipe") and not state.adding {
+            if e.value.view().eq("left") {
+                press(state, host: host, key: "next", a: a);
+            } else {
+                press(state, host: host, key: "prev", a: a);
+            }
             changed = true;
         } else if e.kind.view().eq("click") {
             match key_of(host, n: e.target, a: a) {
@@ -425,12 +637,8 @@ fn show(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
         host_api.log(host, msg: why.view());
     }
     // The day picked: its name, and its events by their times.
-    let p = civil_of(state.picked);
-    var when = alloc.String.from(weekday_name(weekday(state.picked)), a);
-    when.push_str(", ");
-    when.push_str(month_name(p.m));
-    when.push_str(" ");
-    when.push_i64(p.d);
+    var when = alloc.String.init(a);
+    when_text(state.lang, day: state.picked, out: &mut when);
     dom.set_text(host, item: state.when, text: when.view());
     for old in dom.children(host, item: state.list, a: a).items() {
         dom.release(host, item: old.*);
@@ -455,7 +663,7 @@ fn show(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
         if state.picked == now_day {
             none_said = "No events today";
         }
-        line(host, parent_: state.list, tag: "div", class: "none", text: none_said, a: a);
+        line(host, parent_: state.list, tag: "div", class: "none", text: say(state.lang, s: none_said), a: a);
     }
     for at in order.items() {
         let e = &state.events.items()[at.*];
@@ -468,7 +676,8 @@ fn show(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
         var t = alloc.String.init(a);
         minutes_text(&mut t, minutes: e.minute);
         if e.remind {
-            t.push_str(" · Reminder");
+            t.push_str(" · ");
+            t.push_str(say(state.lang, s: "Reminder"));
         }
         line(host, parent_: text, tag: "div", class: "at", text: t.view(), a: a);
         dom.append_child(host, parent_: row, child: text);
@@ -492,13 +701,8 @@ fn show(state: &mut Calendar, host: &mut std.Host, a: alloc.Allocator) {
     two(&mut mm, n: state.at % 60);
     dom.set_text(host, item: state.minute_node, text: mm.view());
     // The day it is on: the one picked.
-    var on_day = alloc.String.from(weekday_name(weekday(state.picked))[0..3], a);
-    on_day.push_str(", ");
-    on_day.push_str(month_name(p.m)[0..3]);
-    on_day.push_str(" ");
-    on_day.push_i64(p.d);
-    on_day.push_str(", ");
-    on_day.push_i64(p.y);
+    var on_day = alloc.String.init(a);
+    on_day_text(state.lang, day: state.picked, out: &mut on_day);
     dom.set_text(host, item: state.date_node, text: on_day.view());
     dom.toggle_class(host, item: state.remind_node, name: "on", on: state.remind);
 }
